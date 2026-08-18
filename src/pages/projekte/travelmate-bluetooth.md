@@ -21,7 +21,7 @@ Grauwasser und Diesel, aktualisiert alle 15 Minuten.
 
 <figure>
   <img src="/bilder/rotarex/cerbo-tanks.png" alt="Füllstandsanzeige im Cerbo GX mit vier Tanks, LPG bei 61 Prozent" />
-  <figcaption>Das Ziel: LPG als vollwertiger Tank in der GX-Oberfläche — 61 %, 13 von 21 Litern.</figcaption>
+  <figcaption>Das Ziel: LPG als vollwertiger Tank in der GX-Oberfläche — 61 %, 13 von 21 Litern.</figcaption>
 </figure>
 
 > **Code auf GitHub:** [cologneone/dbus-rotarex-dime](https://github.com/cologneone/dbus-rotarex-dime)
@@ -56,8 +56,8 @@ Minuten für wenige Sekunden läuft, stört das im Alltag nicht.
 
 > **Nicht Teil der Messung**, auch wenn es auf dem Foto danach aussieht: das
 > blaue Gehäuse direkt am Ventil. Das ist der Crash-Sensor der
-> **GOK Caramatic SafeDrive 30 mbar**, einer Sicherheits-Gasdruck-Regelanlage
-> (1,5 kg/h, Anschluss G.12 KLF × RVS 10/8). Sie sperrt die Gaszufuhr bei einem
+> **GOK Caramatic SafeDrive 30 mbar**, einer Sicherheits-Gasdruck-Regelanlage
+> (1,5 kg/h, Anschluss G.12 KLF × RVS 10/8). Sie sperrt die Gaszufuhr bei einem
 > Unfall ab und ist der Grund, warum während der Fahrt geheizt werden darf.
 > Der silberne Topf mit dem gelben Aufkleber daneben ist der eigentliche Regler.
 
@@ -123,6 +123,11 @@ das Ergebnis in einen virtuellen Tank-Service.
   <figcaption>Der ganze Flow: Timer, Script-Aufruf, Parser, MQTT und der virtuelle Tank. Unten die Statuszeile mit dem aktuellen Wert.</figcaption>
 </figure>
 
+Auf dem Cerbo liegt dabei kein Sonderfall mehr: Der `exec`-Node ruft genau das
+Script auf, das auch im Repository steht — konfiguriert über Umgebungsvariablen,
+sodass MAC und PIN nirgends im Code auftauchen. Wer das Projekt nachbaut,
+bekommt damit wirklich das, was hier auch läuft.
+
 Der Cerbo sieht davon nichts Besonderes — für ihn ist es schlicht ein
 Tanksensor, der über Node-RED angebunden ist:
 
@@ -140,9 +145,10 @@ selbständig in Liter um.
   <figcaption>Einmal eingestellt: 21 Liter, Typ LPG.</figcaption>
 </figure>
 
-Jeder Abruf landet zusätzlich als Zeile in einer CSV — Zeitstempel, Rohwert,
-Prozent, Batteriestand des Senders. Damit lässt sich der Verbrauch über eine
-Saison auswerten.
+Jeder **erfolgreiche** Abruf landet zusätzlich als Zeile in einer CSV —
+Zeitstempel in UTC, Rohwert, Prozent, Batteriestand des Senders. Fehlversuche
+stehen bewusst nicht drin: Eine Historie voller Lücken mit leeren Werten
+verzerrt jede spätere Verbrauchsauswertung.
 
 <figure>
   <img src="/bilder/rotarex/cerbo-kurzansicht.png" alt="Kurzübersicht des Cerbo mit Batterie, Frischwasser, Abwasser und LPG" />
@@ -155,17 +161,17 @@ Der Rohwert ist ein einzelnes Byte und entspricht direkt dem Prozentwert. Kein
 Offset, keine Kurve.
 
 Bestätigt gleich zweifach: einmal an einem Messpunkt außerhalb der oberen
-Sättigung (Rohwert 78 bei App-Anzeige 78 %) — und einmal im direkten Vergleich
-zur selben Zeit. Die App meldete 60 %, der Cerbo zwei Minuten zuvor 61 %. Der
+Sättigung (Rohwert 78 bei App-Anzeige 78 %) — und einmal im direkten Vergleich
+zur selben Zeit. Die App meldete 60 %, der Cerbo zwei Minuten zuvor 61 %. Der
 Unterschied ist genau das, was der 15-Minuten-Takt erwarten lässt.
 
 <figure class="hochformat">
   <img src="/bilder/rotarex/app-trend.png" alt="Rotarex-App mit 60 Prozent Füllstand und fallendem Trenddiagramm" />
-  <figcaption>Die Hersteller-App zur selben Zeit: 60 %. Das Trenddiagramm zeigt schön den gleichmäßigen Verbrauch.</figcaption>
+  <figcaption>Die Hersteller-App zur selben Zeit: 60 %. Das Trenddiagramm zeigt schön den gleichmäßigen Verbrauch.</figcaption>
 </figure>
 
 Am oberen Ende ist die Auflösung allerdings mager — die App fasst alles zwischen
-94 und 100 % einfach als „voll“ zusammen. Weitere Referenzpunkte über den
+94 und 100 % einfach als „voll“ zusammen. Weitere Referenzpunkte über den
 Verbrauch der nächsten Monate werden zeigen, ob das über den ganzen Bereich so
 linear bleibt.
 
@@ -184,7 +190,7 @@ linear bleibt.
 - Die Ausgabe des Node-RED-`exec`-Node kann mehrzeilig sein. Beim Parsen immer
   nur die letzte Zeile als JSON behandeln.
 - Node-RED läuft als Benutzer `nodered` und darf nicht nach `/data/` schreiben —
-  die Historien-Datei gehört nach `/data/home/nodered/.node-red/`.
+  Script und Historien-Datei gehören nach `/data/home/nodered/.node-red/`.
 - Nur eine Bluetooth-Verbindung gleichzeitig: Läuft gerade der Abruf, meldet die
   Hersteller-App einen Verbindungsfehler.
 
