@@ -1,6 +1,6 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 1.0.0 (2026-08-18) — Erstanlage
+// Version: 1.1.0 (2026-08-18) — Zierstreifen in Flair-Farben ergänzt
 import '../styles/global.css';
 
 const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
@@ -43,6 +43,7 @@ const navigation = [
         </nav>
       </div>
     </header>
+    <div class="flair-band" aria-hidden="true"></div>
 
     <main>
       <div class="wrap">
