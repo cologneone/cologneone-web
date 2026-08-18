@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------
+# Datei:   .github/workflows/deploy.yml
+# Zweck:   Baut die Astro-Website und veröffentlicht sie auf GitHub Pages
+# Ziel:    https://cologneone.de
+#
+# Version: 1.0.3
+# Historie:
+#   1.0.0 (2026-08-18) — Erstanlage: Build mit Node 22, Deploy über GitHub Pages
+#   1.0.3 (2026-08-18) — Installation mit "npm install"; im Repository liegt
+#                        (noch) keine package-lock.json
+# ---------------------------------------------------------------------------
+
+name: Website bauen und veröffentlichen
+
+on:
+  # Bei jedem Push auf den Hauptzweig
+  push:
+    branches: [main]
+  # Und von Hand über den Reiter "Actions" auslösbar
+  workflow_dispatch:
+
+# Rechte, die der Workflow für den Pages-Deploy braucht
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Es soll immer nur ein Deploy gleichzeitig laufen
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Bauen
+    runs-on: ubuntu-latest
+    steps:
+      - name: Quellcode auschecken
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Abhängigkeiten installieren
+        run: npm install --no-audit --no-fund
+
+      - name: Website bauen
+        run: npm run build
+
+      - name: Pages konfigurieren
+        uses: actions/configure-pages@v5
+
+      - name: Ergebnis als Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Veröffentlichen
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4
