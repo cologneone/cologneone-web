@@ -29,18 +29,41 @@ Grauwasser und Diesel, aktualisiert alle 15 Minuten.
 
 ## Die Hardware
 
-Die Flasche sitzt im Gaskasten, angeschlossen über einen normalen Druckregler.
-Der Füllstandssensor hängt am Ventil, seine Werte gehen an die blaue
-Bluetooth-Box daneben — zwei AAA-Batterien, sonst nichts.
+Im Gaskasten steht eine **Alugas TravelMate 2.0**, eine wiederbefüllbare
+Alu-Gastankflasche mit elektronischem Multiventil.
 
 <figure>
   <img src="/bilder/rotarex/gaskasten.jpg" alt="Alugas TravelMate 2.0 eingebaut im Gaskasten des Wohnmobils" />
   <figcaption>Die TravelMate 2.0 im Gaskasten, festgezurrt und angeschlossen.</figcaption>
 </figure>
 
+Die Füllstandsmessung besteht aus **drei Teilen**, und nur der dritte hat mit
+Bluetooth zu tun:
+
+1. **Der Sensor im Multiventil.** Er greift den Stand des Schwimmers magnetisch
+   ab und gehört zum Ventil, ist also kein Zubehör.
+2. **Die digitale Anzeige.** Sie ersetzt das analoge Zeigerinstrument am
+   Multiventil und wird per Kabel mit dem Sensor verbunden.
+3. **Die WAVE-BLE-Einheit von Rotarex.** Eine schwarze Sendebox mit einem Meter
+   Anschlusskabel und Klett-Halter, die an die Anzeige gesteckt wird. Sie läuft
+   mit zwei AAA-Batterien und funkt den Wert per Bluetooth Low Energy. Dieser
+   Teil muss **separat gekauft** werden.
+
+Eine Eigenheit der Sendebox, die für dieses Projekt wichtig ist: Sie lässt
+**immer nur eine Bluetooth-Verbindung gleichzeitig** zu. Wenn der Cerbo gerade
+liest, kommt das Handy nicht dran — und umgekehrt. Da der Abruf nur alle 15
+Minuten für wenige Sekunden läuft, stört das im Alltag nicht.
+
+> **Nicht Teil der Messung**, auch wenn es auf dem Foto danach aussieht: das
+> blaue Gehäuse direkt am Ventil. Das ist der Crash-Sensor der
+> **GOK Caramatic SafeDrive 30 mbar**, einer Sicherheits-Gasdruck-Regelanlage
+> (1,5 kg/h, Anschluss G.12 KLF × RVS 10/8). Sie sperrt die Gaszufuhr bei einem
+> Unfall ab und ist der Grund, warum während der Fahrt geheizt werden darf.
+> Der silberne Topf mit dem gelben Aufkleber daneben ist der eigentliche Regler.
+
 <figure>
-  <img src="/bilder/rotarex/ble-modul.jpg" alt="Nahaufnahme des blauen Rotarex-DIME-Bluetooth-Moduls am Flaschenventil" />
-  <figcaption>Das blaue DIME-Modul am Ventil — der einzige Weg zum Füllstand.</figcaption>
+  <img src="/bilder/rotarex/druckregler.jpg" alt="Gasdruckregler GOK Caramatic SafeDrive mit blauem Crash-Sensor am Ventil der Gasflasche" />
+  <figcaption>Der GOK Caramatic SafeDrive am Multiventil — blau der Crash-Sensor, silbern der Regler. Fotos von Sensor, Anzeige und BLE-Box folgen.</figcaption>
 </figure>
 
 ## Warum das nicht einfach ging
@@ -148,6 +171,7 @@ linear bleibt.
 
 ## Was noch offen ist
 
+- Fotos von Sensor, Anzeige und BLE-Box
 - Kalibrierpunkte im unteren Drittel — dafür muss die Flasche erst mal leer werden
 - Auswertung der Verbrauchsdaten über eine ganze Saison
 
@@ -161,6 +185,8 @@ linear bleibt.
   nur die letzte Zeile als JSON behandeln.
 - Node-RED läuft als Benutzer `nodered` und darf nicht nach `/data/` schreiben —
   die Historien-Datei gehört nach `/data/home/nodered/.node-red/`.
+- Nur eine Bluetooth-Verbindung gleichzeitig: Läuft gerade der Abruf, meldet die
+  Hersteller-App einen Verbindungsfehler.
 
 ## Dank
 
@@ -169,5 +195,5 @@ Die entscheidende Vorarbeit zum GATT-Protokoll kam aus dem
 Ohne den dortigen Thread hätte die Suche deutlich länger gedauert.
 
 Das Projekt steht in keiner Verbindung zu Rotarex, SRG Schulz + Rackow
-Gastechnik oder Victron Energy. Es liest ausschließlich die eigene Hardware aus,
-es wird nichts verändert oder umgangen.
+Gastechnik, GOK oder Victron Energy. Es liest ausschließlich die eigene Hardware
+aus, es wird nichts verändert oder umgangen.
