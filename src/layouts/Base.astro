@@ -1,6 +1,6 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
+// Version: 2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
 import '../styles/global.css';
 
 const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
@@ -46,6 +46,16 @@ const navigation = [
       </div>
     </header>
     <div class="flair-band" aria-hidden="true"></div>
+
+    <div class="baustelle">
+      <div class="wrap">
+        <span class="baustelle-schild">Baustelle</span>
+        <span>
+          Diese Seite entsteht gerade. Inhalte sind unvollständig und ändern sich
+          noch täglich.
+        </span>
+      </div>
+    </div>
 
     <main>
       <div class="wrap">
