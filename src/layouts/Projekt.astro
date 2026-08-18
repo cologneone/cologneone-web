@@ -1,12 +1,24 @@
 ---
 // Layout für einzelne Projektseiten (Markdown)
-// Version: 1.0.0 (2026-08-18) — Erstanlage
+// Version: 1.1.0
+// Historie:
+//   1.0.0 (2026-08-18) — Erstanlage
+//   1.1.0 (2026-08-18) — Optionale Angaben meta_titel, meta_beschreibung und
+//                        bild aus dem Frontmatter für Suchmaschinen und
+//                        Vorschaubilder. Fehlen sie, gelten wie bisher
+//                        titel und kurz.
 import Base from './Base.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
-<Base title={frontmatter.titel} description={frontmatter.kurz}>
+<Base
+  title={frontmatter.titel}
+  metaTitle={frontmatter.meta_titel}
+  description={frontmatter.meta_beschreibung ?? frontmatter.kurz}
+  bild={frontmatter.bild}
+  typ="article"
+>
   <a class="back" href="/projekte">← Alle Projekte</a>
   <article class="prose">
     <p class="eyebrow">Projekt</p>

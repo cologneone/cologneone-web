@@ -1,7 +1,10 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Gasflasche per Bluetooth auslesen
+titel: Alugas TravelMate per Bluetooth auslesen
 kurz: Den Füllstand einer Alugas TravelMate 2.0 im Cerbo GX anzeigen — ohne die Hersteller-App, direkt über BlueZ und Node-RED.
+meta_titel: Alugas TravelMate / Rotarex DIMES im Victron Cerbo GX auslesen
+meta_beschreibung: Gasfüllstand einer Alugas TravelMate 2.0 per Bluetooth auslesen — Rotarex DIMES WAVE / SRG-1-WAVE über BlueZ, D-Bus und Node-RED im Victron Cerbo GX.
+bild: /bilder/rotarex/cerbo-tanks.png
 status: Laufend
 stand: 2026-08
 tags:
@@ -12,9 +15,10 @@ tags:
 ---
 
 Die Alugas TravelMate 2.0 meldet ihren Füllstand über ein Bluetooth-Modul von
-Rotarex (DIMES SRG-1-WAVE). Die Hersteller-App zeigt den Wert an — aber eben nur
-dort, auf dem Handy, wenn man danebensteht. Naheliegende Frage: Wie kommt der
-Wert dahin, wo die anderen Bordwerte auch stehen, nämlich in den **Cerbo GX**?
+Rotarex (DIMES WAVE, im BLE-Scan als `SRG-1-WAVE`). Die Hersteller-App zeigt
+den Wert an — aber eben nur dort, auf dem Handy, wenn man danebensteht.
+Naheliegende Frage: Wie kommt der Wert dahin, wo die anderen Bordwerte auch
+stehen, nämlich in den **Victron Cerbo GX**?
 
 Antwort: Er steht jetzt dort. Als ganz normale Tankanzeige neben Frischwasser,
 Grauwasser und Diesel, aktualisiert alle 15 Minuten.

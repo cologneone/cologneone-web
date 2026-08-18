@@ -1,9 +1,31 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
+// Version: 2.4.0
+// Historie:
+//   2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
+//   2.4.0 (2026-08-18) — Auffindbarkeit: eigener Seitentitel und eigene
+//                        Beschreibung je Seite, dazu Vorschaubild und
+//                        vollständige Open-Graph-Angaben fürs Teilen in
+//                        Foren und Messengern
 import '../styles/global.css';
 
-const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
+const {
+  // Kurzer Titel für die Seite selbst. Bekommt "— cologneone" angehängt.
+  title,
+  // Vollständiger Titel für <title> und Suchmaschinen, ohne Anhängsel.
+  // Damit lässt sich der Seitentitel gezielt auf die Begriffe legen,
+  // nach denen jemand tatsächlich sucht.
+  metaTitle,
+  description = 'Projekte, Basteleien und Notizen von Cologneone.',
+  // Pfad zu einem Vorschaubild, z. B. "/bilder/rotarex/cerbo-tanks.png"
+  bild,
+  typ = 'website',
+} = Astro.props;
+
+const seitentitel = metaTitle ?? (title ? `${title} — cologneone` : 'cologneone');
+const seitenUrl = new URL(Astro.url.pathname, Astro.site);
+const bildUrl = bild ? new URL(bild, Astro.site) : null;
+
 const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 const navigation = [
@@ -18,13 +40,24 @@ const navigation = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} — cologneone` : 'cologneone'}</title>
+    <title>{seitentitel}</title>
     <meta name="description" content={description} />
-    <meta property="og:title" content={title ?? 'cologneone'} />
+    <link rel="canonical" href={seitenUrl} />
+
+    <meta property="og:type" content={typ} />
+    <meta property="og:site_name" content="cologneone" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content={seitentitel} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content={seitenUrl} />
+    {bildUrl && <meta property="og:image" content={bildUrl} />}
+
+    <meta name="twitter:card" content={bildUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={seitentitel} />
+    <meta name="twitter:description" content={description} />
+    {bildUrl && <meta name="twitter:image" content={bildUrl} />}
+
     <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>

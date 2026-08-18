@@ -1,6 +1,10 @@
 ---
 // Startseite
-// Version: 1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
+// Version: 1.3.0
+// Historie:
+//   1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
+//   1.3.0 (2026-08-18) — Seitentitel und Beschreibung sagen jetzt, worum
+//                        es hier geht — vorher stand da nur "cologneone"
 import Base from '../layouts/Base.astro';
 
 const dateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -11,8 +15,8 @@ const projekte = Object.values(dateien)
 ---
 
 <Base
-  title={null}
-  description="Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme, Smart Home und kleine Bastelei-Lösungen."
+  metaTitle="cologneone — Wohnmobil-Elektrik, Victron und Sensorik"
+  description="Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme, Bluetooth-Sensorik und Smart Home — mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
 >
   <section class="hero">
     <p class="eyebrow">cologneone.de</p>
