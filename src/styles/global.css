@@ -1,39 +1,45 @@
-:root {
-  /* Farbwelt angelehnt an das Dekor des Niesmann+Bischoff Flair:
-     Nachtblau, Gold-Ocker, Creme, Silber */
-  --navy: #1b2a54;
-  --gold: #d9a02b;
-  --creme: #efeae1;
+/* ---------------------------------------------------------------------------
+   Datei:   src/styles/global.css
+   Zweck:   Gesamtes Styling der Website cologneone.de
+   Vorlage: Dekor des Niesmann+Bischoff Flair — Creme-Aufbau, Nachtblau,
+            Gold-Ocker, dazu die charakteristischen Zierstreifen
 
-  --bg: #0d1524;
-  --bg-soft: #121c30;
-  --bg-card: #16213a;
-  --border: #27334e;
-  --text: #eae6dd;
-  --text-dim: #a2acc0;
-  --accent: #e0a63a;
-  --accent-soft: #f0bb5c;
+   Version: 2.0.0
+   Historie:
+     1.0.0 (2026-08-18) — Erstanlage, neutrale Farben, hell und dunkel
+     1.1.0 (2026-08-18) — Flair-Farben übernommen, Zierstreifen ergänzt
+     2.0.0 (2026-08-18) — durchgehend Creme als Hintergrund (keine dunkle
+                          Variante mehr), Zierstreifen als tragendes Element
+                          in Kopf, Titelbereich, Karten und Fuß
+--------------------------------------------------------------------------- */
+
+:root {
+  /* Farben direkt vom Fahrzeug abgenommen */
+  --navy: #1b2a54;
+  --navy-soft: #5b6478;
+  --gold: #d9a02b;
+  --gold-deep: #a97612;
+  --creme: #f2ede3;
+  --creme-hell: #faf7f1;
+  --linie: #e2dacb;
+
+  --bg: var(--creme);
+  --bg-soft: var(--creme-hell);
+  --bg-card: #ffffff;
+  --border: var(--linie);
+  --text: var(--navy);
+  --text-dim: var(--navy-soft);
+  --accent: var(--gold-deep);
+
   --max: 68rem;
   --radius: 14px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f4f1ea;
-    --bg-soft: #ffffff;
-    --bg-card: #ffffff;
-    --border: #e2dacb;
-    --text: #1b2a54;
-    --text-dim: #5d6478;
-    --accent: #b8801a;
-    --accent-soft: #8f6410;
-  }
 }
 
 * { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -53,14 +59,26 @@ body {
   padding: 0 1.25rem;
 }
 
+/* ---------- Zierstreifen ----------
+   Schichtung wie am Aufbau: Nachtblau, schmale Creme-Fuge, Gold-Ocker. */
+
+.flair-band {
+  height: 9px;
+  background: linear-gradient(
+    to bottom,
+    var(--navy) 0 3px,
+    var(--creme-hell) 3px 4px,
+    var(--gold) 4px 9px
+  );
+}
+
 /* ---------- Kopf ---------- */
+
 .site-header {
-  border-bottom: 1px solid var(--border);
   background: var(--bg-soft);
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(6px);
 }
 
 .site-header .wrap {
@@ -73,31 +91,81 @@ body {
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
   text-decoration: none;
-  color: var(--text);
+  color: var(--navy);
 }
 
-.brand span { color: var(--accent); }
+.brand span { color: var(--gold-deep); }
 
 nav.main a {
-  color: var(--text-dim);
+  color: var(--navy-soft);
   text-decoration: none;
   margin-left: 1.4rem;
   font-size: 0.97rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 2px solid transparent;
 }
 
-nav.main a:hover,
+nav.main a:hover { color: var(--navy); }
+
 nav.main a[aria-current="page"] {
-  color: var(--text);
+  color: var(--navy);
+  border-bottom-color: var(--gold);
 }
 
+/* ---------- Inhalt ---------- */
 
-/* ---------- Flair-Zierstreifen ---------- */
-.flair-band {
+main { padding: 3rem 0 4rem; }
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+  color: var(--navy);
+}
+
+h2 {
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  margin: 2.6rem 0 0.8rem;
+  color: var(--navy);
+}
+
+h3 {
+  font-size: 1.13rem;
+  margin: 2rem 0 0.5rem;
+  color: var(--navy);
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--gold-deep); }
+
+.lead {
+  font-size: 1.16rem;
+  color: var(--text-dim);
+  max-width: 44rem;
+}
+
+/* Titelbereich: statt einer grauen Trennlinie die Flair-Signatur */
+.hero {
+  padding: 1.2rem 0 2.2rem;
+  margin-bottom: 2.6rem;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 9rem;
   height: 7px;
+  border-radius: 2px;
   background: linear-gradient(
     to bottom,
     var(--navy) 0 2px,
@@ -106,55 +174,17 @@ nav.main a[aria-current="page"] {
   );
 }
 
-/* ---------- Inhalt ---------- */
-main {
-  padding: 3rem 0 4rem;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 2.9rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0 0 1rem;
-}
-
-h2 {
-  font-size: 1.45rem;
-  letter-spacing: -0.01em;
-  margin: 2.6rem 0 0.8rem;
-}
-
-h3 {
-  font-size: 1.13rem;
-  margin: 2rem 0 0.5rem;
-}
-
-p { margin: 0 0 1rem; }
-
-a { color: var(--accent-soft); }
-
-.lead {
-  font-size: 1.16rem;
-  color: var(--text-dim);
-  max-width: 44rem;
-}
-
-.hero {
-  padding: 1rem 0 2.5rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 2.5rem;
-}
-
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--accent);
+  font-weight: 800;
+  color: var(--gold-deep);
   margin: 0 0 0.9rem;
 }
 
 /* ---------- Karten ---------- */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
@@ -168,20 +198,39 @@ a { color: var(--accent-soft); }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.4rem;
+  padding: 1.4rem 1.4rem 1.4rem 1.7rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Zierlinie an der Kante — wie am Fahrzeug */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(
+    to right,
+    var(--navy) 0 2px,
+    var(--creme-hell) 2px 3px,
+    var(--gold) 3px 6px
+  );
 }
 
 .card:hover {
-  border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(27, 42, 84, 0.10);
 }
 
 .card h3 { margin: 0; font-size: 1.1rem; }
-.card h3 a { color: var(--text); text-decoration: none; }
+.card h3 a { color: var(--navy); text-decoration: none; }
+.card h3 a:hover { color: var(--gold-deep); }
 .card p { color: var(--text-dim); margin: 0; font-size: 0.97rem; }
 
 .meta {
@@ -200,48 +249,87 @@ a { color: var(--accent-soft); }
   padding: 0.1rem 0.65rem;
   font-size: 0.78rem;
   color: var(--text-dim);
+  background: var(--creme-hell);
 }
 
-.status-laufend { border-color: var(--accent); color: var(--accent); }
+.status-laufend {
+  border-color: var(--gold);
+  background: rgba(217, 160, 43, 0.14);
+  color: var(--gold-deep);
+  font-weight: 600;
+}
 
 /* ---------- Artikel ---------- */
+
 .prose { max-width: 46rem; }
 .prose img { max-width: 100%; height: auto; border-radius: var(--radius); }
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li { margin-bottom: 0.35rem; }
+
+.prose hr {
+  border: 0;
+  height: 7px;
+  width: 6.5rem;
+  margin: 1.8rem 0;
+  border-radius: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--navy) 0 2px,
+    var(--creme) 2px 3px,
+    var(--gold) 3px 7px
+  );
+}
+
 .prose code {
-  background: var(--bg-card);
+  background: var(--creme-hell);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.1rem 0.35rem;
   font-size: 0.9em;
 }
+
 .prose pre {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--navy);
+  color: var(--creme-hell);
   border-radius: var(--radius);
   padding: 1rem;
   overflow-x: auto;
 }
-.prose pre code { border: 0; padding: 0; background: none; }
+
+.prose pre code {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+}
+
 .prose blockquote {
-  border-left: 3px solid var(--accent);
+  border-left: 4px solid var(--gold);
+  background: var(--creme-hell);
   margin: 1.2rem 0;
-  padding: 0.2rem 0 0.2rem 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0 8px 8px 0;
   color: var(--text-dim);
 }
+
 .prose table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.2rem 0;
   font-size: 0.95rem;
 }
+
 .prose th, .prose td {
   border: 1px solid var(--border);
   padding: 0.5rem 0.7rem;
   text-align: left;
 }
-.prose th { background: var(--bg-card); }
+
+.prose th {
+  background: var(--navy);
+  color: var(--creme-hell);
+  border-color: var(--navy);
+}
 
 .back {
   display: inline-block;
@@ -251,8 +339,8 @@ a { color: var(--accent-soft); }
 }
 
 /* ---------- Fuß ---------- */
+
 .site-footer {
-  border-top: 1px solid var(--border);
   background: var(--bg-soft);
   padding: 2rem 0;
   font-size: 0.9rem;
@@ -266,8 +354,13 @@ a { color: var(--accent-soft); }
   flex-wrap: wrap;
 }
 
-.site-footer a { color: var(--text-dim); text-decoration: none; margin-right: 1.2rem; }
-.site-footer a:hover { color: var(--text); }
+.site-footer a {
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-right: 1.2rem;
+}
+
+.site-footer a:hover { color: var(--navy); }
 
 @media (max-width: 32rem) {
   nav.main a { margin: 0 1.2rem 0 0; }
