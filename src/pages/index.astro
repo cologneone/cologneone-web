@@ -1,0 +1,42 @@
+---
+// Startseite
+// Version: 1.0.0 (2026-08-18) — Erstanlage
+import Base from '../layouts/Base.astro';
+
+const dateien = import.meta.glob('./projekte/*.md', { eager: true });
+const projekte = Object.values(dateien)
+  .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
+  .sort((a, b) => String(b.stand).localeCompare(String(a.stand)))
+  .slice(0, 3);
+---
+
+<Base
+  title={null}
+  description="Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme, Smart Home und kleine Bastelei-Lösungen."
+>
+  <section class="hero">
+    <p class="eyebrow">cologneone.de</p>
+    <h1>Basteln, messen, dokumentieren.</h1>
+    <p class="lead">
+      Hier sammle ich meine Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme,
+      Sensorik und Smart Home — mit dem Kram, den ich selbst gern gefunden hätte, als ich
+      angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
+    </p>
+  </section>
+
+  <h2>Aktuelle Projekte</h2>
+  <ul class="cards">
+    {projekte.map((projekt) => (
+      <li class="card">
+        <p class="meta">
+          <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
+          {projekt.stand && <span>{projekt.stand}</span>}
+        </p>
+        <h3><a href={projekt.url}>{projekt.titel}</a></h3>
+        <p>{projekt.kurz}</p>
+      </li>
+    ))}
+  </ul>
+
+  <p><a href="/projekte">Alle Projekte ansehen →</a></p>
+</Base>

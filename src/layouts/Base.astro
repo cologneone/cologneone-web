@@ -1,0 +1,63 @@
+---
+// Basis-Layout für alle Seiten
+// Version: 1.0.0 (2026-08-18) — Erstanlage
+import '../styles/global.css';
+
+const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
+const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const navigation = [
+  { href: '/', label: 'Start' },
+  { href: '/projekte', label: 'Projekte' },
+  { href: '/ueber', label: 'Über' },
+];
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} — cologneone` : 'cologneone'}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title ?? 'cologneone'} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">cologne<span>one</span></a>
+        <nav class="main">
+          {navigation.map((eintrag) => (
+            <a
+              href={eintrag.href}
+              aria-current={pfad === eintrag.href || (eintrag.href !== '/' && pfad.startsWith(eintrag.href)) ? 'page' : undefined}
+            >
+              {eintrag.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>© {new Date().getFullYear()} cologneone.de</div>
+        <div>
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

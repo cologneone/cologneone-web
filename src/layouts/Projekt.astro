@@ -1,0 +1,23 @@
+---
+// Layout für einzelne Projektseiten (Markdown)
+// Version: 1.0.0 (2026-08-18) — Erstanlage
+import Base from './Base.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Base title={frontmatter.titel} description={frontmatter.kurz}>
+  <a class="back" href="/projekte">← Alle Projekte</a>
+  <article class="prose">
+    <p class="eyebrow">Projekt</p>
+    <h1>{frontmatter.titel}</h1>
+    <p class="lead">{frontmatter.kurz}</p>
+    <p class="meta">
+      <span class={`tag status-${frontmatter.status?.toLowerCase()}`}>{frontmatter.status}</span>
+      {frontmatter.stand && <span>Stand: {frontmatter.stand}</span>}
+      {frontmatter.tags?.map((tag) => <span class="tag">{tag}</span>)}
+    </p>
+    <hr />
+    <slot />
+  </article>
+</Base>

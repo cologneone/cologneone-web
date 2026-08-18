@@ -1,0 +1,34 @@
+---
+// Projektübersicht — listet automatisch alle Markdown-Dateien in diesem Ordner
+// Version: 1.0.0 (2026-08-18) — Erstanlage
+import Base from '../../layouts/Base.astro';
+
+const dateien = import.meta.glob('./*.md', { eager: true });
+const projekte = Object.values(dateien)
+  .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
+  .sort((a, b) => String(b.stand).localeCompare(String(a.stand)));
+---
+
+<Base title="Projekte" description="Übersicht aller dokumentierten Projekte auf cologneone.de.">
+  <section class="hero">
+    <p class="eyebrow">Übersicht</p>
+    <h1>Projekte</h1>
+    <p class="lead">
+      Jedes Projekt bekommt eine eigene Seite: was das Ziel war, welche Hardware verbaut ist,
+      was funktioniert hat und was nicht.
+    </p>
+  </section>
+
+  <ul class="cards">
+    {projekte.map((projekt) => (
+      <li class="card">
+        <p class="meta">
+          <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
+          {projekt.stand && <span>{projekt.stand}</span>}
+        </p>
+        <h3><a href={projekt.url}>{projekt.titel}</a></h3>
+        <p>{projekt.kurz}</p>
+      </li>
+    ))}
+  </ul>
+</Base>
