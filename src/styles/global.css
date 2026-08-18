@@ -4,13 +4,15 @@
    Vorlage: Dekor des Niesmann+Bischoff Flair — Creme-Aufbau, Nachtblau,
             Gold-Ocker, dazu die charakteristischen Zierstreifen
 
-   Version: 2.0.0
+   Version: 2.1.0
    Historie:
      1.0.0 (2026-08-18) — Erstanlage, neutrale Farben, hell und dunkel
      1.1.0 (2026-08-18) — Flair-Farben übernommen, Zierstreifen ergänzt
      2.0.0 (2026-08-18) — durchgehend Creme als Hintergrund (keine dunkle
                           Variante mehr), Zierstreifen als tragendes Element
                           in Kopf, Titelbereich, Karten und Fuß
+     2.1.0 (2026-08-18) — Platz für die Fahrzeuggrafik in Wortmarke und
+                          Titelbereich
 --------------------------------------------------------------------------- */
 
 :root {
@@ -91,6 +93,9 @@ body {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   font-weight: 800;
   font-size: 1.2rem;
   letter-spacing: -0.015em;
@@ -98,7 +103,8 @@ body {
   color: var(--navy);
 }
 
-.brand span { color: var(--gold-deep); }
+.brand .brand-text { color: var(--navy); }
+.brand .brand-text span { color: var(--gold-deep); }
 
 nav.main a {
   color: var(--navy-soft);
@@ -172,6 +178,13 @@ a { color: var(--gold-deep); }
     var(--creme) 2px 3px,
     var(--gold) 3px 7px
   );
+}
+
+.hero-fahrzeug {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.8rem 0 0.4rem;
 }
 
 .eyebrow {
