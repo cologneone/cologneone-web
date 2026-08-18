@@ -1,7 +1,8 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.0.0 (2026-08-18) — Zierstreifen auch über dem Fuß
+// Version: 2.1.0 (2026-08-18) — Fahrzeuggrafik in der Wortmarke
 import '../styles/global.css';
+import FlairLogo from '../components/FlairLogo.astro';
 
 const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
 const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -30,7 +31,10 @@ const navigation = [
   <body>
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href="/">cologne<span>one</span></a>
+        <a class="brand" href="/">
+          <FlairLogo size={22} />
+          <span class="brand-text">cologne<span>one</span></span>
+        </a>
         <nav class="main">
           {navigation.map((eintrag) => (
             <a
