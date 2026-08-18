@@ -1,15 +1,37 @@
 ---
 // Layout für einzelne Projektseiten (Markdown)
-// Version: 1.1.0
+// Version: 1.2.0
 // Historie:
 //   1.0.0 (2026-08-18) — Erstanlage
 //   1.1.0 (2026-08-18) — Optionale Angaben meta_titel, meta_beschreibung und
 //                        bild aus dem Frontmatter für Suchmaschinen und
 //                        Vorschaubilder. Fehlen sie, gelten wie bisher
 //                        titel und kurz.
+//   1.2.0 (2026-08-19) — Strukturierte Daten (schema.org TechArticle), damit
+//                        Suchmaschinen und KI-Assistenten Thema, Autor und
+//                        Stand der Seite nicht aus dem Fließtext raten müssen
 import Base from './Base.astro';
 
 const { frontmatter } = Astro.props;
+
+const seiteUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const strukturierteDaten = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: frontmatter.meta_titel ?? frontmatter.titel,
+  name: frontmatter.titel,
+  description: frontmatter.meta_beschreibung ?? frontmatter.kurz,
+  inLanguage: 'de',
+  url: seiteUrl,
+  mainEntityOfPage: seiteUrl,
+  datePublished: frontmatter.stand,
+  dateModified: frontmatter.stand,
+  keywords: frontmatter.tags?.join(', '),
+  image: frontmatter.bild ? new URL(frontmatter.bild, Astro.site).href : undefined,
+  author: { '@type': 'Person', name: 'Daniel Großmann', url: 'https://cologneone.de/ueber' },
+  publisher: { '@type': 'Person', name: 'Daniel Großmann' },
+};
 ---
 
 <Base
@@ -19,6 +41,12 @@ const { frontmatter } = Astro.props;
   bild={frontmatter.bild}
   typ="article"
 >
+  <script
+    slot="kopf"
+    type="application/ld+json"
+    set:html={JSON.stringify(strukturierteDaten)}
+  />
+
   <a class="back" href="/projekte">← Alle Projekte</a>
   <article class="prose">
     <p class="eyebrow">Projekt</p>

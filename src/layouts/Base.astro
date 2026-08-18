@@ -1,12 +1,14 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.4.0
+// Version: 2.5.0
 // Historie:
 //   2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
 //   2.4.0 (2026-08-18) — Auffindbarkeit: eigener Seitentitel und eigene
 //                        Beschreibung je Seite, dazu Vorschaubild und
 //                        vollständige Open-Graph-Angaben fürs Teilen in
 //                        Foren und Messengern
+//   2.5.0 (2026-08-19) — Platz im Kopfbereich für seitenspezifische Angaben
+//                        (benannter Slot "kopf"), z. B. strukturierte Daten
 import '../styles/global.css';
 
 const {
@@ -59,6 +61,9 @@ const navigation = [
 
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Platz für seitenspezifische Angaben, etwa strukturierte Daten -->
+    <slot name="kopf" />
   </head>
   <body>
     <header class="site-header">

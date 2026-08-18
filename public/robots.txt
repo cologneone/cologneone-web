@@ -1,4 +1,51 @@
+# robots.txt — cologneone.de
+#
+# Diese Seite ist eine Projektdokumentation. Sie soll gefunden, gelesen und
+# weiterverwendet werden — von Suchmaschinen wie von KI-Assistenten. Wer hier
+# landet, sucht in aller Regel nach der Loesung eines konkreten Problems.
+# Deshalb ist ausdruecklich nichts gesperrt.
+
 User-agent: *
+Allow: /
+
+# Namentlich willkommen: die Crawler der KI-Anbieter. Der Eintrag oben deckt
+# sie bereits ab — er steht hier trotzdem, damit die Absicht dokumentiert ist
+# und niemand spaeter aus Versehen das Gegenteil einbaut.
+
+# OpenAI — Training, Suchindex, Abruf auf Nutzerwunsch
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Training, Suchindex, Abruf auf Nutzerwunsch
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Google
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Weitere
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://cologneone.de/sitemap-index.xml
