@@ -1,26 +1,32 @@
 :root {
-  --bg: #0f1115;
-  --bg-soft: #161a21;
-  --bg-card: #1b2029;
-  --border: #2a313d;
-  --text: #e6e9ee;
-  --text-dim: #a3acbb;
-  --accent: #f08a24;
-  --accent-soft: #ffb35c;
+  /* Farbwelt angelehnt an das Dekor des Niesmann+Bischoff Flair:
+     Nachtblau, Gold-Ocker, Creme, Silber */
+  --navy: #1b2a54;
+  --gold: #d9a02b;
+  --creme: #efeae1;
+
+  --bg: #0d1524;
+  --bg-soft: #121c30;
+  --bg-card: #16213a;
+  --border: #27334e;
+  --text: #eae6dd;
+  --text-dim: #a2acc0;
+  --accent: #e0a63a;
+  --accent-soft: #f0bb5c;
   --max: 68rem;
   --radius: 14px;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f7f8fa;
+    --bg: #f4f1ea;
     --bg-soft: #ffffff;
     --bg-card: #ffffff;
-    --border: #dfe3ea;
-    --text: #171b22;
-    --text-dim: #5a6472;
-    --accent: #d1701a;
-    --accent-soft: #b85f10;
+    --border: #e2dacb;
+    --text: #1b2a54;
+    --text-dim: #5d6478;
+    --accent: #b8801a;
+    --accent-soft: #8f6410;
   }
 }
 
@@ -86,6 +92,18 @@ nav.main a {
 nav.main a:hover,
 nav.main a[aria-current="page"] {
   color: var(--text);
+}
+
+
+/* ---------- Flair-Zierstreifen ---------- */
+.flair-band {
+  height: 7px;
+  background: linear-gradient(
+    to bottom,
+    var(--navy) 0 2px,
+    var(--creme) 2px 3px,
+    var(--gold) 3px 7px
+  );
 }
 
 /* ---------- Inhalt ---------- */

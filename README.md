@@ -43,9 +43,10 @@ src/
   pages/index.astro        Startseite
   pages/projekte/          Übersicht + je eine Markdown-Datei pro Projekt
   pages/ueber.astro        Über-Seite
-  pages/impressum.astro    Impressum (Pflichtangaben noch ausstehend)
+  pages/impressum.astro    Impressum
   pages/datenschutz.astro  Datenschutzerklärung
   styles/global.css        gesamtes Styling, hell und dunkel
+                           (Farben angelehnt an das Flair-Dekor)
 public/
   CNAME                    verknüpft die Seite mit cologneone.de — nicht löschen
   favicon.svg              Icon im Browsertab
@@ -61,6 +62,5 @@ npm run build    # Ergebnis liegt in dist/
 
 ## Offene Punkte
 
-- [ ] Impressum mit echten Pflichtangaben füllen (§ 5 DDG)
 - [ ] Über-Seite schreiben
 - [ ] Projektseiten mit Inhalt füllen
