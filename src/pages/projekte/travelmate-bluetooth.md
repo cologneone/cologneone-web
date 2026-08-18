@@ -124,9 +124,9 @@ das Ergebnis in einen virtuellen Tank-Service.
 </figure>
 
 Auf dem Cerbo liegt dabei kein Sonderfall mehr: Der `exec`-Node ruft genau das
-Script auf, das auch im Repository steht — konfiguriert über Umgebungsvariablen,
-sodass MAC und PIN nirgends im Code auftauchen. Wer das Projekt nachbaut,
-bekommt damit wirklich das, was hier auch läuft.
+Script auf, das auch im Repository steht. MAC und PIN stehen nicht im Flow,
+sondern in einer Konfigurationsdatei daneben — so lässt sich der Flow
+exportieren und zeigen, ohne Zugangsdaten mitzuliefern.
 
 Der Cerbo sieht davon nichts Besonderes — für ihn ist es schlicht ein
 Tanksensor, der über Node-RED angebunden ist:
@@ -157,23 +157,26 @@ verzerrt jede spätere Verbrauchsauswertung.
 
 ## Kalibrierung
 
-Der Rohwert ist ein einzelnes Byte und entspricht direkt dem Prozentwert. Kein
-Offset, keine Kurve.
+Der Rohwert ist ein einzelnes Byte. Nach bisherigem Stand entspricht er direkt
+dem Prozentwert — in den vorliegenden Messpunkten war weder ein Offset noch
+eine Kurve nötig.
 
-Bestätigt gleich zweifach: einmal an einem Messpunkt außerhalb der oberen
-Sättigung (Rohwert 78 bei App-Anzeige 78 %) — und einmal im direkten Vergleich
-zur selben Zeit. Die App meldete 60 %, der Cerbo zwei Minuten zuvor 61 %. Der
-Unterschied ist genau das, was der 15-Minuten-Takt erwarten lässt.
+Belegt ist das durch zwei unabhängige Beobachtungen: einen Messpunkt außerhalb
+der oberen Sättigung (Rohwert 78 bei App-Anzeige 78 %) und einen zeitnahen
+Vergleich. Die App meldete 60 %, der Cerbo zwei Minuten zuvor 61 % — genau das,
+was der 15-Minuten-Takt erwarten lässt.
 
 <figure class="hochformat">
   <img src="/bilder/rotarex/app-trend.png" alt="Rotarex-App mit 60 Prozent Füllstand und fallendem Trenddiagramm" />
   <figcaption>Die Hersteller-App zur selben Zeit: 60 %. Das Trenddiagramm zeigt schön den gleichmäßigen Verbrauch.</figcaption>
 </figure>
 
-Am oberen Ende ist die Auflösung allerdings mager — die App fasst alles zwischen
-94 und 100 % einfach als „voll“ zusammen. Weitere Referenzpunkte über den
-Verbrauch der nächsten Monate werden zeigen, ob das über den ganzen Bereich so
-linear bleibt.
+Zwei Punkte im oberen Mittelfeld sind allerdings kein Beweis für den ganzen
+Bereich. Unten fehlen Referenzwerte schlicht deshalb, weil die Flasche dafür
+erst leer werden muss. Und am oberen Ende ist die Auflösung ohnehin mager — die
+App fasst alles zwischen 94 und 100 % einfach als „voll“ zusammen. Ob die
+Zuordnung über den ganzen Bereich linear bleibt, wird sich über den Verbrauch
+der nächsten Monate zeigen.
 
 ## Was noch offen ist
 
@@ -190,9 +193,10 @@ linear bleibt.
 - Die Ausgabe des Node-RED-`exec`-Node kann mehrzeilig sein. Beim Parsen immer
   nur die letzte Zeile als JSON behandeln.
 - Node-RED läuft als Benutzer `nodered` und darf nicht nach `/data/` schreiben —
-  Script und Historien-Datei gehören nach `/data/home/nodered/.node-red/`.
+  Script, Konfiguration und Historie gehören nach `/data/home/nodered/.node-red/`.
 - Nur eine Bluetooth-Verbindung gleichzeitig: Läuft gerade der Abruf, meldet die
-  Hersteller-App einen Verbindungsfehler.
+  Hersteller-App einen Verbindungsfehler. Deshalb trennt das Script am Ende
+  immer, auch wenn unterwegs etwas schiefgeht.
 
 ## Dank
 
