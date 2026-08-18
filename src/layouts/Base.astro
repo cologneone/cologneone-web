@@ -1,8 +1,7 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.1.0 (2026-08-18) — Fahrzeuggrafik in der Wortmarke
+// Version: 2.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
 import '../styles/global.css';
-import FlairLogo from '../components/FlairLogo.astro';
 
 const { title, description = 'Projekte, Basteleien und Notizen von Cologneone.' } = Astro.props;
 const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -32,7 +31,6 @@ const navigation = [
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="/">
-          <FlairLogo size={22} />
           <span class="brand-text">cologne<span>one</span></span>
         </a>
         <nav class="main">

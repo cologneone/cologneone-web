@@ -1,8 +1,7 @@
 ---
 // Startseite
-// Version: 1.1.0 (2026-08-18) — Fahrzeuggrafik im Titelbereich
+// Version: 1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
 import Base from '../layouts/Base.astro';
-import FlairLogo from '../components/FlairLogo.astro';
 
 const dateien = import.meta.glob('./projekte/*.md', { eager: true });
 const projekte = Object.values(dateien)
@@ -23,7 +22,6 @@ const projekte = Object.values(dateien)
       Sensorik und Smart Home — mit dem Kram, den ich selbst gern gefunden hätte, als ich
       angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
     </p>
-    <FlairLogo size={62} class="hero-fahrzeug" />
   </section>
 
   <h2>Aktuelle Projekte</h2>
