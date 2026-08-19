@@ -149,6 +149,14 @@ selbständig in Liter um.
   <figcaption>Einmal eingestellt: 21 Liter, Typ LPG.</figcaption>
 </figure>
 
+> **Vorsicht, hier steckt eine Falle:** „Einmal eingestellt" stimmt so nicht
+> ganz. Der Flow schickt Kapazität und Flüssigkeitstyp bei *jedem* Abruf mit —
+> was in der Cerbo-Oberfläche eingetragen ist, wird also spätestens nach 15
+> Minuten wieder überschrieben. Bei meiner 11-kg-Flasche fällt das nicht auf,
+> weil beide Werte dasselbe sagen. Wer eine andere Flaschengröße hat, trägt sie
+> im Funktionsknoten des Flows ein und nicht in den Einstellungen — oder nimmt
+> die beiden Felder dort heraus und pflegt sie im Cerbo.
+
 Jeder **erfolgreiche** Abruf landet zusätzlich als Zeile in einer CSV —
 Zeitstempel in UTC, Rohwert, Prozent, Batteriestand des Senders. Fehlversuche
 stehen bewusst nicht drin: Eine Historie voller Lücken mit leeren Werten
@@ -201,6 +209,11 @@ der nächsten Monate zeigen.
 - Nur eine Bluetooth-Verbindung gleichzeitig: Läuft gerade der Abruf, meldet die
   Hersteller-App einen Verbindungsfehler. Deshalb trennt das Script am Ende
   immer, auch wenn unterwegs etwas schiefgeht.
+- BlueZ-Aufrufe haben keine eigene Zeitgrenze. Ist das Modul außer Reichweite
+  oder hält jemand anderes die Verbindung, bleibt `Connect()` einfach stehen —
+  hier gemessen einmal elf Minuten. Das Script bricht deshalb nach 85 Sekunden
+  von selbst ab und meldet `timeout`, statt vom `exec`-Node ohne Ausgabe
+  abgeschossen zu werden.
 
 ## Dank
 
