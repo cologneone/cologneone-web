@@ -13,10 +13,35 @@ tags:
   - Wohnmobil
 ---
 
-Am Dieseltank sitzt ein **Mopeka Pro** — ein Ultraschallsensor, der von außen an den
+**Kurz vorweg, damit die Sache nicht verrückter klingt als sie ist:** Ich habe nicht
+aus Spaß einen Ultraschallsensor unter meinen Dieseltank geklebt. Es gab zwei Gründe.
+
+**Erstens ist es nicht mehr der Serientank.** Verbaut ist ein
+**Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug — deutlich größer als
+das Original. Auf dem Papier fasst er 135 Liter, tatsächlich sind es **139**. Ein
+größerer Tank verschiebt aber alles, was man über Reichweite zu wissen glaubt: Die
+Nadel im Armaturenbrett gehört zum Serientank, nicht zu diesem hier.
+
+**Zweitens ist der originale Tankgeber eine Sackgasse.** Er sitzt weiterhin im Tank
+und tut, was er soll — er bewegt die Nadel im Cockpit. Aber sein Wert kommt nirgendwo
+digital heraus. Er erreicht den **Cerbo GX** nicht, das kleine Steuergerät, bei dem
+im Fahrzeug alle anderen Werte zusammenlaufen: Batterie, Solar, Wasser, Gas. Damit
+lässt er sich weder protokollieren noch für eine Reichweitenrechnung verwenden noch
+aus der Ferne ansehen.
+
+Eine Nadel im Fahrerhaus beantwortet die Frage „ist noch was drin?". Sie beantwortet
+nicht die Frage, die man auf einer Reise tatsächlich hat: **Wie weit komme ich noch,
+und wie viel habe ich seit der letzten Tankstelle wirklich verbraucht?**
+
+Deshalb der zweite Sensor.
+
+## Was da klebt
+
+Am Tank sitzt ein **Mopeka Pro** — ein Ultraschallsensor, der von außen an den
 Tankboden geklebt wird und die Füllhöhe misst, ohne dass irgendwo ein Loch gebohrt
-werden muss. Venus OS bringt die Unterstützung mit: Sensor anlernen, Tankform
-eintragen, fertig. So weit die Theorie.
+oder ein Geber getauscht werden muss. Er funkt per Bluetooth, läuft mit einer
+Knopfzelle und wird von Venus OS, dem Betriebssystem des Cerbo, ab Werk unterstützt:
+Sensor anlernen, Tankform eintragen, fertig. So weit die Theorie.
 
 In der Praxis sprang die Anzeige regelmäßig auf 0 %, und die angezeigte Restmenge
 passte nicht zu dem, was beim Tanken tatsächlich hineinging. Beides hatte eine
@@ -94,9 +119,21 @@ und danach notieren. Nach ein paar Tankungen hat man eine eigene Kennlinie, die 
 Faktor mitschluckt — und ab dann stimmt die Restmenge, obwohl die zugrunde liegende
 Rechnung falsch bleibt.
 
-Genau das läuft hier: Die Tankungen werden erfasst, und aus ihnen entsteht ein
-Restmengenmodell, das nicht auf der Herstellerkurve beruht, sondern auf dem, was
-wirklich in den Tank gepasst hat.
+Genau das läuft hier: Bei jedem Tanken werden Menge und Kilometerstand über eine
+kleine Handyseite eingetragen — nicht an der Zapfsäule, das darf auch Stunden später
+passieren. Daraus entsteht ein Restmengenmodell, das nicht auf der Herstellerkurve
+beruht, sondern auf dem, was wirklich in den Tank gepasst hat. Es rechnet die
+Restmenge aus der letzten Volltankung minus gefahrener Strecke mal Verbrauch — und
+lässt den Sensor nur dann korrigierend eingreifen, wenn er eine Reihe von
+Plausibilitätsprüfungen besteht: gute Signalqualität, genug gültige Werte, Fahrzeug
+steht, Neigung unter zwei Grad.
+
+Die Neigung ist dabei kein Beiwerk. Der Tank liegt quer im Fahrzeug, und schon wenige
+Grad Schräglage — ein Stellplatz mit Gefälle genügt — verschieben den
+Ultraschallweg messbar.
+
+Als Ausgangswert dient ein gemessener Verbrauch von **12,63 l/100 km**, sauber von
+randvoll bis randvoll über 2376 km ermittelt.
 
 ## Was noch offen ist
 
