@@ -1,17 +1,10 @@
 ---
-// Layout für einzelne Projektseiten (Markdown)
-// Version: 1.3.0
-// Historie:
-//   1.0.0 (2026-08-18) — Erstanlage
-//   1.1.0 (2026-08-18) — Optionale Angaben meta_titel, meta_beschreibung und
-//                        bild aus dem Frontmatter für Suchmaschinen und
-//                        Vorschaubilder. Fehlen sie, gelten wie bisher
-//                        titel und kurz.
-//   1.2.0 (2026-08-19) — Strukturierte Daten (schema.org TechArticle), damit
-//                        Suchmaschinen und KI-Assistenten Thema, Autor und
-//                        Stand der Seite nicht aus dem Fließtext raten müssen
-//   1.3.0 (2026-08-24) — Baustellenhinweis kommt aus dem Frontmatter, gilt also
-//                        je Seite statt für alle
+// Layout für Notizen — kurze Beiträge, meist eine einzelne Erkenntnis
+// Version: 1.0.0 (2026-08-24) — Erstanlage
+//
+// Unterschied zur Projektseite: keine Statusangabe, keine Bildergalerie,
+// keine Gliederung. Eine Notiz beantwortet genau eine Frage und ist in
+// zwei Minuten gelesen.
 import Base from './Base.astro';
 
 const { frontmatter } = Astro.props;
@@ -30,7 +23,6 @@ const strukturierteDaten = {
   datePublished: frontmatter.stand,
   dateModified: frontmatter.stand,
   keywords: frontmatter.tags?.join(', '),
-  image: frontmatter.bild ? new URL(frontmatter.bild, Astro.site).href : undefined,
   author: { '@type': 'Person', name: 'Daniel Großmann', url: 'https://cologneone.de/ueber' },
   publisher: { '@type': 'Person', name: 'Daniel Großmann' },
 };
@@ -40,9 +32,7 @@ const strukturierteDaten = {
   title={frontmatter.titel}
   metaTitle={frontmatter.meta_titel}
   description={frontmatter.meta_beschreibung ?? frontmatter.kurz}
-  bild={frontmatter.bild}
   typ="article"
-  baustelle={frontmatter.baustelle === true}
 >
   <script
     slot="kopf"
@@ -50,13 +40,12 @@ const strukturierteDaten = {
     set:html={JSON.stringify(strukturierteDaten)}
   />
 
-  <a class="back" href="/projekte">← Alle Projekte</a>
+  <a class="back" href="/notizen">← Alle Notizen</a>
   <article class="prose">
-    <p class="eyebrow">Projekt</p>
+    <p class="eyebrow">Notiz</p>
     <h1>{frontmatter.titel}</h1>
     <p class="lead">{frontmatter.kurz}</p>
     <p class="meta">
-      <span class={`tag status-${frontmatter.status?.toLowerCase()}`}>{frontmatter.status}</span>
       {frontmatter.stand && <span>Stand: {frontmatter.stand}</span>}
       {frontmatter.tags?.map((tag) => <span class="tag">{tag}</span>)}
     </p>

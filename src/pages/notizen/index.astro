@@ -1,0 +1,37 @@
+---
+// Notizen — kurze Beiträge, listet automatisch alle Markdown-Dateien im Ordner
+// Version: 1.0.0 (2026-08-24) — Erstanlage
+import Base from '../../layouts/Base.astro';
+
+const dateien = import.meta.glob('./*.md', { eager: true });
+const notizen = Object.values(dateien)
+  .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
+  .sort((a, b) => String(b.stand).localeCompare(String(a.stand)));
+---
+
+<Base
+  title="Notizen"
+  description="Kurze Notizen zu Wohnmobil-Technik: einzelne Erkenntnisse, Fallstricke und Antworten, für die eine ganze Projektseite zu viel wäre."
+>
+  <section class="hero">
+    <p class="eyebrow">Kurz notiert</p>
+    <h1>Notizen</h1>
+    <p class="lead">
+      Dinge, die mich je einen halben Abend gekostet haben und danach in drei Sätzen
+      erklärt sind. Zu klein für ein eigenes Projekt, zu ärgerlich zum Vergessen.
+    </p>
+  </section>
+
+  <ul class="notizen">
+    {notizen.map((notiz) => (
+      <li>
+        <a href={notiz.url}>{notiz.titel}</a>
+        <p>{notiz.kurz}</p>
+        <p class="meta">
+          {notiz.stand && <span>{notiz.stand}</span>}
+          {notiz.tags?.map((tag) => <span class="tag">{tag}</span>)}
+        </p>
+      </li>
+    ))}
+  </ul>
+</Base>

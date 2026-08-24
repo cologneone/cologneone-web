@@ -1,10 +1,13 @@
 ---
 // Über-Seite
-// Version: 1.0.0 (2026-08-18) — Erstanlage, Text noch Platzhalter
+// Version: 1.1.0
+// Historie:
+//   1.0.0 (2026-08-18) — Erstanlage, Text noch Platzhalter
+//   1.1.0 (2026-08-24) — Baustellenhinweis, solange der Text Platzhalter ist
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Über" description="Wer hinter cologneone.de steckt.">
+<Base title="Über" description="Wer hinter cologneone.de steckt." baustelle={true}>
   <section class="hero">
     <p class="eyebrow">Über</p>
     <h1>Hinter der Seite</h1>

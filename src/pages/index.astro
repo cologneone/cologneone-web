@@ -1,17 +1,24 @@
 ---
 // Startseite
-// Version: 1.3.0
+// Version: 1.4.0
 // Historie:
 //   1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
 //   1.3.0 (2026-08-18) — Seitentitel und Beschreibung sagen jetzt, worum
 //                        es hier geht — vorher stand da nur "cologneone"
+//   1.4.0 (2026-08-24) — Notizen mit auf die Startseite
 import Base from '../layouts/Base.astro';
 
-const dateien = import.meta.glob('./projekte/*.md', { eager: true });
-const projekte = Object.values(dateien)
+const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
+const projekte = Object.values(projektDateien)
   .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
   .sort((a, b) => String(b.stand).localeCompare(String(a.stand)))
-  .slice(0, 3);
+  .slice(0, 4);
+
+const notizDateien = import.meta.glob('./notizen/*.md', { eager: true });
+const notizen = Object.values(notizDateien)
+  .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
+  .sort((a, b) => String(b.stand).localeCompare(String(a.stand)))
+  .slice(0, 5);
 ---
 
 <Base
@@ -43,4 +50,19 @@ const projekte = Object.values(dateien)
   </ul>
 
   <p><a href="/projekte">Alle Projekte ansehen →</a></p>
+
+  <h2>Kurz notiert</h2>
+  <p class="lead">
+    Einzelne Erkenntnisse, für die eine ganze Projektseite zu viel wäre.
+  </p>
+  <ul class="notizen">
+    {notizen.map((notiz) => (
+      <li>
+        <a href={notiz.url}>{notiz.titel}</a>
+        <p>{notiz.kurz}</p>
+      </li>
+    ))}
+  </ul>
+
+  <p><a href="/notizen">Alle Notizen ansehen →</a></p>
 </Base>

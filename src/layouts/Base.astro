@@ -1,6 +1,6 @@
 ---
 // Basis-Layout für alle Seiten
-// Version: 2.5.0
+// Version: 2.6.0
 // Historie:
 //   2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
 //   2.4.0 (2026-08-18) — Auffindbarkeit: eigener Seitentitel und eigene
@@ -9,6 +9,9 @@
 //                        Foren und Messengern
 //   2.5.0 (2026-08-19) — Platz im Kopfbereich für seitenspezifische Angaben
 //                        (benannter Slot "kopf"), z. B. strukturierte Daten
+//   2.6.0 (2026-08-24) — Der Baustellenhinweis gilt nicht mehr pauschal für die
+//                        ganze Seite, sondern nur noch dort, wo wirklich etwas
+//                        fehlt. Neuer Bereich "Notizen" in der Navigation.
 import '../styles/global.css';
 
 const {
@@ -22,6 +25,9 @@ const {
   // Pfad zu einem Vorschaubild, z. B. "/bilder/rotarex/cerbo-tanks.png"
   bild,
   typ = 'website',
+  // Zeigt den Baustellenhinweis über dem Inhalt. Bewusst nur dort setzen, wo
+  // wirklich etwas fehlt — ein Hinweis, der überall steht, wird nicht gelesen.
+  baustelle = false,
 } = Astro.props;
 
 const seitentitel = metaTitle ?? (title ? `${title} — cologneone` : 'cologneone');
@@ -33,6 +39,7 @@ const pfad = Astro.url.pathname.replace(/\/$/, '') || '/';
 const navigation = [
   { href: '/', label: 'Start' },
   { href: '/projekte', label: 'Projekte' },
+  { href: '/notizen', label: 'Notizen' },
   { href: '/ueber', label: 'Über' },
 ];
 ---
@@ -85,15 +92,16 @@ const navigation = [
     </header>
     <div class="flair-band" aria-hidden="true"></div>
 
-    <div class="baustelle">
-      <div class="wrap">
-        <span class="baustelle-schild">Baustelle</span>
-        <span>
-          Diese Seite entsteht gerade. Inhalte sind unvollständig und ändern sich
-          noch täglich.
-        </span>
+    {baustelle && (
+      <div class="baustelle">
+        <div class="wrap">
+          <span class="baustelle-schild">Baustelle</span>
+          <span>
+            Diese Seite entsteht noch. Inhalte sind unvollständig und ändern sich.
+          </span>
+        </div>
       </div>
-    </div>
+    )}
 
     <main>
       <div class="wrap">
