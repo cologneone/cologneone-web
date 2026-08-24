@@ -37,15 +37,17 @@ dann deren Summe. Der Wert stammt aus dem VE.Direct-Protokoll, Register `0x0207`
 
 ## Der Fehler
 
-Das Naheliegende ist falsch:
+Das Naheliegende ist falsch — in beide Richtungen:
 
 ```js
-if (reason === 8) { /* Motor steht */ }     // funktioniert nur zufaellig
+if (reason === 0) { /* Motor laeuft */ }    // genau so stand es bei mir im Flow
+if (reason === 8) { /* Motor steht  */ }    // dieselbe Falle, andersherum
 ```
 
-Kommt ein zweiter Grund dazu — etwa fehlende Eingangsspannung, Bit 0 —, steht dort
-`8 + 1 = 9`, und der Vergleich schlägt fehl. Richtig ist die Prüfung auf das einzelne
-Bit:
+Solange wirklich nur ein einziger Grund anliegen kann, geht das gut. Kommt ein zweiter
+dazu — etwa Bit 0, „keine Eingangsspannung", weil ein Trennschalter aus war —, steht
+dort `1` statt `0`, und der laufende Motor wird nie erkannt. Richtig ist die Prüfung
+auf das einzelne Bit:
 
 ```js
 const dPlusAktiv = (reason & 8) === 0;      // Bit 3 nicht gesetzt = Motor laeuft
@@ -56,10 +58,9 @@ Ist dieses eine Bit gesetzt?
 
 ## Warum das so ärgerlich ist
 
-Bei mir stand die falsche Variante eine Weile im Ablauf. Die Folge war unauffällig
-und deshalb besonders lästig: Die Motorerkennung funktionierte im Normalfall
-tadellos und setzte immer genau dann aus, wenn zusätzlich noch etwas anderes anlag —
-also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
+Die Folge war unauffällig und deshalb besonders lästig: Die Motorerkennung
+funktionierte im Normalfall tadellos und setzte immer genau dann aus, wenn zusätzlich
+noch etwas anderes anlag — also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
 
 Dieselbe Falle steckt in vielen Statuswerten von Victron-Geräten. Wenn in einer
 Dokumentation eine Tabelle mit Bit-Nummern steht, ist es eine Bitmaske.

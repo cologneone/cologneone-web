@@ -97,6 +97,132 @@ Cerbo** geschaltet, und alle Schwellenwerte liegen nicht im Gerät, sondern in e
 Node-RED-Ablauf auf dem Cerbo. Ein alter Aufkleber am Gehäuse behauptet noch etwas
 anderes — der gehört abgemacht.
 
+## Der Flow, der Booster 3 steuert
+
+Booster 3 hat keinen Datenanschluss und **keine eigenen Schwellenwerte mehr** — die
+sind bewusst aus dem Gerät heraus und in den Cerbo hinein gewandert. Er kann nur noch
+eins: an oder aus, geschaltet über **Relais 1** des Cerbo. Alles, was entscheidet
+*wann*, steckt in einem Node-RED-Ablauf.
+
+Der Grund dafür ist praktisch. Ein Ladebooster kennt nur seine eigenen zwei Klemmen.
+Er weiß nicht, wie voll die Wohnraumbatterie ist, ob der Motor läuft oder ob die
+Starterbatterie gerade in Not ist. Der Cerbo weiß das alles — also gehört die
+Entscheidung dorthin.
+
+<figure>
+  <img src="/bilder/victron/motor-flow.png" alt="Node-RED-Flow mit Keepalive, drei MQTT-Eingängen, Logikfunktion, Relaisschaltung und Diagnose-Endpunkt" />
+  <figcaption>Der Tab „Motor → Relay 1". Links kommen die Messwerte herein, in der Mitte fällt die Entscheidung, rechts wird geschaltet und geprüft. Oben links der Zeitgeber, an dem mehr hängt, als sein Name verrät.</figcaption>
+</figure>
+
+### Wie der Cerbo merkt, dass der Motor läuft
+
+Das ist der Teil, der mich am meisten Zeit gekostet hat — und die Lösung braucht
+**kein einziges zusätzliches Kabel**.
+
+**D+** ist eine alte Bekannte aus der Fahrzeugelektrik: eine Klemme, die nur dann
+Spannung führt, wenn die Lichtmaschine dreht. Früher hing daran die
+Ladekontrollleuchte im Cockpit. Sie ist damit das ehrlichste „der Motor läuft"-Signal,
+das ein Fahrzeug hat — ehrlicher als die Zündung, denn die steht auch beim
+Radiohören an.
+
+An den Cerbo geht dieses Signal aber gar nicht. Es liegt an den **Fernsteuereingängen
+von Booster 1 und 2** — dort gehört es hin, denn die sollen ja nur bei laufendem
+Motor laden. Und genau da wird es abgegriffen:
+
+Beide Orion XS melden über ihr Datenkabel einen Wert namens **`DeviceOffReason`** —
+„warum ich gerade nicht lade". Ist darin das Bit für „Fernsteuereingang inaktiv"
+gesetzt, liegt kein D+ an, also steht der Motor. Ist es nicht gesetzt, läuft er.
+Der Cerbo fragt also nicht das Fahrzeug, sondern die beiden Booster — die wissen es
+ohnehin schon.
+
+```js
+const BIT_REMOTE = 8;                        // Bit 3 = Fernsteuereingang (D+)
+const dPlusAktiv = (reason & BIT_REMOTE) === 0;
+```
+
+**Und hier steckte lange ein Fehler drin.** Die erste Fassung prüfte auf
+`reason === 0`, also „gar kein Abschaltgrund = Motor läuft". Das geht gut, solange
+wirklich nur ein einziger Grund anliegen kann. Kam ein zweiter dazu — etwa Bit 0,
+„keine Eingangsspannung", weil ein Trennschalter aus war —, stand dort `1` statt `0`,
+und der laufende Motor wurde nie erkannt. `DeviceOffReason` ist eine **Bitmaske**,
+keine Aufzählung; [die Kurzfassung dazu hier](/notizen/deviceoffreason-bitmaske).
+
+Dazu eine zweite Absicherung, die genauso wichtig ist: **Meldungen, die älter als
+fünf Minuten sind, gelten als ungültig** und werden als „Motor aus" gewertet. Ein
+eingefrorener Messwert soll nicht dazu führen, dass der Cerbo stundenlang glaubt, es
+werde noch gefahren.
+
+### Was der Flow entscheidet
+
+Vier Regeln, in dieser Reihenfolge — die erste, die zutrifft, gewinnt:
+
+| Vorrang | Bedingung | Relais | Warum |
+|---|---|---|---|
+| 1 | Motor läuft (D+ aktiv) | **aus** | Während der Fahrt lädt die Lichtmaschine über Booster 1 und 2. Ein dritter Verbraucher am selben Netz wäre nur Gegenverkehr. Gleichzeitig geht die Motorvorwärmung aus |
+| 2 | Starterbatterie unter 12,2 V | **ein** | Notfall. Endet erst wieder oberhalb von 13,0 V |
+| 3 | Ladezustand der Bordbatterie unter 80 % | aus | Die Bordbatterie hat Vorrang. Wieder frei ab 85 % |
+| 4 | sonst | ein | Normalbetrieb: Es ist Strom übrig, die Starterbatterie darf mittrinken |
+
+Zwei Details, die den Unterschied zwischen „funktioniert" und „funktioniert auch im
+Dauerbetrieb" ausmachen:
+
+**Überall Hysterese.** Aus bei 80 %, wieder ein erst ab 85 %. Aus bei 13,0 V, wieder
+ein erst unter 12,2 V. Ohne diesen Abstand klappert das Relais genau an der Schwelle
+im Sekundentakt.
+
+**Ein unbekannter Ladezustand gilt als gesperrt.** Kommt gerade kein Wert an, wird
+nicht geladen. Im Zweifel wird die Bordbatterie geschont — nicht optimistisch
+weitergemacht.
+
+### Schalten mit Bedacht
+
+- **AUS wirkt sofort, EIN erst nach 30 Sekunden.** Wackelt D+ beim Anlassen kurz, soll
+  das Relais nicht mitzappeln. In die sichere Richtung darf es sofort, in die andere
+  muss es sich gedulden.
+- **Nach dem Schalten wird nachgeprüft**, ob das Relais wirklich steht, wo es stehen
+  soll. Senden ist nicht dasselbe wie geschaltet haben.
+- Ein Fehler beim Abschalten der Motorvorwärmung wird abgefangen und legt den Rest
+  des Ablaufs nicht lahm.
+
+### Der unscheinbare Knoten oben links
+
+Im selben Tab sitzt der Zeitgeber, der alle 30 Sekunden das
+[MQTT-Lebenszeichen](/notizen/victron-mqtt-keepalive) schickt. **Ohne ihn verstummen
+sämtliche Messwerte im ganzen Haus** — Dieselgeber, virtueller Tank, Wasserflow,
+alles. Wer diesen Tab zum Testen deaktiviert, legt nebenbei die halbe Anlage still
+und sucht den Fehler danach an der falschen Stelle.
+
+Sauber wäre er in einem eigenen Tab. Er steht hier, weil dieser Tab historisch der
+erste war — und bleibt vorerst, weil ein Umzug genau die Art von Änderung ist, die
+man nicht kurz vor einer Reise macht.
+
+### Diagnose statt Raten
+
+Der Flow bietet unter `/motor/status` eine Antwort im Klartext an: Motorzustand,
+Ladezustand, Starterspannung, dazu je Booster den Spannungsverlauf am Eingang und
+den Zeitpunkt, an dem dort zuletzt mehr als 5 V anlagen.
+
+Der letzte Wert klingt unscheinbar und ist Gold wert: Wackelt man an einer Sicherung
+oder einer Klemme und es kommt für einen Sekundenbruchteil Spannung an, sieht man das
+danach — auch wenn man in dem Moment gar nicht auf den Bildschirm geschaut hat. Genau
+diese Antwort holt sich auch der [Router](/projekte/wohnmobil-netzwerk) alle paar
+Minuten ab, um im Ernstfall eine SMS zu schicken.
+
+### Vielleicht wird ein Repo daraus
+
+Der Ablauf ist nichts fahrzeugspezifisch Gebasteltes mehr, sondern beantwortet eine
+Frage, die viele haben: **Wie erkenne ich im Cerbo zuverlässig, dass der Motor läuft,
+ohne ein zusätzliches Kabel zu ziehen — und wie schalte ich damit etwas?** Die
+Bausteine dafür — Bitmaske statt Gleichheit, Altersprüfung der Messwerte, Hysterese,
+Puffer beim Einschalten, Prüfung nach dem Schalten — sind übertragbar.
+
+Der Gasflaschen-Teil dieser Seite liegt schon
+[als eigenes Repository](https://github.com/cologneone/dbus-rotarex-dime) mit
+Installationsskript und Lizenz. Für den Motor-Flow wäre dasselbe naheliegend: der Tab
+als importierbare Datei, die Schwellen sauber oben als Konstanten, eine ehrliche
+Liesmich-Datei dazu, was er tut und was er ausdrücklich nicht tut. Steht auf der
+Liste — noch nicht gemacht.
+
 ## Der Abend, an dem beide Booster nicht luden
 
 Motor lief, beide Orion XS meldeten: nichts. Das kostete einen ganzen Abend, und
