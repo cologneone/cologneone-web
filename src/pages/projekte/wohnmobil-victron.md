@@ -4,7 +4,7 @@ titel: Die Energieanlage — Victron und Cerbo GX im Flair
 kurz: 560 Ah Lithium, ein Wechselrichter, zwei Solarregler, drei Ladebooster und ein Cerbo GX, der alles zusammenhält. Mit Fotos aus den Fächern — und dem Abend, an dem beide Booster nicht luden.
 meta_titel: Victron-Anlage im Wohnmobil mit Cerbo GX — Aufbau, Verkabelung, Praxis
 meta_beschreibung: MultiPlus-II, zwei SmartSolar MPPT, drei Ladebooster, 560 Ah LiFePO4 und ein Victron Cerbo GX im Wohnmobil. Lynx-Verteiler mit selbst nachgerüsteten Sicherungen, Querschnitte, Sicherungsplan und die Fehlersuche, die einen ganzen Abend gekostet hat.
-bild: /bilder/victron/flair-kroatien.jpg
+bild: /bilder/victron/flair-berge.jpg
 status: Laufend
 stand: 2026-08
 tags:
@@ -15,7 +15,7 @@ tags:
 ---
 
 <figure>
-  <img src="/bilder/victron/flair-kroatien.jpg" alt="Niesmann+Bischoff Flair auf einem Schotterplatz an der kroatischen Küste" />
+  <img src="/bilder/victron/flair-berge.jpg" alt="Niesmann+Bischoff Flair 6000 auf einem Schotterplatz vor einem Karstberg in Kroatien" />
   <figcaption>Darum geht der ganze Aufwand: ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne Rechnen.</figcaption>
 </figure>
 

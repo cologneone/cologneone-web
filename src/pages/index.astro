@@ -16,6 +16,9 @@
 //                        Darum geht es auf der ganzen Seite
 //   1.9.0 (2026-08-24) — ein Foto des Fahrzeugs als ruhiges Band zwischen
 //                        Projekten und Notizen, dazu als Vorschaubild
+//   1.10.0 (2026-08-24) — fuers Band die Seitenansicht am Meer statt der
+//                         Bergaufnahme: schoenerer Hintergrund, und sie passt
+//                         zur Fahrzeuggrafik im Titelbereich
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -33,7 +36,7 @@ const notizen = Object.values(notizDateien)
 
 <Base
   metaTitle="cologneone — ein Flair 6000 von 1998 mit Victron, Sensorik und Node-RED"
-  bild="/bilder/flair-berge.jpg"
+  bild="/bilder/flair-band.jpg"
   description="Ein Niesmann+Bischoff Flair 6000 von 1998, nachgerüstet mit Victron-Energiesystem, Bluetooth-Sensorik und Node-RED — mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
 >
   <section class="hero">
@@ -74,10 +77,10 @@ const notizen = Object.values(notizDateien)
 
   <figure class="bild-band">
     <img
-      src="/bilder/flair-berge.jpg"
-      alt="Der Flair 6000 auf einem Schotterplatz vor einem Karstberg in Kroatien"
+      src="/bilder/flair-band.jpg"
+      alt="Der Flair 6000 von der Seite auf einem Schotterplatz an der kroatischen Küste, dahinter das Meer"
       width="1500"
-      height="791"
+      height="789"
       loading="lazy"
     />
   </figure>
