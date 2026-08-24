@@ -208,16 +208,19 @@ was der 15-Minuten-Takt erwarten lässt.
   <figcaption>Die Hersteller-App zur selben Zeit: 60 %. Das Trenddiagramm zeigt schön den gleichmäßigen Verbrauch.</figcaption>
 </figure>
 
-Zwei Punkte im oberen Mittelfeld sind allerdings kein Beweis für den ganzen
-Bereich. Unten fehlen Referenzwerte schlicht deshalb, weil die Flasche dafür
-erst leer werden muss. Und am oberen Ende ist die Auflösung ohnehin mager — die
-App fasst alles zwischen 94 und 100 % einfach als „voll“ zusammen. Ob die
-Zuordnung über den ganzen Bereich linear bleibt, wird sich über den Verbrauch
-der nächsten Monate zeigen.
+Inzwischen ist ein **dritter Punkt** dazugekommen, und zwar deutlich weiter unten:
+Am 24. August stand die Flasche bei **26 %** — und der Vergleich hat wieder
+gepasst. Damit ist die Zuordnung nicht mehr nur im oberen Mittelfeld belegt,
+sondern über eine Spanne, die den Alltag abdeckt.
+
+Am oberen Ende bleibt die Auflösung trotzdem mager: Die App fasst alles zwischen
+94 und 100 % einfach als „voll“ zusammen. Und ganz unten fehlen weiterhin Werte,
+weil die Flasche dafür erst wirklich leer werden muss. Für die Frage, die man
+unterwegs tatsächlich hat — reicht das Gas noch für die nächsten Tage? — ist der
+belegte Bereich aber inzwischen der richtige.
 
 ## Was noch offen ist
 
-- Kalibrierpunkte im unteren Drittel — dafür muss die Flasche erst mal leer werden
 - Auswertung der Verbrauchsdaten über eine ganze Saison
 
 ## Stolpersteine für Nachbauer
