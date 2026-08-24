@@ -4,6 +4,7 @@ titel: Mopeka-Dieselgeber am Cerbo GX — und warum er falsch rechnet
 kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen — jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin.
 meta_titel: Mopeka Dieseltank am Victron Cerbo GX — Kalibrierung und Ausfälle
 meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX — warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
+bild: /bilder/rotarex/cerbo-tanks.png
 status: Laufend
 stand: 2026-08
 tags:

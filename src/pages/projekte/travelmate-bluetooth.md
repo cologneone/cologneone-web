@@ -26,8 +26,8 @@ Antwort: Er steht jetzt dort. Als ganz normale Tankanzeige neben Frischwasser,
 Grauwasser und Diesel, aktualisiert alle 15 Minuten.
 
 <figure>
-  <img src="/bilder/rotarex/cerbo-tanks.png" alt="Füllstandsanzeige im Cerbo GX mit vier Tanks, LPG bei 61 Prozent" />
-  <figcaption>Das Ziel: LPG als vollwertiger Tank in der GX-Oberfläche — 61 %, 13 von 21 Litern.</figcaption>
+  <img src="/bilder/rotarex/cerbo-tanks.png" alt="Füllstandsanzeige im Cerbo GX mit fünf Tanks: Frischwasser, Grauwasser, Diesel, Diesel gefiltert und LPG bei 25 Prozent" />
+  <figcaption>Das Ziel: LPG als vollwertiger Tank in der GX-Oberfläche, gleichberechtigt neben Wasser und Diesel — hier 25 %, also noch 5 von 21 Litern.</figcaption>
 </figure>
 
 > **Code auf GitHub:** [cologneone/dbus-rotarex-dime](https://github.com/cologneone/dbus-rotarex-dime)
