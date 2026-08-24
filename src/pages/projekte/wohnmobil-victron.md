@@ -74,7 +74,7 @@ ganze Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis — immer da
 ein Stück davon aufgibt.
 
 <figure>
-  <img src="/bilder/victron/multiplus-fach.jpg" alt="Originales Niesmann-Kontroll- und Verteilungsmodul, rechts daneben der MultiPlus-II" />
+  <img src="/bilder/victron/cbe-modul.jpg" alt="Originales CBE-Kontroll- und Verteilungsmodul Mod. M 2005 mit Flachsicherungen, rechts angeschnitten ein SmartSolar-Laderegler" />
   <figcaption>Dasselbe Fach von der anderen Seite: oben das originale CBE-Kontroll- und Verteilungsmodul „Mod. M 2005" mit seinen Flachsicherungen, rechts angeschnitten einer der SmartSolar-Laderegler. Unten links der Votronic-Plusverteiler, der die Kreise übernommen hat, die über den defekten Steckplatz des CBE-Moduls liefen.</figcaption>
 </figure>
 
