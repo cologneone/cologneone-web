@@ -12,6 +12,8 @@
 //   1.7.0 (2026-08-24) — Ueberschrift noch einmal: weniger technisch, dafuer
 //                        das, worum es wirklich geht — ein altes Fahrzeug mit
 //                        neuer Technik
+//   1.8.0 (2026-08-24) — Fahrzeug beim Namen nennen: Flair 6000, Baujahr 1998.
+//                        Darum geht es auf der ganzen Seite
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -28,16 +30,16 @@ const notizen = Object.values(notizDateien)
 ---
 
 <Base
-  metaTitle="cologneone — Wohnmobil-Elektrik, Victron und Sensorik"
-  description="Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme, Bluetooth-Sensorik und Smart Home — mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
+  metaTitle="cologneone — ein Flair 6000 von 1998 mit Victron, Sensorik und Node-RED"
+  description="Ein Niesmann+Bischoff Flair 6000 von 1998, nachgerüstet mit Victron-Energiesystem, Bluetooth-Sensorik und Node-RED — mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
 >
   <section class="hero">
     <p class="eyebrow">cologneone.de</p>
-    <h1>Fast dreißig Jahre alt — und weiß endlich, wie es ihm geht.</h1>
+    <h1>Ein Flair 6000 von 1998 — mit der Technik, die andere erst im Neufahrzeug bekommen.</h1>
     <p class="lead">
-      Ein Niesmann+Bischoff Flair aus den späten Neunzigern, Stück für Stück
-      nachgerüstet. Gas, Diesel, Wasser, Batterien und das Bordnetz melden sich
-      heute von selbst und sagen Bescheid, wenn etwas nicht stimmt. Hier steht, wie
+      Niesmann+Bischoff baut den Flair bis heute. Meiner ist der von damals, Stück
+      für Stück nachgerüstet: Gas, Diesel, Wasser, Batterien und das Bordnetz melden
+      sich von selbst und sagen Bescheid, wenn etwas nicht stimmt. Hier steht, wie
       das gegangen ist — mit dem Kram, den ich selbst gern gefunden hätte, als ich
       angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
     </p>
