@@ -44,11 +44,32 @@ erlaubt 0 °C, aber das BMS kennt die Zelltemperatur nur ungefähr — und eine
 LiFePO4-Zelle, die man kalt lädt, nimmt dauerhaft Schaden, ohne dass man es merkt.
 Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
 
+## Das Technikfach
+
+Das meiste davon sitzt in einem einzigen Fach unter der Sitzbank. Wer dort zum ersten
+Mal die Klappe aufmacht, sieht erst mal gar nichts — deshalb hier zwei Aufnahmen, in
+denen man sich zurechtfinden kann.
+
+<figure>
+  <img src="/bilder/victron/technikfach.jpg" alt="Blick ins Technikfach mit zwei SmartSolar MPPT, Cerbo GX, Ladeverteiler und Votronic-Sicherungsverteilern" />
+  <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und die originale Niesmann-Sicherungseinheit — alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
+</figure>
+
+Genau das ist der Punkt, den man an einem gewachsenen Wohnmobil sieht und der in
+keinem Katalogfoto vorkommt: **Die Victron-Anlage ersetzt die Werksinstallation
+nicht, sie tritt daneben.** Die originale Niesmann-Verteilung mit ihren Flachsicherungen
+macht weiter, was sie immer gemacht hat; die neuen Geräte hängen davor und dahinter.
+
+<figure>
+  <img src="/bilder/victron/multiplus-fach.jpg" alt="Originales Niesmann-Kontroll- und Verteilungsmodul, rechts daneben der MultiPlus-II" />
+  <figcaption>Dasselbe Fach von der anderen Seite: die originale Niesmann-Verteilung von 2005, rechts der MultiPlus-II. Unten der Votronic-Plusverteiler, der die ursprüngliche Einheit ersetzt hat — in deren Steckerleiste saß ein Wackelkontakt, der sich nicht finden ließ.</figcaption>
+</figure>
+
 ## Der Punkt, an dem alles zusammenläuft
 
 <figure>
   <img src="/bilder/victron/technikfach-lynx.jpg" alt="Victron Lynx Power In 1000 im Technikfach, links daneben der rote Batterietrennschalter" />
-  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batterietrennschalter.</figcaption>
+  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batteriehauptschalter — der trennt die ganze Anlage, nicht nur einen Zweig.</figcaption>
 </figure>
 
 Alles Dicke trifft sich an einer Stelle: dem **Lynx Power In 1000**. Der ist ab Werk
@@ -238,9 +259,11 @@ die Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit s
 3. **Wenn keine Eingangsspannung ankommt, ist die Ursache mechanisch.**
 
 Genau so war es: Der **Trennschalter in der Zuleitung von der Lichtmaschine** stand
-auf aus. Kein Defekt, kein Bauteil, ein Schalter. Die Wohnraumbatterie versorgte
-weiter alles wie gewohnt, deshalb war im Fahrzeug auch nichts anderes auffällig —
-nur der Weg vom Motor zu den Boostern war unterbrochen.
+auf aus. Kein Defekt, kein Bauteil, ein Schalter — und zwar nicht der große rote
+Hauptschalter vom Foto weiter oben, sondern ein eigener, der nur diesen einen Zweig
+abklemmt. Die Wohnraumbatterie versorgte deshalb alles weiter wie gewohnt, im
+Fahrzeug war nichts auffällig. Unterbrochen war nur der Weg vom Motor zu den
+Boostern.
 
 Ehrlicherweise gehört dazu, was ich vorher falsch vermutet hatte: eine lose oder
 korrodierte Hochstromverbindung, samt Sorge vor Wärmeentwicklung. Das war überzogen,
