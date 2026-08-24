@@ -22,16 +22,22 @@ das Original. Auf dem Papier fasst er 135 Liter, tatsächlich sind es **139**. E
 größerer Tank verschiebt aber alles, was man über Reichweite zu wissen glaubt: Die
 Nadel im Armaturenbrett gehört zum Serientank, nicht zu diesem hier.
 
-**Zweitens ist der originale Tankgeber eine Sackgasse.** Er sitzt weiterhin im Tank
-und tut, was er soll — er bewegt die Nadel im Cockpit. Aber sein Wert kommt nirgendwo
-digital heraus. Er erreicht den **Cerbo GX** nicht, das kleine Steuergerät, bei dem
-im Fahrzeug alle anderen Werte zusammenlaufen: Batterie, Solar, Wasser, Gas. Damit
-lässt er sich weder protokollieren noch für eine Reichweitenrechnung verwenden noch
-aus der Ferne ansehen.
+**Zweitens taugt der originale Tankgeber nichts.** Und zwar nicht ein bisschen,
+sondern grundsätzlich: Er sitzt **unterhalb der Diesellinie**, sein Messbereich
+beginnt erst bei etwa 70 Litern. Alles darüber sieht er schlicht nicht. Ein randvoller
+Tank steht im Cockpit auf halb — und bleibt dort, bis der Stand tatsächlich in seinen
+Bereich gefallen ist. Auch darunter ist die Anzeige eher ein Schätzeisen als eine
+Messung.
 
-Eine Nadel im Fahrerhaus beantwortet die Frage „ist noch was drin?". Sie beantwortet
-nicht die Frage, die man auf einer Reise tatsächlich hat: **Wie weit komme ich noch,
-und wie viel habe ich seit der letzten Tankstelle wirklich verbraucht?**
+Er bewegt also die Nadel. Nur sagt die Nadel wenig darüber, wie viel wirklich drin
+ist. Und selbst wenn sie es täte: Sein Wert kommt nirgendwo digital heraus. Er
+erreicht den **Cerbo GX** nicht, das kleine Steuergerät, bei dem im Fahrzeug alle
+anderen Werte zusammenlaufen — Batterie, Solar, Wasser, Gas. Weder protokollieren
+noch für eine Reichweitenrechnung verwenden noch aus der Ferne ansehen.
+
+Damit bleibt genau eine Frage offen, und es ist ausgerechnet die, die man auf einer
+Reise tatsächlich hat: **Wie weit komme ich noch, und wie viel habe ich seit der
+letzten Tankstelle wirklich verbraucht?**
 
 Deshalb der zweite Sensor.
 
@@ -139,7 +145,7 @@ randvoll bis randvoll über 2376 km ermittelt.
 
 - Genügend Tankungen für eine belastbare eigene Kennlinie — das dauert eine Saison
 - Die Ankopplung des Sensors am Tankboden noch einmal ansehen; 27 % Ausfall ist viel
-- Ein Vergleich mit dem Werksgeber über den ganzen Bereich, nicht nur im oberen Drittel
+- Kalibrierpunkte im unteren Tankbereich, wo bisher am wenigsten Messungen liegen
 
 ## Stolpersteine für Nachbauer
 
