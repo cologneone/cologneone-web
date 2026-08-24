@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Alugas TravelMate per Bluetooth auslesen
+titel: Alugas TravelMate 2.0 über Bluetooth im Cerbo GX sichtbar machen
 kurz: Den Füllstand einer Alugas TravelMate 2.0 im Cerbo GX anzeigen — ohne die Hersteller-App, direkt über BlueZ und Node-RED.
 meta_titel: Alugas TravelMate / Rotarex DIMES im Victron Cerbo GX auslesen
 meta_beschreibung: Gasfüllstand einer Alugas TravelMate 2.0 per Bluetooth auslesen — Rotarex DIMES WAVE / SRG-1-WAVE über BlueZ, D-Bus und Node-RED im Victron Cerbo GX.
 bild: /bilder/rotarex/cerbo-tanks.png
-status: Laufend
+status: Fertig
 stand: 2026-08
 tags:
   - Bluetooth
