@@ -48,7 +48,7 @@ Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
 
 <figure>
   <img src="/bilder/victron/technikfach-lynx.jpg" alt="Victron Lynx Power In 1000 im Technikfach, links daneben der rote Batterietrennschalter" />
-  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batterietrennschalter in der Lichtmaschinenleitung — der spielt später noch eine Hauptrolle.</figcaption>
+  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batterietrennschalter.</figcaption>
 </figure>
 
 Alles Dicke trifft sich an einer Stelle: dem **Lynx Power In 1000**. Der ist ab Werk
@@ -111,9 +111,10 @@ die Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit s
    hier](/notizen/deviceoffreason-bitmaske).
 3. **Wenn keine Eingangsspannung ankommt, ist die Ursache mechanisch.**
 
-Genau so war es: Der **Batterietrennschalter** in der Lichtmaschinenleitung — der
-rote Drehknopf auf dem Foto weiter oben — stand auf aus. Kein Defekt, kein Bauteil,
-ein Schalter.
+Genau so war es: Der **Trennschalter in der Zuleitung von der Lichtmaschine** stand
+auf aus. Kein Defekt, kein Bauteil, ein Schalter. Die Wohnraumbatterie versorgte
+weiter alles wie gewohnt, deshalb war im Fahrzeug auch nichts anderes auffällig —
+nur der Weg vom Motor zu den Boostern war unterbrochen.
 
 Ehrlicherweise gehört dazu, was ich vorher falsch vermutet hatte: eine lose oder
 korrodierte Hochstromverbindung, samt Sorge vor Wärmeentwicklung. Das war überzogen,
