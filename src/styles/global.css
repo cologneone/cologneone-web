@@ -4,7 +4,7 @@
    Vorlage: Dekor des Niesmann+Bischoff Flair — Creme-Aufbau, Nachtblau,
             Gold-Ocker, dazu die charakteristischen Zierstreifen
 
-   Version: 2.5.0
+   Version: 2.6.0
    Historie:
      1.0.0 (2026-08-18) — Erstanlage, neutrale Farben, hell und dunkel
      1.1.0 (2026-08-18) — Flair-Farben übernommen, Zierstreifen ergänzt
@@ -18,6 +18,8 @@
      2.4.0 (2026-08-24) — Liste für den neuen Bereich Notizen
      2.5.0 (2026-08-24) — Bilder in Artikeln etwas schmaler als der Text,
                           dazu Platz für die Fahrzeuggrafik im Titelbereich
+     2.6.0 (2026-08-24) — Fahrzeuggrafik deutlich kleiner; sie ist eine
+                          Signatur neben der Überschrift, kein Titelbild
 --------------------------------------------------------------------------- */
 
 :root {
@@ -217,9 +219,11 @@ a { color: var(--gold-deep); }
 
 .hero-fahrzeug {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 17rem;
   height: auto;
-  margin: 1.8rem 0 0.4rem;
+  margin: 1.6rem 0 0;
+  opacity: 0.95;
 }
 
 .eyebrow {

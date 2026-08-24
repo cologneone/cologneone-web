@@ -69,8 +69,31 @@ Minuten für wenige Sekunden läuft, stört das im Alltag nicht.
 
 <figure>
   <img src="/bilder/rotarex/druckregler.jpg" alt="Gasdruckregler GOK Caramatic SafeDrive mit blauem Crash-Sensor am Ventil der Gasflasche" />
-  <figcaption>Der GOK Caramatic SafeDrive am Multiventil — blau der Crash-Sensor, silbern der Regler. Fotos von Sensor, Anzeige und BLE-Box folgen.</figcaption>
+  <figcaption>Der GOK Caramatic SafeDrive am Multiventil — blau der Crash-Sensor, silbern der Regler.</figcaption>
 </figure>
+
+### Wo Anzeige und Sendebox sitzen — und warum nicht im Gaskasten
+
+<figure>
+  <img src="/bilder/rotarex/ble-box.jpg" alt="Rotarex DIMES-Anzeige und schwarze WAVE-Sendebox auf dem Deckel des Gaskastens unter der Sitzbank, daneben die gasdicht verschlossene Kabeldurchführung" />
+  <figcaption>Unter der Sitzbank, oben auf dem Gaskasten: rund die DIMES-Anzeige mit ihren 43 %, links die schwarze WAVE-Sendebox am Klettband. Der weiße Klumpen rechts daneben ist die gasdicht verschlossene Kabeldurchführung.</figcaption>
+</figure>
+
+Der Gaskasten sitzt bei diesem Fahrzeug **unter der Sitzbank**. Anzeige und
+Sendebox habe ich bewusst **nicht hineingebaut**, sondern obenauf gesetzt — also
+außerhalb des Gaskastens, aber noch unter der Bank.
+
+Das hat zwei Gründe. Erstens ist ein Gaskasten kein Ort für Elektronik: Er ist nach
+außen belüftet, dort steht bei jedem Wetter Feuchtigkeit, und alles, was Funken
+schlagen könnte, hat darin nichts verloren. Zweitens will man an eine
+batteriebetriebene Sendebox gelegentlich heran, ohne erst die Flasche losschnallen
+zu müssen.
+
+Die dafür nötige Kabeldurchführung ist **gasdicht verschlossen** — auf dem Foto der
+weiße Klumpen. Das ist kein Schönheitsfehler, sondern der Punkt, an dem die ganze
+Sache steht oder fällt: Ein Gaskasten muss nach innen dicht sein, sonst ist er
+sinnlos. Wer diesen Weg nachbaut, sollte genau diese Stelle sorgfältig machen und
+danach kontrollieren.
 
 ## Warum das nicht einfach ging
 
@@ -194,7 +217,6 @@ der nächsten Monate zeigen.
 
 ## Was noch offen ist
 
-- Fotos von Sensor, Anzeige und BLE-Box
 - Kalibrierpunkte im unteren Drittel — dafür muss die Flasche erst mal leer werden
 - Auswertung der Verbrauchsdaten über eine ganze Saison
 

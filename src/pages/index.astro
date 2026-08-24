@@ -9,6 +9,9 @@
 //   1.5.0 (2026-08-24) — Fahrzeuggrafik im Titelbereich
 //   1.6.0 (2026-08-24) — neue Ueberschrift; die alte war eine Aufzaehlung
 //                        und sagte nichts
+//   1.7.0 (2026-08-24) — Ueberschrift noch einmal: weniger technisch, dafuer
+//                        das, worum es wirklich geht — ein altes Fahrzeug mit
+//                        neuer Technik
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -30,13 +33,13 @@ const notizen = Object.values(notizDateien)
 >
   <section class="hero">
     <p class="eyebrow">cologneone.de</p>
-    <h1>Die Anzeige lügt, bis man nachmisst.</h1>
+    <h1>Fast dreißig Jahre alt — und weiß endlich, wie es ihm geht.</h1>
     <p class="lead">
-      Der Tank steht auf halb, obwohl er randvoll ist. Der Router sagt „verbunden",
-      und nichts geht. Hier sammle ich meine Projekte rund um Wohnmobil-Elektrik,
-      Victron-Energiesysteme, Sensorik und Smart Home — mit dem Kram, den ich selbst
-      gern gefunden hätte, als ich angefangen habe: Verkabelung, Fallstricke,
-      Messwerte, fertiger Code.
+      Ein Niesmann+Bischoff Flair aus den späten Neunzigern, Stück für Stück
+      nachgerüstet. Gas, Diesel, Wasser, Batterien und das Bordnetz melden sich
+      heute von selbst und sagen Bescheid, wenn etwas nicht stimmt. Hier steht, wie
+      das gegangen ist — mit dem Kram, den ich selbst gern gefunden hätte, als ich
+      angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
     </p>
     <img
       class="hero-fahrzeug"
