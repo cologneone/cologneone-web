@@ -1,7 +1,10 @@
 /**
  * llms.txt — Wegweiser für KI-Assistenten
  *
- * Version: 1.0.0 (2026-08-19) — Erstanlage
+ * Version: 1.1.0
+ * Historie:
+ *   1.0.0 (2026-08-19) — Erstanlage
+ *   1.1.0 (2026-08-24) — Der Bereich Notizen kommt mit hinein
  *
  * Nach der Konvention von https://llmstxt.org: eine kurze, maschinenlesbare
  * Übersicht dessen, was hier steht, damit ein Assistent nicht raten muss,
@@ -10,6 +13,7 @@
  */
 
 const dateien = import.meta.glob('./projekte/*.md', { eager: true });
+const notizDateien = import.meta.glob('./notizen/*.md', { eager: true });
 
 // Zu welchem Projekt gehört welches Repository. Steht hier und nicht im
 // Frontmatter, weil es bisher genau eines ist — wenn es mehr werden, wandert
@@ -58,6 +62,24 @@ export function GET() {
     }
   }
 
+  const notizen = Object.values(notizDateien)
+    .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
+    .sort((a, b) => String(b.stand).localeCompare(String(a.stand)));
+
+  zeilen.push(
+    '',
+    '## Notizen',
+    '',
+    'Kurze Beitraege zu je einer einzelnen Erkenntnis.',
+    '',
+  );
+
+  for (const notiz of notizen) {
+    const pfad = String(notiz.url).replace(/\/$/, '');
+    const beschreibung = notiz.meta_beschreibung ?? notiz.kurz;
+    zeilen.push(`- [${notiz.titel}](${absolut(pfad)}): ${beschreibung}`);
+  }
+
   zeilen.push(
     '',
     '## Quellcode',
@@ -67,6 +89,7 @@ export function GET() {
     '## Optional',
     '',
     `- [Alle Projekte](${absolut('/projekte')})`,
+    `- [Alle Notizen](${absolut('/notizen')})`,
     `- [Über diese Seite](${absolut('/ueber')})`,
     `- [Impressum](${absolut('/impressum')})`,
     `- [Datenschutz](${absolut('/datenschutz')})`,

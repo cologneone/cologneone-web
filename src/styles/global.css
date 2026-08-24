@@ -4,7 +4,7 @@
    Vorlage: Dekor des Niesmann+Bischoff Flair — Creme-Aufbau, Nachtblau,
             Gold-Ocker, dazu die charakteristischen Zierstreifen
 
-   Version: 2.3.0
+   Version: 2.4.0
    Historie:
      1.0.0 (2026-08-18) — Erstanlage, neutrale Farben, hell und dunkel
      1.1.0 (2026-08-18) — Flair-Farben übernommen, Zierstreifen ergänzt
@@ -15,6 +15,7 @@
                           Titelbereich
      2.2.0 (2026-08-18) — Baustellenhinweis unter der Kopfzeile
      2.3.0 (2026-08-18) — Bilder mit Bildunterschrift in Artikeln
+     2.4.0 (2026-08-24) — Liste für den neuen Bereich Notizen
 --------------------------------------------------------------------------- */
 
 :root {
@@ -297,12 +298,60 @@ a { color: var(--gold-deep); }
   background: var(--creme-hell);
 }
 
+.status-fertig {
+  border-color: var(--navy-soft);
+  background: rgba(27, 42, 84, 0.08);
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .status-laufend {
   border-color: var(--gold);
   background: rgba(217, 160, 43, 0.14);
   color: var(--gold-deep);
   font-weight: 600;
 }
+
+/* ---------- Notizen ----------
+   Bewusst schlichter als die Karten: eine Notiz ist ein Eintrag in einer
+   Liste, kein Projekt mit eigener Kachel. */
+
+.notizen {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  max-width: 46rem;
+}
+
+.notizen li {
+  padding: 1.25rem 0 1.25rem 1.1rem;
+  border-top: 1px solid var(--border);
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.15s ease, padding-left 0.15s ease;
+}
+
+.notizen li:last-child { border-bottom: 1px solid var(--border); }
+
+.notizen li:hover {
+  border-left-color: var(--gold);
+}
+
+.notizen a {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.notizen a:hover { color: var(--gold-deep); }
+
+.notizen p {
+  color: var(--text-dim);
+  margin: 0.35rem 0 0;
+  font-size: 0.97rem;
+}
+
+.notizen .meta { margin-top: 0.6rem; }
 
 /* ---------- Artikel ---------- */
 
@@ -331,7 +380,6 @@ a { color: var(--gold-deep); }
 .prose figure.hochformat img {
   max-width: 20rem;
 }
-
 .prose ul, .prose ol { padding-left: 1.3rem; }
 .prose li { margin-bottom: 0.35rem; }
 
