@@ -139,7 +139,7 @@ Kreis. Wer die Spülung stromlos macht, macht den Cerbo stromlos — und damit
 Messwerte, Automatik und Fernzugriff.
 
 Das ist kein Baufehler, sondern eine gewachsene Belegung. Aber es ist die Art von
-Zusammenhang, die man kennen muss, bevor man an einem Regentag „mail eben" eine
+Zusammenhang, die man kennen muss, bevor man an einem Regentag „mal eben" eine
 Sicherung zieht. Deshalb steht sie hier so deutlich.
 
 Der zweite Grund, warum diese Tafel hier steht: **Beschriften.** Vierzehn schwarze
