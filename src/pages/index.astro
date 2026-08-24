@@ -1,11 +1,14 @@
 ---
 // Startseite
-// Version: 1.4.0
+// Version: 1.5.0
 // Historie:
 //   1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
 //   1.3.0 (2026-08-18) — Seitentitel und Beschreibung sagen jetzt, worum
 //                        es hier geht — vorher stand da nur "cologneone"
 //   1.4.0 (2026-08-24) — Notizen mit auf die Startseite
+//   1.5.0 (2026-08-24) — Fahrzeuggrafik im Titelbereich
+//   1.6.0 (2026-08-24) — neue Ueberschrift; die alte war eine Aufzaehlung
+//                        und sagte nichts
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -27,12 +30,22 @@ const notizen = Object.values(notizDateien)
 >
   <section class="hero">
     <p class="eyebrow">cologneone.de</p>
-    <h1>Basteln, messen, dokumentieren.</h1>
+    <h1>Die Anzeige lügt, bis man nachmisst.</h1>
     <p class="lead">
-      Hier sammle ich meine Projekte rund um Wohnmobil-Elektrik, Victron-Energiesysteme,
-      Sensorik und Smart Home — mit dem Kram, den ich selbst gern gefunden hätte, als ich
-      angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
+      Der Tank steht auf halb, obwohl er randvoll ist. Der Router sagt „verbunden",
+      und nichts geht. Hier sammle ich meine Projekte rund um Wohnmobil-Elektrik,
+      Victron-Energiesysteme, Sensorik und Smart Home — mit dem Kram, den ich selbst
+      gern gefunden hätte, als ich angefangen habe: Verkabelung, Fallstricke,
+      Messwerte, fertiger Code.
     </p>
+    <img
+      class="hero-fahrzeug"
+      src="/bilder/flair.png"
+      alt="Zeichnung des Wohnmobils Niesmann+Bischoff Flair in Silber, Nachtblau und Gold-Ocker"
+      width="1400"
+      height="719"
+      loading="eager"
+    />
   </section>
 
   <h2>Aktuelle Projekte</h2>

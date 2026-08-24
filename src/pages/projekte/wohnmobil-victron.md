@@ -4,7 +4,7 @@ titel: Die Energieanlage — Victron und Cerbo GX im Flair
 kurz: 560 Ah Lithium, ein Wechselrichter, zwei Solarregler, drei Ladebooster und ein Cerbo GX, der alles zusammenhält. Mit Fotos aus den Fächern — und dem Abend, an dem beide Booster nicht luden.
 meta_titel: Victron-Anlage im Wohnmobil mit Cerbo GX — Aufbau, Verkabelung, Praxis
 meta_beschreibung: MultiPlus-II, zwei SmartSolar MPPT, drei Ladebooster, 560 Ah LiFePO4 und ein Victron Cerbo GX im Wohnmobil. Lynx-Verteiler mit selbst nachgerüsteten Sicherungen, Querschnitte, Sicherungsplan und die Fehlersuche, die einen ganzen Abend gekostet hat.
-bild: /bilder/victron/boosterfach.jpg
+bild: /bilder/victron/flair-kroatien.jpg
 status: Laufend
 stand: 2026-08
 tags:
@@ -13,6 +13,11 @@ tags:
   - Node-RED
   - Wohnmobil
 ---
+
+<figure>
+  <img src="/bilder/victron/flair-kroatien.jpg" alt="Niesmann+Bischoff Flair auf einem Schotterplatz an der kroatischen Küste" />
+  <figcaption>Darum geht der ganze Aufwand: ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne Rechnen.</figcaption>
+</figure>
 
 Das Energiesystem im Fahrzeug läuft auf Victron-Komponenten, mit einem **Cerbo GX**
 als Kopf der Anlage. Das Ziel war nie die maximale Ausbaustufe, sondern ein System,
@@ -49,6 +54,11 @@ Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
 Das meiste davon sitzt in einem einzigen Fach unter der Sitzbank. Wer dort zum ersten
 Mal die Klappe aufmacht, sieht erst mal gar nichts — deshalb hier zwei Aufnahmen, in
 denen man sich zurechtfinden kann.
+
+<figure>
+  <img src="/bilder/victron/technikfach-gesamt.jpg" alt="Technikfach mit Lynx-Verteiler, MultiPlus-II, beschrifteten Kabeln und den beiden 280-Ah-Batterien" />
+  <figcaption>Die Gesamtaufnahme: oben links der Lynx, rechts der MultiPlus-II, unten die beiden 280-Ah-Batterien. Jedes Kabel trägt ein Schild — „Bordnetz", „Ladeverteiler", „Multiplus Ltg 1+", „Haupt Masse". Das ist der Unterschied zwischen einer Anlage, die man versteht, und einer, die man beim nächsten Mal wieder auseinandernehmen muss.</figcaption>
+</figure>
 
 <figure>
   <img src="/bilder/victron/technikfach.jpg" alt="Blick ins Technikfach mit zwei SmartSolar MPPT, Cerbo GX, Ladeverteiler und Votronic-Sicherungsverteilern" />
@@ -96,13 +106,30 @@ Die Regel für die Querschnitte ist im ganzen Fahrzeug dieselbe und leicht zu me
 
 Und der Satz, der beim Sicherungenaussuchen wirklich hilft: **Eine Sicherung schützt
 die Leitung, nicht das Gerät.** Sie muss also zum Kabel passen, nicht zum
-Verbraucher. Dahinter kommt die Staffelung: 200 A im Lynx, davor 60 A im
-Ladeverteiler, davor 60 A am Booster. Fliegt etwas, fliegt es an der richtigen
-Stelle — und nicht die große Sicherung, die die halbe Anlage mitnimmt.
+Verbraucher. Deshalb steht am Lynx überall 200 A, wo 50 mm² liegt — und nur dort
+60 A, wo es dünner wird:
+
+| Weg | Querschnitt | Sicherung |
+|---|---|---|
+| Batterie 1 zum Lynx | 50 mm² | 200 A |
+| Batterie 2 zum Lynx | 50 mm² | 200 A |
+| MultiPlus-II, Leitung 1 | 50 mm² | 200 A |
+| MultiPlus-II, Leitung 2 | 50 mm² | 200 A |
+| Ladeverteiler (Solar und Booster) | 50 mm² | 200 A |
+| Bordnetz | 16 mm² | 60 A |
+
+Beide Batterien hängen **einzeln** am Lynx, jede mit eigenem Kabel und eigener
+Sicherung — nicht in Reihe durchgeschleift. Der MultiPlus ebenso doppelt, weil ein
+3000-VA-Wechselrichter im Spitzenfall Ströme zieht, die eine einzelne Leitung nicht
+sinnvoll trägt.
+
+Dahinter kommt die Staffelung: 200 A im Lynx, davor 60 A im Ladeverteiler, davor
+60 A am Booster. Fliegt etwas, fliegt es an der richtigen Stelle — und nicht die
+große Sicherung, die die halbe Anlage mitnimmt.
 
 <figure>
   <img src="/bilder/victron/lynx-offen.jpg" alt="Geöffneter Lynx Power In: vier Bolzen, darunter je eine Sicherung zur gemeinsamen Sammelschiene" />
-  <figcaption>Der Lynx ohne Deckel — hier wird der Umbau erst verständlich. Unten die durchgehende Sammelschiene, darüber je Abgang ein eigener Bolzen, und dazwischen die Sicherung. Links die beiden blauen 200-A-MEGA-Sicherungen, rechts zwei schwarze. Deren Aufdruck ist auf keinem meiner Fotos sicher zu lesen — deshalb steht der Wert unten bei den offenen Punkten und nicht in der Tabelle.</figcaption>
+  <figcaption>Der Lynx ohne Deckel — hier wird der Umbau erst verständlich. Unten die durchgehende Sammelschiene, darüber je Abgang ein eigener Bolzen, und dazwischen die Sicherung. Ab Werk sind die vier Bolzen einfach nur miteinander verbunden.</figcaption>
 </figure>
 
 > **Ein Fehler, den ich fast gemacht hätte:** Empfohlen war mir zuerst eine
@@ -377,8 +404,6 @@ kaputter Sensor und ist keiner —
 
 ## Was noch offen ist
 
-- Den Aufdruck einer Sicherung im Lynx ablesen — auf dem Foto nicht sicher lesbar,
-  und geraten wird hier nichts
 - Fotos vom Batteriefach und vom Ladeverteiler aus der Nähe
 - Solarertrag und Verbrauch über eine ganze Saison, nicht über ein paar Wochen
 - Ein kleines Display fürs Fahrerhaus: Dieselstand, Ladezustand, Boosterströme. Das
