@@ -1,10 +1,11 @@
 ---
 layout: ../../layouts/Projekt.astro
 titel: Internet im Wohnmobil — sechs Fallen, die dich offline lassen
-kurz: Router mit zwei SIMs und Campingplatz-WLAN. Die Technik ist der einfache Teil — die Fallen sind es nicht, und die meisten zeigen dir währenddessen „verbunden" an.
+kurz: 5G-Router mit zwei SIM-Karten und Campingplatz-WLAN. Die Technik ist der einfache Teil — die Fallen sind es nicht, und die meisten zeigen dir währenddessen „verbunden" an.
 meta_titel: Internet im Wohnmobil — Router-Fallen, die niemand erwähnt
-meta_beschreibung: Campingplatz-WLAN, LTE-Failover und zwei SIMs im Wohnmobil. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
+meta_beschreibung: Campingplatz-WLAN, 5G-Failover und zwei SIM-Karten im Wohnmobil mit einem Teltonika RUTX50. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
 status: Laufend
+bild: /bilder/netzwerk/router-front.jpg
 stand: 2026-08
 tags:
   - Netzwerk
@@ -12,27 +13,48 @@ tags:
   - Router
 ---
 
-Im Fahrzeug sitzt ein LTE-Router mit zwei SIM-Karten. Die gewünschte Reihenfolge ist
-banal: **Campingplatz-WLAN, wenn es taugt — sonst SIM 1 — sonst SIM 2.** Fällt eines
-aus, übernimmt das nächste.
+**Der Aufbau, um den es geht:** Im Fahrzeug sitzt ein **Teltonika RUTX50** — ein
+5G-Router für den Dauerbetrieb, mit zwei SIM-Kartenplätzen, vier LAN-Buchsen und
+eigenem WLAN. Er spannt das Bordnetz auf, in dem alles hängt, was im Wohnmobil ins
+Internet will oder untereinander redet: Laptop, Fernseher, die Steuerung der
+Energieanlage, ein paar Funkschalter.
+
+<figure>
+  <img src="/bilder/netzwerk/router-front.jpg" alt="Frontblende eines Teltonika RUTX50 mit zwei SIM-Schächten, vier LAN-Buchsen und 3G/4G/5G-Anzeigen" />
+  <figcaption>Zwei SIM-Schächte nebeneinander, vier LAN-Buchsen, darüber die Anzeigen für 3G, 4G und 5G. Der Kippschalter links gehört nicht zum Router, sondern trennt ihn vom Bordnetz.</figcaption>
+</figure>
+
+Die gewünschte Reihenfolge ist banal: **Campingplatz-WLAN, wenn es taugt — sonst
+SIM 1 — sonst SIM 2.** Fällt eines aus, übernimmt das nächste. Fachbegriff dafür ist
+*Failover*; der Router prüft dazu im Sekundentakt, ob über den gerade aktiven Weg
+überhaupt noch etwas nach draußen geht.
 
 Das einzurichten ist eine Nachmittagsaufgabe. Der Rest dieses Textes handelt davon,
 was danach passiert ist. Alle sechs Punkte haben echte Zeit gekostet, und fünf davon
 haben eines gemeinsam: **Während sie auftreten, sagen dir sämtliche Anzeigen, dass
 alles in Ordnung ist.**
 
+<figure>
+  <img src="/bilder/netzwerk/router-einbau.jpg" alt="Der Router im Klappfach hinter der originalen Wohnmobil-Bedienung, daneben Kabelbäume und ein Schaltmodul" />
+  <figcaption>Der Einbauort: ein totes Klappfach vorne hinter der originalen Bedieneinheit. Lüftungsöffnungen mussten nachgerüstet werden — das Fach kühlt auch nachts nicht aus.</figcaption>
+</figure>
+
 ## 1. Der Campingplatz benutzt dasselbe Subnetz wie du
 
-Der teuerste Fund. Ein Platz in Italien vergab `192.168.50.x` mit Gateway
-`192.168.50.1` — exakt das, was mein eigenes Netz benutzte. Damit sollte der Router
-Pakete an eine Adresse schicken, die er selbst war.
+Der teuerste Fund. Jedes Heimnetz benutzt private Adressen, meist irgendetwas mit
+`192.168.x.y`. Ein Platz in Italien vergab genau denselben Bereich, den mein eigenes
+Netz benutzte — mitsamt derselben Adresse für den Zugang nach draußen. Damit sollte
+der Router Pakete an eine Adresse schicken, die er selbst war.
 
 Das Routing brach zusammen. Die Oberfläche meldete durchgehend „verbunden", das
 WLAN-Signal war ausgezeichnet, und nichts funktionierte.
 
 Die Lehre: **Wähle für dein eigenes Netz einen Bereich, den kein Hersteller und kein
 Platzbetreiber als Standard benutzt.** Nicht `192.168.0.x`, nicht `.1.x`, nicht
-`.50.x`, nicht `.178.x`. Irgendetwas Krummes. Ich bin auf `192.168.173.x` gegangen.
+`.50.x`, nicht `.178.x` — das sind die Werkseinstellungen der gängigen Router und
+damit genau die, auf die du unterwegs triffst. Nimm irgendetwas Krummes aus der
+Mitte des Bereichs. Umgestellt ist das in fünf Minuten, gefunden hätte ich es
+sonst nie.
 
 Und wenn jemals „der Router sagt verbunden, aber nichts geht" gilt, ist der erste
 Blick nicht auf die Signalstärke, sondern auf die eigene IP-Adresse im Platznetz.
@@ -76,13 +98,14 @@ Anzeige „sehr gut" — bei einem **SINR von −1**.
 
 Übersetzt: Der Sendemast ist laut zu hören, aber alle anderen auch. Die Zelle ist
 überlastet. Dagegen hilft keine Einstellung, kein Antennenwechsel und kein Neustart.
-Nur ein anderer Standort oder eine andere Zelle.
+Nur ein anderer Standort oder eine andere Zelle. [Die Kurzfassung dazu
+hier](/notizen/volle-balken-heissen-nichts).
 
 **Wer Mobilfunk beurteilen will, schaut auf SINR und RSRQ, nicht auf die Balken.**
 
 ## 5. Der Router nummeriert deine Prioritäten selbst um
 
-Der unangenehmste Fund, weil er still ist. Sobald ein WAN-Interface dazukommt oder
+Der unangenehmste Fund, weil er still ist. Sobald ein Weg nach draußen dazukommt oder
 abgeschaltet wird, schreibt die Router-Firmware ihre Konfiguration neu und vergibt die
 Prioritäten in Entstehungsreihenfolge — nicht in der, die du eingestellt hast.
 
@@ -97,10 +120,11 @@ läuft.
 
 ## 6. Zwei SIM-Karten sind nicht zwei Verbindungen
 
-Beide SIMs stecken im selben Modem. Es kann immer nur **eine** aktiv sein. Der
-Wechsel ist ein Umschaltvorgang mit Abbruch, kein Failover im eigentlichen Sinn — und
-wenn die Umschaltautomatik nicht ausdrücklich aktiviert ist, existiert die dritte
-Stufe deiner schönen Ausfallkette nur auf dem Papier.
+Zwei SIM-Schlächte heißt nicht zwei gleichzeitige Verbindungen: Beide Karten teilen
+sich **ein Funkmodul**, es kann immer nur **eine** aktiv sein. Der Wechsel ist ein
+Umschaltvorgang mit Abbruch, kein Failover im eigentlichen Sinn — und wenn die
+Umschaltautomatik nicht ausdrücklich aktiviert ist, existiert die dritte Stufe
+deiner schönen Ausfallkette nur auf dem Papier.
 
 Dazu ein Sonderfall, den keine Automatik erkennt: **aufgebrauchtes Roaming-Volumen.**
 Die Verbindung fällt nicht aus, sie wird nur langsam. Kein Ping schlägt fehl, kein
