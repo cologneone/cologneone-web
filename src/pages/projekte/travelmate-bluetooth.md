@@ -18,7 +18,9 @@ Die Alugas TravelMate 2.0 meldet ihren Füllstand über ein Bluetooth-Modul von
 Rotarex (DIMES WAVE, im BLE-Scan als `SRG-1-WAVE`). Die Hersteller-App zeigt
 den Wert an — aber eben nur dort, auf dem Handy, wenn man danebensteht.
 Naheliegende Frage: Wie kommt der Wert dahin, wo die anderen Bordwerte auch
-stehen, nämlich in den **Victron Cerbo GX**?
+stehen, nämlich in den **Victron Cerbo GX**? Das ist das kleine Steuergerät, bei dem
+im Fahrzeug alles zusammenläuft — Batterie, Solar, Frisch- und Grauwasser, Diesel.
+Nur eben bisher nicht das Gas.
 
 Antwort: Er steht jetzt dort. Als ganz normale Tankanzeige neben Frischwasser,
 Grauwasser und Diesel, aktualisiert alle 15 Minuten.
