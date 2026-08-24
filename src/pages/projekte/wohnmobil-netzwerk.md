@@ -120,7 +120,7 @@ läuft.
 
 ## 6. Zwei SIM-Karten sind nicht zwei Verbindungen
 
-Zwei SIM-Schlächte heißt nicht zwei gleichzeitige Verbindungen: Beide Karten teilen
+Zwei SIM-Schächte heißt nicht zwei gleichzeitige Verbindungen: Beide Karten teilen
 sich **ein Funkmodul**, es kann immer nur **eine** aktiv sein. Der Wechsel ist ein
 Umschaltvorgang mit Abbruch, kein Failover im eigentlichen Sinn — und wenn die
 Umschaltautomatik nicht ausdrücklich aktiviert ist, existiert die dritte Stufe
