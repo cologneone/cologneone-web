@@ -52,17 +52,30 @@ denen man sich zurechtfinden kann.
 
 <figure>
   <img src="/bilder/victron/technikfach.jpg" alt="Blick ins Technikfach mit zwei SmartSolar MPPT, Cerbo GX, Ladeverteiler und Votronic-Sicherungsverteilern" />
-  <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und die originale Niesmann-Sicherungseinheit — alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
+  <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und oben das originale Kontroll- und Verteilungsmodul des Fahrzeugs — alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
 </figure>
 
 Genau das ist der Punkt, den man an einem gewachsenen Wohnmobil sieht und der in
 keinem Katalogfoto vorkommt: **Die Victron-Anlage ersetzt die Werksinstallation
-nicht, sie tritt daneben.** Die originale Niesmann-Verteilung mit ihren Flachsicherungen
-macht weiter, was sie immer gemacht hat; die neuen Geräte hängen davor und dahinter.
+nicht, sie löst sie stückweise ab.** Das Fahrzeug ist von **1998**; die originale
+Verteilung darin ist ein **CBE-Modul, Modell M 2005** — das ist die Typbezeichnung des
+Herstellers, kein Baujahr. Aufgedruckt ist der Name des Wohnmobilherstellers, gebaut
+hat es CBE.
+
+Und dieses Modul ist der Grund, warum die Verkabelung heute so aussieht, wie sie
+aussieht: **Auf seiner Platine ist ein Steckplatz defekt.** Eine Reparatur wäre
+unwirtschaftlich gewesen — die Einheit ist alt, Ersatzteile sind es auch. Also sind
+mehrere Stromkreise auf die neue Verteilung umgezogen, die aus dem Victron-Block
+gespeist wird. Der schwarze Votronic-Plusverteiler unten im nächsten Bild ist genau
+das: die Kreise, die das Originalmodul nicht mehr sicher tragen konnte.
+
+Das ist die realistische Reihenfolge bei einem älteren Fahrzeug. Man reißt nicht die
+ganze Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis — immer dann, wenn
+ein Stück davon aufgibt.
 
 <figure>
   <img src="/bilder/victron/multiplus-fach.jpg" alt="Originales Niesmann-Kontroll- und Verteilungsmodul, rechts daneben der MultiPlus-II" />
-  <figcaption>Dasselbe Fach von der anderen Seite: die originale Niesmann-Verteilung von 2005, rechts der MultiPlus-II. Unten der Votronic-Plusverteiler, der die ursprüngliche Einheit ersetzt hat — in deren Steckerleiste saß ein Wackelkontakt, der sich nicht finden ließ.</figcaption>
+  <figcaption>Dasselbe Fach von der anderen Seite: oben das originale CBE-Kontroll- und Verteilungsmodul „Mod. M 2005" mit seinen Flachsicherungen, rechts angeschnitten einer der SmartSolar-Laderegler. Unten links der Votronic-Plusverteiler, der die Kreise übernommen hat, die über den defekten Steckplatz des CBE-Moduls liefen.</figcaption>
 </figure>
 
 ## Der Punkt, an dem alles zusammenläuft
@@ -86,6 +99,11 @@ die Leitung, nicht das Gerät.** Sie muss also zum Kabel passen, nicht zum
 Verbraucher. Dahinter kommt die Staffelung: 200 A im Lynx, davor 60 A im
 Ladeverteiler, davor 60 A am Booster. Fliegt etwas, fliegt es an der richtigen
 Stelle — und nicht die große Sicherung, die die halbe Anlage mitnimmt.
+
+<figure>
+  <img src="/bilder/victron/lynx-offen.jpg" alt="Geöffneter Lynx Power In: vier Bolzen, darunter je eine Sicherung zur gemeinsamen Sammelschiene" />
+  <figcaption>Der Lynx ohne Deckel — hier wird der Umbau erst verständlich. Unten die durchgehende Sammelschiene, darüber je Abgang ein eigener Bolzen, und dazwischen die Sicherung. Links die beiden blauen 200-A-MEGA-Sicherungen, rechts zwei schwarze. Deren Aufdruck ist auf keinem meiner Fotos sicher zu lesen — deshalb steht der Wert unten bei den offenen Punkten und nicht in der Tabelle.</figcaption>
+</figure>
 
 > **Ein Fehler, den ich fast gemacht hätte:** Empfohlen war mir zuerst eine
 > Class-T-Sicherung an der Batterie — die teure Variante mit sehr hohem
