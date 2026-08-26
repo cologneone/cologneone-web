@@ -3,7 +3,7 @@ layout: ../../layouts/Projekt.astro
 titel: Internet im Wohnmobil – sechs Fallen, die dich offline lassen
 kurz: 5G-Router mit zwei SIM-Karten und Campingplatz-WLAN. Die Technik ist der einfache Teil – die Fallen sind es nicht, und die meisten zeigen dir währenddessen „verbunden" an.
 meta_titel: Internet im Wohnmobil – Router-Fallen, die niemand erwähnt
-meta_beschreibung: Campingplatz-WLAN, 5G-Failover und zwei SIM-Karten im Wohnmobil mit einem Teltonika RUTX50. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
+meta_beschreibung: Campingplatz-WLAN, 5G-Failover und zwei SIM-Karten im Wohnmobil mit einem Teltonika RUTX50. Dazu der Einbau der Panorama-Dachantenne mit dem richtigen Kabelsatz. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
 rang: 4
 status: Laufend
 bild: /bilder/netzwerk/router-front.jpg
@@ -39,6 +39,59 @@ alles in Ordnung ist.**
   <img src="/bilder/netzwerk/router-einbau.jpg" alt="Der Router im Klappfach hinter der originalen Wohnmobil-Bedienung, daneben Kabelbäume und ein Schaltmodul" />
   <figcaption>Der Einbauort: ein totes Klappfach vorne hinter der originalen Bedieneinheit. Lüftungsöffnungen mussten nachgerüstet werden, das Fach kühlt auch nachts nicht aus.</figcaption>
 </figure>
+
+## 5G steht dran. Ankommen muss es trotzdem
+
+Bevor es zu den Fallen geht, das Bauteil, das am meisten gebracht hat und in keiner
+Anleitung vorkommt: **die Dachantenne.**
+
+Ab Werk hat der Router kurze Stabantennen. Auf einem Schreibtisch reicht das. In
+einem Wohnmobil steckt der Router in einem geschlossenen Fach hinter einer
+Bedieneinheit, ringsum Metall, Kabelbäume und Möbel. Das ist ungefähr die
+schlechteste Position, die man einem Funkgerät zumuten kann. Nach oben aufs Dach
+verlegt, hat dieselbe SIM in derselben Zelle plötzlich Empfang, wo vorher nichts war.
+Verbaut ist eine **Panorama-Dachantenne**, die alles mitbringt, was der Router
+braucht: **vier Wege für 5G und LTE, zwei fürs WLAN und einen für GPS.**
+
+**Und hier die Falle, an der man Geld und einen Nachmittag verliert:** Es gibt zwei
+Kabelsätze. Der eine hat **30 cm**, der andere **einen Meter**, und sie haben nicht
+dieselben Stecker. Wer den falschen erwischt, kommt entweder nicht bis zum Router
+oder bekommt die Stecker nicht angeschraubt. Deshalb die Antenne **gleich mit dem
+passenden Satz für den RUTX50 kaufen**, nicht Antenne und Kabel getrennt
+zusammensuchen.
+
+Der Meter ist dabei kein Luxus, sondern auch keine Reserve. **Antenne und Router muss
+man zusammen planen**, nicht nacheinander: Der Router muss dorthin, wo das Kabel
+hinreicht. Verlängern kann man zwar, aber jeder zusätzliche Meter Koaxkabel kostet
+bei diesen Frequenzen spürbar Signal. Kurz ist besser als bequem.
+
+### Was ich beim Montieren gelernt habe
+
+<figure>
+  <img src="/bilder/netzwerk/antenne-durchfuehrung.jpg" alt="Blick von innen an die Decke, eine selbst zugeschnittene Edelstahlplatte als Gegenhalter, darin die verschraubte Gewindedurchführung der Dachantenne mit dem schwarzen Kabelbündel" />
+  <figcaption>Die Stelle, an der es tatsächlich knifflig wird. Die Platte ist selbst zugeschnitten, weil das vorhandene Loch von innen zu groß war. Darin sitzt die Gewindeverlängerung, gekontert mit der Mutter, und daraus kommt das Kabelbündel.</figcaption>
+</figure>
+
+**Sie klebt genau einmal.** Die Antenne sitzt auf einer vollflächigen Klebefläche.
+Das ist gut so, aber es heißt eben auch: einmal aufgesetzt, ist die Entscheidung
+gefallen. Also vorher trocken auflegen, ausrichten, anzeichnen, Fläche gründlich
+reinigen. Und erst dann.
+
+**Abstand zu allem, was oben sonst noch steht.** Bei mir sitzt sie vorne rechts, mit
+Luft zu den übrigen Aufbauten. Alles, was daneben in die Höhe ragt, steht der Antenne
+im Weg.
+
+**Man braucht fast immer eine Gewindeverlängerung.** Das Gewinde am Antennenfuß ist
+für dünnere Dächer gedacht als das Sandwich eines Wohnmobils. Ich habe mir eine
+passende Verlängerung in Durchmesser und Länge bestellt, und die war schneller da als
+das Originalteil.
+
+**Ein altes Loch ist ein Geschenk und ein Problem zugleich.** Bei mir steckte an der
+Stelle eine schlechte Radioantenne. Das erspart das Bohren, aber die Öffnung war von
+innen zu groß, um darin etwas zu kontern. Die Lösung war eine kleine, selbst
+zugeschnittene **Edelstahlplatte**, gegen die die Verschraubung zieht. Abgedichtet ist
+das Ganze mit **Dekasil**, dem Zeug, mit dem im Wohnmobilbau ohnehin alles geklebt und
+gedichtet wird.
 
 ## 1. Der Campingplatz benutzt dasselbe Subnetz wie du
 
