@@ -1,6 +1,6 @@
 ---
 // Startseite
-// Version: 1.5.0
+// Version: 1.12.0
 // Historie:
 //   1.2.0 (2026-08-18) – Fahrzeuggrafik vorerst wieder entfernt
 //   1.3.0 (2026-08-18) – Seitentitel und Beschreibung sagen jetzt, worum
@@ -20,12 +20,16 @@
 //                         Bergaufnahme: schoenerer Hintergrund, und sie passt
 //                         zur Fahrzeuggrafik im Titelbereich
 //   1.11.0 (2026-08-26) – neues Bandfoto: Abendlicht an der Cote d'Azur
+//   1.12.0 (2026-08-26) – Projekte nach Wichtigkeit sortiert (Feld 'rang')
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
 const projekte = Object.values(projektDateien)
   .map((eintrag) => ({ ...eintrag.frontmatter, url: eintrag.url }))
-  .sort((a, b) => String(b.stand).localeCompare(String(a.stand)))
+  .sort((a, b) =>
+    (a.rang ?? 99) - (b.rang ?? 99) ||
+    String(b.stand).localeCompare(String(a.stand)),
+  )
   .slice(0, 4);
 
 const notizDateien = import.meta.glob('./notizen/*.md', { eager: true });

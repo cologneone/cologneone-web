@@ -5,6 +5,7 @@ kurz: 560 Ah Lithium, ein Wechselrichter, zwei Solarregler, drei Ladebooster und
 meta_titel: Victron-Anlage im Wohnmobil mit Cerbo GX – Aufbau, Verkabelung, Praxis
 meta_beschreibung: MultiPlus-II, zwei SmartSolar MPPT, drei Ladebooster, 560 Ah LiFePO4 und ein Victron Cerbo GX im Wohnmobil. Lynx-Verteiler mit selbst nachgerüsteten Sicherungen, Querschnitte, Sicherungsplan und die Fehlersuche, die einen ganzen Abend gekostet hat.
 bild: /bilder/victron/flair-berge.jpg
+rang: 1
 status: Laufend
 stand: 2026-08
 tags:
@@ -48,6 +49,55 @@ Eine Zahl, die im Winter zählt: **Unter 5 °C wird nicht geladen.** Das Datenbl
 erlaubt 0 °C, aber das BMS kennt die Zelltemperatur nur ungefähr. Und eine
 LiFePO4-Zelle, die man kalt lädt, nimmt dauerhaft Schaden, ohne dass man es merkt.
 Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
+
+## Sechs Ampere an der Säule, und trotzdem Wasserkocher
+
+Wenn ich aus dieser ganzen Anlage eine einzige Sache herausgreifen dürfte, die ich
+jedem sofort erzählen würde, dann diese hier. Sie kostet nichts extra, sie steckt im
+MultiPlus bereits drin, und die meisten wissen gar nicht, dass es sie gibt.
+
+Die Ausgangslage kennt jeder, der schon einmal auf einem älteren Platz gestanden hat:
+An der Säule steht **6 A**. Das sind knapp 1400 Watt für das ganze Fahrzeug.
+Wasserkocher an, und es wird dunkel. Dann läuft man mit der Taschenlampe zum
+Verteilerkasten, sucht im Regen seinen Automaten und drinnen fragt jemand, ob der
+Kaffee noch kommt.
+
+Der MultiPlus löst das mit zwei Funktionen, die zusammenarbeiten.
+
+**Erstens sagt man ihm die Wahrheit.** Man stellt die **Eingangsstrombegrenzung** auf
+genau das, was die Säule hergibt: 6 A, 4 A, 10 A, je nach Platz. Das dauert zehn
+Sekunden am Display oder am Handy und ist bei mir das Erste nach dem Einstöpseln.
+
+**Zweitens hält er sich daran, ohne einen einzuschränken.** Und genau das ist der
+Punkt:
+
+- Zieht das Fahrzeug **weniger** als die eingestellte Grenze, lädt er mit dem Rest die
+  Batterie. Wird es knapp, drosselt er das Laden, statt die Sicherung am Platz zu
+  werfen. Victron nennt das *Power Control*.
+- Zieht das Fahrzeug **mehr**, trennt er nicht ab. Er holt die fehlende Leistung aus
+  der **Batterie** und schiebt sie in Echtzeit dazu, ohne dass drinnen auch nur eine
+  Lampe flackert. Das ist *PowerAssist*.
+
+Das Ergebnis ist ein 2000-Watt-Wasserkocher an einer 6-Ampere-Säule. Die Säule liefert
+ihre 1400 Watt, die Batterie legt den Rest drauf, und sobald das Wasser kocht, holt
+sich die Batterie in aller Ruhe zurück, was sie gerade vorgestreckt hat.
+
+**Und da liegt der Gedanke, der mich daran wirklich begeistert:** Die Säule ist keine
+Obergrenze mehr dafür, was ich gleichzeitig anschalten darf. Sie ist nur noch eine
+Obergrenze für das, was ich **über den Tag** verbrauche. Spitzenleistung und
+Energiemenge sind entkoppelt. Und Spitzen sind im Wohnmobil fast immer kurz:
+Wasserkocher, Föhn, Kaffeemaschine, Mikrowelle. Drei Minuten, nicht drei Stunden.
+
+Man steht damit an der schlechtesten Säule des Platzes und merkt es einfach nicht.
+Das ist kein Trick und keine Bastelei, das ist die Funktion, für die dieses Gerät
+gebaut wurde. Wer einen MultiPlus im Fahrzeug hat und die Eingangsbegrenzung nie
+angefasst hat, verschenkt den halben Nutzen.
+
+Zwei ehrliche Einschränkungen gehören dazu. **Geliehen ist nicht geschenkt:** Die
+Batterie muss etwas haben, das sie vorstrecken kann, sonst hilft der schönste
+Automatismus nichts. Und **ganz beliebig klein darf die eingestellte Grenze nicht
+sein**, unterhalb eines Mindestwerts kann PowerAssist nicht mehr arbeiten. Welcher
+das beim eigenen Gerät ist, steht im Handbuch.
 
 ## Das Technikfach
 

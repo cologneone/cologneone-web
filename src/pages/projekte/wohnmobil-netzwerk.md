@@ -4,6 +4,7 @@ titel: Internet im Wohnmobil – sechs Fallen, die dich offline lassen
 kurz: 5G-Router mit zwei SIM-Karten und Campingplatz-WLAN. Die Technik ist der einfache Teil – die Fallen sind es nicht, und die meisten zeigen dir währenddessen „verbunden" an.
 meta_titel: Internet im Wohnmobil – Router-Fallen, die niemand erwähnt
 meta_beschreibung: Campingplatz-WLAN, 5G-Failover und zwei SIM-Karten im Wohnmobil mit einem Teltonika RUTX50. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
+rang: 4
 status: Laufend
 bild: /bilder/netzwerk/router-front.jpg
 stand: 2026-08
