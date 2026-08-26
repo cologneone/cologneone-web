@@ -41,8 +41,8 @@ Beiträgen.
 | Der Kopf | Cerbo GX mit Node-RED | Sammelt alles ein, zeigt es an und schaltet, wo es nötig ist |
 
 Dazu Tankgeber für Frisch- und Grauwasser, ein Ultraschallsensor am Dieseltank,
-Temperaturfühler im Fahrzeug und eine Handvoll Funkschaltaktoren für Licht und
-Verbraucher.
+fünf kleine Funksensoren für Temperatur und Luftfeuchte und eine Handvoll
+Funkschaltaktoren für Licht und Verbraucher.
 
 Eine Zahl, die im Winter zählt: **Unter 5 °C wird nicht geladen.** Das Datenblatt
 erlaubt 0 °C, aber das BMS kennt die Zelltemperatur nur ungefähr. Und eine
@@ -385,6 +385,55 @@ Oberfläche auf. **Drei Dinge tun das nicht** und mussten dazugebaut werden:
 Die Logik dafür liegt in Node-RED auf dem Cerbo selbst: ein Tab je Aufgabe, jeder
 für sich importierbar und mit eigener Änderungshistorie. Node-RED ist bei Victron
 Teil der „large"-Firmware, kostet also nichts extra und läuft direkt auf dem Gerät.
+
+## Fünf kleine Kästchen, die Temperatur funken
+
+Ein **RuuviTag** ist ein Sensor in der Größe eines Flaschendeckels: Knopfzelle drin,
+Temperatur, Luftfeuchte und Luftdruck raus, per Bluetooth, ohne Kabel und ohne
+Anmeldung. Er sendet alle paar Sekunden einfach in die Gegend. Wer zuhören mag, hört
+zu.
+
+Und genau das tut Venus OS, die Software auf dem Cerbo, von Haus aus. In den
+Einstellungen gibt es einen Punkt für Bluetooth-Sensoren, dort taucht jeder Tag in
+Reichweite von allein auf, man gibt ihm einen Namen und ist fertig. **Kein Treiber,
+kein Node-RED, keine zusätzliche Hardware.** Nach dem Gasflaschensensor und dem
+Dieselgeber, die beide erst mühsam beigebracht werden mussten, ist das eine
+ausgesprochen angenehme Abwechslung.
+
+Fünf Stück sind im Fahrzeug verteilt:
+
+| Wo | Wofür |
+|---|---|
+| Wohnraum | Die Zahl, die abends entscheidet, ob die Heizung noch anspringt |
+| Kühlschrank | Kühlt der Absorberkühlschrank wirklich, oder tut er nur so? |
+| Kühlbox | Dasselbe für die Kompressorbox, die deutlich kälter läuft |
+| Technikfach | Dort sitzen Wechselrichter, Laderegler und die beiden Batterien |
+| Außen | Temperatur und Luftfeuchte draußen, ohne Griff zur Wetter-App |
+
+Der interessanteste ist der im **Technikfach**. Während ich das schreibe, stehen dort
+34 °C, bei 24 °C draußen. Das ist kein Alarm, aber es ist die Art von Wert, die man
+kennen sollte: Zehn Grad über Außentemperatur sind an einem milden Tag harmlos, auf
+einem Stellplatz ohne Schatten im Hochsommer wird daraus eine andere Zahl. Und
+Lithiumzellen mögen Hitze ähnlich wenig wie Kälte.
+
+Der zweite Nutzen ist banaler und trotzdem der, den ich am häufigsten habe: **Man
+sieht, ob der Kühlschrank arbeitet, ohne ihn aufzumachen.** Ein Absorberkühlschrank
+von 1998 ist kein Präzisionsgerät, und jedes Öffnen kostet genau die Kälte, die man
+gerade prüfen wollte. Steht er morgens bei 10 °C statt bei 6, weiß ich das jetzt vor
+dem Frühstück und nicht danach.
+
+Dass alles über Bluetooth läuft, hat einen Preis, den man kennen sollte: **Reichweite
+und Batterie.** Die Knopfzelle hält je nach Sendetakt ein bis zwei Jahre, und wenn
+sie leer ist, verschwindet der Fühler nicht mit einer Meldung, sondern der Wert wird
+einfach alt. Für die Anzeige gilt hier dasselbe wie für den Dieselgeber: Ein Sensor,
+der nichts mehr sagt, ist kein Sensor, der 0 °C misst.
+
+> **Eine Zeile in derselben Liste ist gar kein Tag.** Ganz unten steht ein Fühler
+> namens „Router" mit gut 70 °C. Der ist virtuell: Dahinter steckt kein RuuviTag,
+> sondern der [Router im Fahrzeug](/projekte/wohnmobil-netzwerk), der seine eigene
+> Gehäusetemperatur alle fünf Minuten an den Cerbo meldet. Für die Anzeige sieht das
+> aus wie ein Sensor unter vielen. Wer die Liste zum ersten Mal sieht, sollte das
+> wissen, bevor er sich über 70 Grad im Wohnraum wundert.
 
 ## Drei Dinge, die ich vorher gern gewusst hätte
 
