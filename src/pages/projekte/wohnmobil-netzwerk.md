@@ -70,9 +70,10 @@ darunter. Was rein örtlich läuft, läuft zwar auch ohne Verbindung nach drauß
 aber alles darüber hinaus hängt am Internet.
 
 Und dann ist da noch die Sache, wegen der ich am meisten grinse. Im Fahrzeug hängt ein
-**Echo der ersten Generation** – und zwar genau der, weil er seinen Strom über USB
-bekommt und kein Netzteil braucht. Seitdem sage ich im Wohnmobil „Alexa, Licht aus".
-Oder „Alexa, Licht auf zehn Prozent". **Das ist Luxus.**
+**alter Echo Dot** – und zwar genau der, weil er seinen Strom über USB bekommt und
+kein Netzteil braucht. Er sitzt unter einem Schrank an einer eingebauten USB-Dose und
+trägt eine Holzfolie im Möbelton, damit man ihn nicht sieht. Seitdem sage ich im
+Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". **Das ist Luxus.**
 
 ## Würde ich ihn wieder kaufen? Ja, aber die eSIM-Version
 
