@@ -50,6 +50,34 @@ Der Vollständigkeit halber: In derselben Liste tauchen auch Ultraschall-Tanksen
 von Mopeka auf. Wer schon einen davon im Tank hat, hat den Weg für die
 Temperaturfühler längst offen.
 
+## Es gibt nicht *den* RuuviTag
+
+Das ist der Punkt, an dem man vor dem Kauf zwei Minuten nachdenken sollte, denn die
+Modelle unterscheiden sich mehr, als der gemeinsame Name vermuten lässt:
+
+| Modell | Misst | Dicht | Temperaturbereich |
+|---|---|---|---|
+| RuuviTag, weiß | Temperatur, Luftfeuchte, **Luftdruck**, Bewegung | IP67 | −20 bis +70 °C |
+| RuuviTag Pro 3in1 | Temperatur, Luftfeuchte, Bewegung | IP67, atmungsaktive Membran | −40 bis +85 °C |
+| RuuviTag Pro 4in1 | wie 3in1, **plus Luftdruck** | IP67 | −40 bis +85 °C |
+| RuuviTag Pro 2in1 | nur Temperatur und Bewegung | IP68 und IP69K | −40 bis +85 °C |
+
+Der weiße Standard-Tag ist leichter und reagiert dadurch schneller auf
+Temperaturänderungen, was ihn drinnen angenehm macht. Die Pro-Modelle sind schwerer,
+robuster und halten den doppelten Temperaturbereich aus. Und wer einen Fühler dorthin
+legt, wo es nass wird, nimmt den 2in1, verzichtet dafür aber auf die Luftfeuchte.
+
+Bei mir sitzen deshalb drinnen die weißen und draußen ein Pro 3in1: Der hält den
+Winter aus, und seine Membran lässt die Luftfeuchte durch, ohne Wasser
+hereinzulassen. Der fehlende Luftdruck ist draußen verschmerzbar, drinnen liefern
+ihn ja vier andere.
+
+> **Kleine Falle am Rande:** Das GX-Gerät nennt jeden davon schlicht „RuuviTag". Wer
+> nach zwei Jahren wissen will, welches Modell wo verbaut ist, sieht es **an den
+> Werten**: Kommt ein Luftdruck an, steckt ein Barometer drin. Fehlt die
+> Luftfeuchte, ist es ein 2in1. So habe ich meinen eigenen Bestand nachträglich
+> auseinandersortiert.
+
 ## Namen geben, sonst wird es unübersichtlich
 
 Ab Werk heißt jeder Sensor nach seiner Funkkennung, etwa „Ruuvi 7F22". Bei fünf
@@ -82,9 +110,14 @@ Statusbewertung:
   <figcaption>24 °C, 87 % Luftfeuchte und 3,08 V in der Zelle, bewertet mit „Ok". Die verbaute CR2477 hat 3,0 V Nennspannung; deutlich darunter wird es Zeit für eine neue.</figcaption>
 </figure>
 
-Damit erledigt sich die schlimmste Sorge bei Funksensoren von allein: Man merkt es,
-**bevor** die Zelle leer ist, und nicht erst, wenn ein Wert seit drei Tagen derselbe
-ist. Wer mag, hängt einen Alarm daran.
+Und es bleibt nicht bei der Anzeige: **Das GX-Gerät meldet sich von allein, wenn eine
+Zelle leer wird.** Damit erledigt sich die schlimmste Sorge bei Funksensoren, nämlich
+dass man den Ausfall erst bemerkt, wenn ein Wert seit drei Tagen derselbe ist.
+
+Erwarten sollte man rund **ein Jahr je Zelle**. Das Datenblatt nennt zwölf bis
+vierundzwanzig Monate, in meinem Fahrzeug ist es eher das untere Ende. Kein Wunder:
+Der eine liegt im Kühlschrank, der andere im Sommer bei 34 °C im Technikfach, und
+Knopfzellen mögen beides nicht besonders.
 
 ## Die drei Dinge, die man wissen sollte
 
