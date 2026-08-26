@@ -3,7 +3,7 @@ layout: ../../layouts/Notiz.astro
 titel: RuuviTag im Victron Cerbo, ganz ohne Bastelei
 kurz: Temperatur und Luftfeuchte im Wohnmobil messen, ohne ein Kabel zu ziehen und ohne Node-RED. Venus OS erkennt die Funksensoren von selbst. Es gibt genau drei Dinge, die man dabei wissen sollte.
 meta_titel: RuuviTag am Victron Cerbo GX einbinden – ohne Treiber und ohne Node-RED
-meta_beschreibung: Bluetooth-Temperatursensoren in einem Victron GX-Gerät: wo der Menüpunkt liegt, was der Sensortyp bewirkt, warum der Cerbo vor kontinuierlichem Scannen warnt und woran man einen virtuellen Fühler erkennt. Mit Screenshots aus Venus OS.
+meta_beschreibung: Bluetooth-Temperatursensoren in einem Victron GX-Gerät. Wo der Menüpunkt liegt, was der Sensortyp bewirkt, warum der Cerbo vor kontinuierlichem Scannen warnt und woran man einen virtuellen Fühler erkennt. Mit Screenshots aus Venus OS.
 stand: 2026-08
 tags:
   - Victron
