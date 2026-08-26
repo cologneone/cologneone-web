@@ -63,6 +63,17 @@ Dauerbetrieb an 12 V, und ein Betriebssystem, in das man hineinkommt. Alles, was
 dieser Seite an Automatik vorkommt, gibt es nur, weil auf dem Router eigene Skripte
 laufen dürfen.
 
+Der wichtigste Grund steht aber noch gar nicht da: **Ohne Netz an Bord steht der ganze
+Rest still.** Die Funkschalter fürs Licht, die Steuerung der Energieanlage, die
+Klimaanlage. Der Router ist nicht das Zubehör zum Ausbau, er ist die Grundlage
+darunter. Was rein örtlich läuft, läuft zwar auch ohne Verbindung nach draußen weiter,
+aber alles darüber hinaus hängt am Internet.
+
+Und dann ist da noch die Sache, wegen der ich am meisten grinse. Im Fahrzeug hängt ein
+**Echo der ersten Generation** – und zwar genau der, weil er seinen Strom über USB
+bekommt und kein Netzteil braucht. Seitdem sage ich im Wohnmobil „Alexa, Licht aus".
+Oder „Alexa, Licht auf zehn Prozent". **Das ist Luxus.**
+
 ## Würde ich ihn wieder kaufen? Ja, aber die eSIM-Version
 
 Sofort. Mit genau einer Einschränkung: Ich würde die **eSIM-Variante** nehmen.
