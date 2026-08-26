@@ -1,27 +1,129 @@
 ---
 // Über-Seite
-// Version: 1.1.0
+// Version: 2.0.0
 // Historie:
 //   1.0.0 (2026-08-18) — Erstanlage, Text noch Platzhalter
 //   1.1.0 (2026-08-24) — Baustellenhinweis, solange der Text Platzhalter ist
+//   2.0.0 (2026-08-26) — echter Text; damit faellt der Baustellenhinweis weg
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Über" description="Wer hinter cologneone.de steckt." baustelle={true}>
+<Base
+  title="Über"
+  metaTitle="Über mich — cologneone.de"
+  description="Wer hinter cologneone.de steckt: Notfallsanitäter aus Köln, Jahrgang 1975, seit 2019 mit einem Niesmann+Bischoff Flair 6000 unterwegs. Alles Technische ist selbst beigebracht."
+  bild="/bilder/daniel-pisa.jpg"
+>
   <section class="hero">
     <p class="eyebrow">Über</p>
     <h1>Hinter der Seite</h1>
+    <p class="lead">
+      Kurz vorweg, weil es erklärt, warum hier auch die Sackgassen stehen:
+      Ich habe technisch nichts gelernt.
+    </p>
   </section>
 
   <div class="prose">
+    <figure>
+      <img
+        src="/bilder/daniel-pisa.jpg"
+        alt="Daniel vor dem Schiefen Turm von Pisa, die Hand am Turm, als würde er ihn stützen"
+        width="1100"
+        height="1467"
+        loading="lazy"
+      />
+      <figcaption>Ja, dieses Foto. Macht jeder. Ich auch.</figcaption>
+    </figure>
+
+    <h2>Wer hier schreibt</h2>
+
     <p>
-      <em>Platzhalter — dieser Text will noch geschrieben werden.</em>
+      Daniel, Jahrgang 1975, aus Köln. Aufgewachsen mit Campingplatz — meine Eltern
+      haben mich in den Siebzigern schon mitgenommen, da war ich ein paar Jahre alt.
+      Das hat offenbar gehalten.
     </p>
+
     <p>
-      Ein paar Sätze dazu, wer hier schreibt, warum es diese Seite gibt und worum es
-      inhaltlich geht: Wohnmobil-Technik, Energiesysteme, Sensorik, Smart Home.
+      Beruflich bin ich <strong>Notfallsanitäter</strong>. Technisch gelernt habe ich
+      nichts: kein Elektriker, kein Informatiker, keine Ausbildung, in der mir jemand
+      Leitungsquerschnitte oder Bitmasken beigebracht hätte. Alles, was auf dieser
+      Seite steht, habe ich mir selbst angeeignet — mit Tutorials, mit Datenblättern
+      und vor allem damit, Dinge auszuprobieren. Diese Experimentierfreude hatte ich
+      schon als Kind. Technik verstehe ich relativ schnell; der Rest ist Fleiß.
     </p>
+
+    <h2>Warum die Seite so aussieht, wie sie aussieht</h2>
+
+    <p>
+      Wer sich etwas selbst beibringt, kennt die Stellen, an denen man hängenbleibt.
+      Und ärgert sich über Anleitungen, die so tun, als hätte alles beim ersten
+      Versuch geklappt.
+    </p>
+
+    <p>
+      Deshalb stehen hier auch die <strong>Sackgassen</strong>: die falschen
+      Vermutungen, der Abend, an dem die Ursache am Ende ein ausgeschalteter Schalter
+      war, und die Sätze „das war schlicht falsch". Das ist keine Koketterie. Die
+      Sackgasse ist oft der nützlichere Teil — den richtigen Weg findet man auch
+      allein, die Abzweigung, an der es schiefgeht, meistens nicht.
+    </p>
+
+    <h2>Die Fahrzeuge</h2>
+
+    <p>
+      Vor dem Flair fuhr ich einen <strong>Clou 670F auf VW LT 55, Baujahr 1987</strong>
+      — meine rollende Zweiraumwohnung. Ihn wieder herzurichten hätte allerdings jeden
+      vernünftigen Kostenrahmen gesprengt. Irgendwann ist das keine Frage der Zuneigung
+      mehr, sondern eine Rechenaufgabe.
+    </p>
+
+    <p>
+      Seit <strong>2019</strong> steht ein <strong>Niesmann+Bischoff Flair 6000</strong>
+      davor, Baujahr 1998. Drei Dinge waren mir bei der Auswahl wichtig:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Der stabile Aufbau.</strong> Bei einem Fahrzeug, das noch Jahrzehnte
+        halten soll, entscheidet nicht das Möbeldekor.
+      </li>
+      <li>
+        <strong>Dusche getrennt vom WC.</strong> Klingt nach Luxus. Ist es auch — und
+        über mehrere Wochen unterwegs macht es den Unterschied.
+      </li>
+      <li>
+        <strong>Teilintegriert</strong>, auch wegen der Sicherheit: Das Fahrerhaus
+        bleibt das des Basisfahrzeugs, mit allem, was der Hersteller dort an Struktur
+        vorgesehen hat.
+      </li>
+    </ul>
+
+    <p>
+      Was seitdem daran passiert ist, steht in den <a href="/projekte">Projekten</a>.
+      Die Geschichte des Fahrzeugs selbst bekommt eine eigene Seite — mit den Bildern
+      von dem Tag, an dem ich ihn gekauft habe, und ein paar alten Prospekten.
+    </p>
+
     <h2>Kontakt</h2>
-    <p>Kontaktmöglichkeit ergänzen (E-Mail-Adresse oder Formular).</p>
+
+    <p>
+      <a href="mailto:info@cologneone.de">info@cologneone.de</a> — Fragen, Korrekturen
+      und „bei mir war das anders" sind ausdrücklich willkommen. Gerade das Letzte.
+    </p>
+
+    <h2>Das Kleingedruckte</h2>
+
+    <p>
+      Keine Werbung, keine bezahlten Empfehlungen, keine Verbindung zu den Herstellern,
+      deren Geräte hier vorkommen. Alles, was hier steht, stammt aus dem eigenen
+      Fahrzeug und der eigenen Werkstatt. Wo ich etwas nicht weiß, steht das dabei. Wo
+      ich mich geirrt habe, bleibt der Irrtum stehen und die Korrektur daneben.
+    </p>
+
+    <p>
+      Und der übliche Satz, der leider nötig ist: Wer an seiner eigenen Anlage
+      nachbaut, prüft Querschnitte, Absicherung und Gasinstallation selbst — im Zweifel
+      bei jemandem, der das beruflich macht.
+    </p>
   </div>
 </Base>
