@@ -209,16 +209,18 @@ was der 15-Minuten-Takt erwarten lässt.
   <figcaption>Die Hersteller-App zur selben Zeit: 60 %. Das Trenddiagramm zeigt schön den gleichmäßigen Verbrauch.</figcaption>
 </figure>
 
-Inzwischen ist ein **dritter Punkt** dazugekommen, und zwar deutlich weiter unten:
-Am 24. August stand die Flasche bei **26 %** – und der Vergleich hat wieder
-gepasst. Damit ist die Zuordnung nicht mehr nur im oberen Mittelfeld belegt,
-sondern über eine Spanne, die den Alltag abdeckt.
+Dazu sind zwei weitere Punkte gekommen, beide deutlich weiter unten. Am
+24. August stand die Flasche bei **26 %**, am 26. August bei **12 %**, und beide
+Male zeigten App und Cerbo dasselbe. Damit ist die Zuordnung nicht mehr nur im
+oberen Mittelfeld belegt, sondern **über die ganze Spanne von 78 bis 12 %** – und
+gerade der untere Bereich ist der, auf den es ankommt, wenn man wissen will, ob
+das Gas noch reicht.
 
-Am oberen Ende bleibt die Auflösung trotzdem mager: Die App fasst alles zwischen
-94 und 100 % einfach als „voll“ zusammen. Und ganz unten fehlen weiterhin Werte,
-weil die Flasche dafür erst wirklich leer werden muss. Für die Frage, die man
-unterwegs tatsächlich hat – reicht das Gas noch für die nächsten Tage? – ist der
-belegte Bereich aber inzwischen der richtige.
+Zwei Einschränkungen bleiben. Am oberen Ende ist die Auflösung mager: Die App
+fasst alles zwischen 94 und 100 % einfach als „voll“ zusammen. Und das letzte
+Stück unterhalb von 12 % ist weiter unbelegt, dafür muss die Flasche erst einmal
+wirklich leer werden. Für die Frage, die man unterwegs tatsächlich hat, ist der
+geprüfte Bereich damit aber abgedeckt.
 
 ## Was noch offen ist
 
