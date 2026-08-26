@@ -1,10 +1,10 @@
 /**
- * llms.txt — Wegweiser für KI-Assistenten
+ * llms.txt – Wegweiser für KI-Assistenten
  *
  * Version: 1.1.0
  * Historie:
- *   1.0.0 (2026-08-19) — Erstanlage
- *   1.1.0 (2026-08-24) — Der Bereich Notizen kommt mit hinein
+ *   1.0.0 (2026-08-19) – Erstanlage
+ *   1.1.0 (2026-08-24) – Der Bereich Notizen kommt mit hinein
  *
  * Nach der Konvention von https://llmstxt.org: eine kurze, maschinenlesbare
  * Übersicht dessen, was hier steht, damit ein Assistent nicht raten muss,
@@ -16,7 +16,7 @@ const dateien = import.meta.glob('./projekte/*.md', { eager: true });
 const notizDateien = import.meta.glob('./notizen/*.md', { eager: true });
 
 // Zu welchem Projekt gehört welches Repository. Steht hier und nicht im
-// Frontmatter, weil es bisher genau eines ist — wenn es mehr werden, wandert
+// Frontmatter, weil es bisher genau eines ist – wenn es mehr werden, wandert
 // die Angabe in die jeweilige Markdown-Datei.
 const REPOS = {
   '/projekte/travelmate-bluetooth':
@@ -42,7 +42,7 @@ export function GET() {
     '',
     'Geschrieben von Daniel Großmann in Köln. Die Inhalte stammen aus dem eigenen',
     'Fahrzeug und der eigenen Werkstatt, nicht aus zweiter Hand. Angaben zu',
-    'Messwerten sind als das gekennzeichnet, was sie sind — belegte Messpunkte',
+    'Messwerten sind als das gekennzeichnet, was sie sind – belegte Messpunkte',
     'oder offene Fragen.',
     '',
     'Der Quellcode steht unter MIT-Lizenz und darf frei verwendet werden. Wer',

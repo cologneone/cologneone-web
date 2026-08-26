@@ -2,20 +2,20 @@
 // Basis-Layout für alle Seiten
 // Version: 2.6.0
 // Historie:
-//   2.3.0 (2026-08-18) — Baustellenhinweis über dem Inhalt
-//   2.4.0 (2026-08-18) — Auffindbarkeit: eigener Seitentitel und eigene
+//   2.3.0 (2026-08-18) – Baustellenhinweis über dem Inhalt
+//   2.4.0 (2026-08-18) – Auffindbarkeit: eigener Seitentitel und eigene
 //                        Beschreibung je Seite, dazu Vorschaubild und
 //                        vollständige Open-Graph-Angaben fürs Teilen in
 //                        Foren und Messengern
-//   2.5.0 (2026-08-19) — Platz im Kopfbereich für seitenspezifische Angaben
+//   2.5.0 (2026-08-19) – Platz im Kopfbereich für seitenspezifische Angaben
 //                        (benannter Slot "kopf"), z. B. strukturierte Daten
-//   2.6.0 (2026-08-24) — Der Baustellenhinweis gilt nicht mehr pauschal für die
+//   2.6.0 (2026-08-24) – Der Baustellenhinweis gilt nicht mehr pauschal für die
 //                        ganze Seite, sondern nur noch dort, wo wirklich etwas
 //                        fehlt. Neuer Bereich "Notizen" in der Navigation.
 import '../styles/global.css';
 
 const {
-  // Kurzer Titel für die Seite selbst. Bekommt "— cologneone" angehängt.
+  // Kurzer Titel für die Seite selbst. Bekommt "– cologneone" angehängt.
   title,
   // Vollständiger Titel für <title> und Suchmaschinen, ohne Anhängsel.
   // Damit lässt sich der Seitentitel gezielt auf die Begriffe legen,
@@ -26,11 +26,11 @@ const {
   bild,
   typ = 'website',
   // Zeigt den Baustellenhinweis über dem Inhalt. Bewusst nur dort setzen, wo
-  // wirklich etwas fehlt — ein Hinweis, der überall steht, wird nicht gelesen.
+  // wirklich etwas fehlt – ein Hinweis, der überall steht, wird nicht gelesen.
   baustelle = false,
 } = Astro.props;
 
-const seitentitel = metaTitle ?? (title ? `${title} — cologneone` : 'cologneone');
+const seitentitel = metaTitle ?? (title ? `${title} – cologneone` : 'cologneone');
 const seitenUrl = new URL(Astro.url.pathname, Astro.site);
 const bildUrl = bild ? new URL(bild, Astro.site) : null;
 

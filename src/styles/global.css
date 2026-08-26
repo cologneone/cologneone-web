@@ -1,27 +1,27 @@
 /* ---------------------------------------------------------------------------
    Datei:   src/styles/global.css
    Zweck:   Gesamtes Styling der Website cologneone.de
-   Vorlage: Dekor des Niesmann+Bischoff Flair — Creme-Aufbau, Nachtblau,
+   Vorlage: Dekor des Niesmann+Bischoff Flair – Creme-Aufbau, Nachtblau,
             Gold-Ocker, dazu die charakteristischen Zierstreifen
 
    Version: 2.8.0
    Historie:
-     1.0.0 (2026-08-18) — Erstanlage, neutrale Farben, hell und dunkel
-     1.1.0 (2026-08-18) — Flair-Farben übernommen, Zierstreifen ergänzt
-     2.0.0 (2026-08-18) — durchgehend Creme als Hintergrund (keine dunkle
+     1.0.0 (2026-08-18) – Erstanlage, neutrale Farben, hell und dunkel
+     1.1.0 (2026-08-18) – Flair-Farben übernommen, Zierstreifen ergänzt
+     2.0.0 (2026-08-18) – durchgehend Creme als Hintergrund (keine dunkle
                           Variante mehr), Zierstreifen als tragendes Element
                           in Kopf, Titelbereich, Karten und Fuß
-     2.1.0 (2026-08-18) — Platz für die Fahrzeuggrafik in Wortmarke und
+     2.1.0 (2026-08-18) – Platz für die Fahrzeuggrafik in Wortmarke und
                           Titelbereich
-     2.2.0 (2026-08-18) — Baustellenhinweis unter der Kopfzeile
-     2.3.0 (2026-08-18) — Bilder mit Bildunterschrift in Artikeln
-     2.4.0 (2026-08-24) — Liste für den neuen Bereich Notizen
-     2.5.0 (2026-08-24) — Bilder in Artikeln etwas schmaler als der Text,
+     2.2.0 (2026-08-18) – Baustellenhinweis unter der Kopfzeile
+     2.3.0 (2026-08-18) – Bilder mit Bildunterschrift in Artikeln
+     2.4.0 (2026-08-24) – Liste für den neuen Bereich Notizen
+     2.5.0 (2026-08-24) – Bilder in Artikeln etwas schmaler als der Text,
                           dazu Platz für die Fahrzeuggrafik im Titelbereich
-     2.6.0 (2026-08-24) — Fahrzeuggrafik deutlich kleiner; sie ist eine
+     2.6.0 (2026-08-24) – Fahrzeuggrafik deutlich kleiner; sie ist eine
                           Signatur neben der Überschrift, kein Titelbild
-     2.7.0 (2026-08-24) — ruhiges Bildband für die Startseite
-     2.8.0 (2026-08-24) — Bildband schneidet nichts mehr ab. Der flache
+     2.7.0 (2026-08-24) – ruhiges Bildband für die Startseite
+     2.8.0 (2026-08-24) – Bildband schneidet nichts mehr ab. Der flache
                           Ausschnitt steckt im Bild selbst, nicht in einem
                           object-fit, das dem Fahrzeug Dach und Heck nahm
 --------------------------------------------------------------------------- */
@@ -263,7 +263,7 @@ a { color: var(--gold-deep); }
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Zierlinie an der Kante — wie am Fahrzeug */
+/* Zierlinie an der Kante – wie am Fahrzeug */
 .card::before {
   content: "";
   position: absolute;

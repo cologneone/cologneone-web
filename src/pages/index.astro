@@ -2,24 +2,24 @@
 // Startseite
 // Version: 1.5.0
 // Historie:
-//   1.2.0 (2026-08-18) — Fahrzeuggrafik vorerst wieder entfernt
-//   1.3.0 (2026-08-18) — Seitentitel und Beschreibung sagen jetzt, worum
-//                        es hier geht — vorher stand da nur "cologneone"
-//   1.4.0 (2026-08-24) — Notizen mit auf die Startseite
-//   1.5.0 (2026-08-24) — Fahrzeuggrafik im Titelbereich
-//   1.6.0 (2026-08-24) — neue Ueberschrift; die alte war eine Aufzaehlung
+//   1.2.0 (2026-08-18) – Fahrzeuggrafik vorerst wieder entfernt
+//   1.3.0 (2026-08-18) – Seitentitel und Beschreibung sagen jetzt, worum
+//                        es hier geht – vorher stand da nur "cologneone"
+//   1.4.0 (2026-08-24) – Notizen mit auf die Startseite
+//   1.5.0 (2026-08-24) – Fahrzeuggrafik im Titelbereich
+//   1.6.0 (2026-08-24) – neue Ueberschrift; die alte war eine Aufzaehlung
 //                        und sagte nichts
-//   1.7.0 (2026-08-24) — Ueberschrift noch einmal: weniger technisch, dafuer
-//                        das, worum es wirklich geht — ein altes Fahrzeug mit
+//   1.7.0 (2026-08-24) – Ueberschrift noch einmal: weniger technisch, dafuer
+//                        das, worum es wirklich geht – ein altes Fahrzeug mit
 //                        neuer Technik
-//   1.8.0 (2026-08-24) — Fahrzeug beim Namen nennen: Flair 6000, Baujahr 1998.
+//   1.8.0 (2026-08-24) – Fahrzeug beim Namen nennen: Flair 6000, Baujahr 1998.
 //                        Darum geht es auf der ganzen Seite
-//   1.9.0 (2026-08-24) — ein Foto des Fahrzeugs als ruhiges Band zwischen
+//   1.9.0 (2026-08-24) – ein Foto des Fahrzeugs als ruhiges Band zwischen
 //                        Projekten und Notizen, dazu als Vorschaubild
-//   1.10.0 (2026-08-24) — fuers Band die Seitenansicht am Meer statt der
+//   1.10.0 (2026-08-24) – fuers Band die Seitenansicht am Meer statt der
 //                         Bergaufnahme: schoenerer Hintergrund, und sie passt
 //                         zur Fahrzeuggrafik im Titelbereich
-//   1.11.0 (2026-08-26) — neues Bandfoto: Abendlicht an der Cote d'Azur
+//   1.11.0 (2026-08-26) – neues Bandfoto: Abendlicht an der Cote d'Azur
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -36,18 +36,18 @@ const notizen = Object.values(notizDateien)
 ---
 
 <Base
-  metaTitle="cologneone — ein Flair 6000 von 1998 mit Victron, Sensorik und Node-RED"
+  metaTitle="cologneone – ein Flair 6000 von 1998 mit Victron, Sensorik und Node-RED"
   bild="/bilder/flair-band.jpg"
-  description="Ein Niesmann+Bischoff Flair 6000 von 1998, nachgerüstet mit Victron-Energiesystem, Bluetooth-Sensorik und Node-RED — mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
+  description="Ein Niesmann+Bischoff Flair 6000 von 1998, nachgerüstet mit Victron-Energiesystem, Bluetooth-Sensorik und Node-RED – mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
 >
   <section class="hero">
     <p class="eyebrow">cologneone.de</p>
-    <h1>Ein Flair 6000 von 1998 — mit der Technik, die andere erst im Neufahrzeug bekommen.</h1>
+    <h1>Ein Flair 6000 von 1998 – mit der Technik, die andere erst im Neufahrzeug bekommen.</h1>
     <p class="lead">
       Niesmann+Bischoff baut den Flair bis heute. Meiner ist der von damals, Stück
       für Stück nachgerüstet: Gas, Diesel, Wasser, Batterien und das Bordnetz melden
       sich von selbst und sagen Bescheid, wenn etwas nicht stimmt. Hier steht, wie
-      das gegangen ist — mit dem Kram, den ich selbst gern gefunden hätte, als ich
+      das gegangen ist – mit dem Kram, den ich selbst gern gefunden hätte, als ich
       angefangen habe: Verkabelung, Fallstricke, Messwerte, fertiger Code.
     </p>
     <img

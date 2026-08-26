@@ -2,7 +2,7 @@
 layout: ../../layouts/Notiz.astro
 titel: DeviceOffReason ist eine Bitmaske, keine Zahl
 kurz: Victron-Ladegeräte melden, warum sie gerade nicht laden. Wer diesen Wert wie eine normale Zahl behandelt, baut sich einen Fehler ein, der nur manchmal auftritt.
-meta_titel: Victron DeviceOffReason — Bitmaske richtig auswerten
+meta_titel: Victron DeviceOffReason – Bitmaske richtig auswerten
 meta_beschreibung: Der Abschaltgrund eines Victron-Ladegeräts ist eine Bitmaske aus dem VE.Direct-Protokoll. Bit-Tabelle, Codebeispiel und der Fehler, der die Motorerkennung aussetzen lässt.
 stand: 2026-08
 tags:
@@ -10,7 +10,7 @@ tags:
   - Node-RED
 ---
 
-**Worum es geht:** Victron-Ladegeräte — Solarregler, Ladebooster, DC-DC-Wandler —
+**Worum es geht:** Victron-Ladegeräte – Solarregler, Ladebooster, DC-DC-Wandler –
 melden über den Wert `DeviceOffReason`, warum sie gerade nichts tun. Der Wert taucht
 überall dort auf, wo man die Geräte ausliest: in Node-RED, in Home Assistant, per
 MQTT oder direkt über VE.Direct. Wer eine Automatik baut, die zum Beispiel erkennen
@@ -37,7 +37,7 @@ dann deren Summe. Der Wert stammt aus dem VE.Direct-Protokoll, Register `0x0207`
 
 ## Der Fehler
 
-Das Naheliegende ist falsch — in beide Richtungen:
+Das Naheliegende ist falsch – in beide Richtungen:
 
 ```js
 if (reason === 0) { /* Motor laeuft */ }    // genau so stand es bei mir im Flow
@@ -45,7 +45,7 @@ if (reason === 8) { /* Motor steht  */ }    // dieselbe Falle, andersherum
 ```
 
 Solange wirklich nur ein einziger Grund anliegen kann, geht das gut. Kommt ein zweiter
-dazu — etwa Bit 0, „keine Eingangsspannung", weil ein Trennschalter aus war —, steht
+dazu – etwa Bit 0, „keine Eingangsspannung", weil ein Trennschalter aus war –, steht
 dort `1` statt `0`, und der laufende Motor wird nie erkannt. Richtig ist die Prüfung
 auf das einzelne Bit:
 
@@ -60,7 +60,7 @@ Ist dieses eine Bit gesetzt?
 
 Die Folge war unauffällig und deshalb besonders lästig: Die Motorerkennung
 funktionierte im Normalfall tadellos und setzte immer genau dann aus, wenn zusätzlich
-noch etwas anderes anlag — also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
+noch etwas anderes anlag – also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
 
 Dieselbe Falle steckt in vielen Statuswerten von Victron-Geräten. Wenn in einer
 Dokumentation eine Tabelle mit Bit-Nummern steht, ist es eine Bitmaske.

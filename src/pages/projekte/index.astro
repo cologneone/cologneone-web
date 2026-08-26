@@ -1,9 +1,9 @@
 ---
-// Projektübersicht — listet automatisch alle Markdown-Dateien in diesem Ordner
+// Projektübersicht – listet automatisch alle Markdown-Dateien in diesem Ordner
 // Version: 1.1.0
 // Historie:
-//   1.0.0 (2026-08-18) — Erstanlage
-//   1.1.0 (2026-08-18) — aussagekraeftige Beschreibung fuer Suchmaschinen
+//   1.0.0 (2026-08-18) – Erstanlage
+//   1.1.0 (2026-08-18) – aussagekraeftige Beschreibung fuer Suchmaschinen
 import Base from '../../layouts/Base.astro';
 
 const dateien = import.meta.glob('./*.md', { eager: true });
@@ -14,7 +14,7 @@ const projekte = Object.values(dateien)
 
 <Base
   title="Projekte"
-  description="Dokumentierte Projekte zu Wohnmobil-Elektrik, Victron Cerbo GX, Bluetooth-Sensorik und Node-RED — jeweils mit Hardware, Messwerten und Code."
+  description="Dokumentierte Projekte zu Wohnmobil-Elektrik, Victron Cerbo GX, Bluetooth-Sensorik und Node-RED – jeweils mit Hardware, Messwerten und Code."
 >
   <section class="hero">
     <p class="eyebrow">Übersicht</p>

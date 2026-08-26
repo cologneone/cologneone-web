@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Mopeka-Dieselgeber am Cerbo GX — und warum er falsch rechnet
-kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen — jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin.
-meta_titel: Mopeka Dieseltank am Victron Cerbo GX — Kalibrierung und Ausfälle
-meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX — warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
+titel: Mopeka-Dieselgeber am Cerbo GX – und warum er falsch rechnet
+kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen – jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin.
+meta_titel: Mopeka Dieseltank am Victron Cerbo GX – Kalibrierung und Ausfälle
+meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX – warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
 bild: /bilder/rotarex/cerbo-tanks.png
 status: Laufend
 stand: 2026-08
@@ -18,7 +18,7 @@ tags:
 aus Spaß einen Ultraschallsensor unter meinen Dieseltank geklebt. Es gab zwei Gründe.
 
 **Erstens ist es nicht mehr der Serientank.** Verbaut ist ein
-**Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug — deutlich größer als
+**Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug – deutlich größer als
 das Original. Auf dem Papier fasst er 135 Liter, tatsächlich sind es **139**. Ein
 größerer Tank verschiebt aber alles, was man über Reichweite zu wissen glaubt: Die
 Nadel im Armaturenbrett gehört zum Serientank, nicht zu diesem hier.
@@ -26,14 +26,14 @@ Nadel im Armaturenbrett gehört zum Serientank, nicht zu diesem hier.
 **Zweitens taugt der originale Tankgeber nichts.** Und zwar nicht ein bisschen,
 sondern grundsätzlich: Er sitzt **unterhalb der Diesellinie**, sein Messbereich
 beginnt erst bei etwa 70 Litern. Alles darüber sieht er schlicht nicht. Ein randvoller
-Tank steht im Cockpit auf halb — und bleibt dort, bis der Stand tatsächlich in seinen
+Tank steht im Cockpit auf halb – und bleibt dort, bis der Stand tatsächlich in seinen
 Bereich gefallen ist. Auch darunter ist die Anzeige eher ein Schätzeisen als eine
 Messung.
 
 Er bewegt also die Nadel. Nur sagt die Nadel wenig darüber, wie viel wirklich drin
 ist. Und selbst wenn sie es täte: Sein Wert kommt nirgendwo digital heraus. Er
 erreicht den **Cerbo GX** nicht, das kleine Steuergerät, bei dem im Fahrzeug alle
-anderen Werte zusammenlaufen — Batterie, Solar, Wasser, Gas. Weder protokollieren
+anderen Werte zusammenlaufen – Batterie, Solar, Wasser, Gas. Weder protokollieren
 noch für eine Reichweitenrechnung verwenden noch aus der Ferne ansehen.
 
 Damit bleibt genau eine Frage offen, und es ist ausgerechnet die, die man auf einer
@@ -44,7 +44,7 @@ Deshalb der zweite Sensor.
 
 ## Was da klebt
 
-Am Tank sitzt ein **Mopeka Pro** — ein Ultraschallsensor, der von außen an den
+Am Tank sitzt ein **Mopeka Pro** – ein Ultraschallsensor, der von außen an den
 Tankboden geklebt wird und die Füllhöhe misst, ohne dass irgendwo ein Loch gebohrt
 oder ein Geber getauscht werden muss. Er funkt per Bluetooth, läuft mit einer
 Knopfzelle und wird von Venus OS, dem Betriebssystem des Cerbo, ab Werk unterstützt:
@@ -57,18 +57,18 @@ Ursache, und keine davon war die, die ich zuerst vermutet hatte.
 ## Überraschung 1: Jede vierte Messung ist Müll
 
 Über **32 Stunden** mitgeschrieben, jede Messung mit ihrem Qualitätswert: rund
-**27 % der Messungen kamen mit `Quality 0`** — der Sensor sagt selbst, dass er dem
+**27 % der Messungen kamen mit `Quality 0`** – der Sensor sagt selbst, dass er dem
 Wert nicht traut.
 
 Der naheliegende Verdacht war die Funkstrecke. Der ist falsch: Am selben
 Bluetooth-Baustein hängt die Gasflasche, und die liefert zuverlässig. Es liegt also
-nicht an der Übertragung, sondern an der **Messung selbst** — am Ultraschall in der
+nicht an der Übertragung, sondern an der **Messung selbst** – am Ultraschall in der
 Flüssigkeit. Verdächtig sind die Ankopplung des Sensors an den Tankboden und das Gel
 darunter.
 
 Wichtig ist, was daraus folgt: **Ein Ausfall ist kein Fehler, sondern ein
 Betriebszustand.** Ein Tanksensor, der viermal am Tag kurz nichts sieht, darf nicht
-viermal am Tag 0 % melden — sonst ist jede Verbrauchsauswertung wertlos und jeder
+viermal am Tag 0 % melden – sonst ist jede Verbrauchsauswertung wertlos und jeder
 Alarm ein Fehlalarm.
 
 Zwei Schutzschichten fangen das ab:
@@ -86,13 +86,13 @@ gefilterte Wert weg. Nur eben nicht nach zwanzig Sekunden.
 ## Überraschung 2: Diesel wird wie Benzin gerechnet
 
 Die zweite Sache habe ich erst gefunden, als ich aufgehört habe zu raten und in den
-Quelltext des Treibers geschaut habe — `victronenergy/dbus-ble-sensors`, Datei
+Quelltext des Treibers geschaut habe – `victronenergy/dbus-ble-sensors`, Datei
 `src/mopeka.c`.
 
 Beim **Hardware-Typ 12** („universal", also dem Sensor, der für beliebige
 Flüssigkeiten verkauft wird) steht im Code `coefs = NULL`. Es gibt also keinen
 sensorspezifischen Koeffizientensatz. Stattdessen entscheidet der in der Oberfläche
-eingestellte **FluidType**, welche Kurve benutzt wird — und dort teilen sich
+eingestellte **FluidType**, welche Kurve benutzt wird – und dort teilen sich
 `FLUID_TYPE_GASOLINE` und `FLUID_TYPE_DIESEL` **denselben** Satz.
 
 Gerechnet wird so:
@@ -111,7 +111,7 @@ Zwei Dinge stehen damit fest, und eines davon widerlegt meine eigene frühere An
   Schallgeschwindigkeit für Propan. Das war schlicht falsch, und ich lasse es hier
   stehen, weil die Fehlannahme im Netz kursiert.
 - **Die Kurve ist die von Benzin.** Schall läuft in Diesel messbar anders als in
-  Benzin. Wer „Diesel" einstellt, bekommt trotzdem die Benzin-Kurve — und damit eine
+  Benzin. Wer „Diesel" einstellt, bekommt trotzdem die Benzin-Kurve – und damit eine
   systematische Abweichung, die keine Einstellung in der Oberfläche behebt.
 
 ## Was das praktisch bedeutet
@@ -123,20 +123,20 @@ wegkonfigurieren kann.
 Der Ausweg ist derselbe wie bei jeder krummen Messkette: **gegen die Wirklichkeit
 kalibrieren.** Bei jedem Tanken die tatsächlich getankte Menge und den Rohwert davor
 und danach notieren. Nach ein paar Tankungen hat man eine eigene Kennlinie, die den
-Faktor mitschluckt — und ab dann stimmt die Restmenge, obwohl die zugrunde liegende
+Faktor mitschluckt – und ab dann stimmt die Restmenge, obwohl die zugrunde liegende
 Rechnung falsch bleibt.
 
 Genau das läuft hier: Bei jedem Tanken werden Menge und Kilometerstand über eine
-kleine Handyseite eingetragen — nicht an der Zapfsäule, das darf auch Stunden später
+kleine Handyseite eingetragen – nicht an der Zapfsäule, das darf auch Stunden später
 passieren. Daraus entsteht ein Restmengenmodell, das nicht auf der Herstellerkurve
 beruht, sondern auf dem, was wirklich in den Tank gepasst hat. Es rechnet die
-Restmenge aus der letzten Volltankung minus gefahrener Strecke mal Verbrauch — und
+Restmenge aus der letzten Volltankung minus gefahrener Strecke mal Verbrauch – und
 lässt den Sensor nur dann korrigierend eingreifen, wenn er eine Reihe von
 Plausibilitätsprüfungen besteht: gute Signalqualität, genug gültige Werte, Fahrzeug
 steht, Neigung unter zwei Grad.
 
 Die Neigung ist dabei kein Beiwerk. Der Tank liegt quer im Fahrzeug, und schon wenige
-Grad Schräglage — ein Stellplatz mit Gefälle genügt — verschieben den
+Grad Schräglage – ein Stellplatz mit Gefälle genügt – verschieben den
 Ultraschallweg messbar.
 
 Als Ausgangswert dient ein gemessener Verbrauch von **12,63 l/100 km**, sauber von
@@ -144,7 +144,7 @@ randvoll bis randvoll über 2376 km ermittelt.
 
 ## Was noch offen ist
 
-- Genügend Tankungen für eine belastbare eigene Kennlinie — das dauert eine Saison
+- Genügend Tankungen für eine belastbare eigene Kennlinie – das dauert eine Saison
 - Die Ankopplung des Sensors am Tankboden noch einmal ansehen; 27 % Ausfall ist viel
 - Kalibrierpunkte im unteren Tankbereich, wo bisher am wenigsten Messungen liegen
 
@@ -162,6 +162,6 @@ randvoll bis randvoll über 2376 km ermittelt.
 
 ## Dank und Einordnung
 
-Der Treiber ist quelloffen — ohne das wäre die zweite Erkenntnis nicht möglich
+Der Treiber ist quelloffen – ohne das wäre die zweite Erkenntnis nicht möglich
 gewesen. Das Projekt steht in keiner Verbindung zu Mopeka oder Victron Energy und
 liest ausschließlich die eigene Hardware aus.
