@@ -6,11 +6,15 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "astro build && node skripte/leerzeichen-pruefen.mjs",
+    "preview": "astro preview",
+    "pruefen": "node skripte/leerzeichen-pruefen.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.2.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
   }
 }
