@@ -388,52 +388,23 @@ Teil der „large"-Firmware, kostet also nichts extra und läuft direkt auf dem 
 
 ## Fünf kleine Kästchen, die Temperatur funken
 
-Ein **RuuviTag** ist ein Sensor in der Größe eines Flaschendeckels: Knopfzelle drin,
-Temperatur, Luftfeuchte und Luftdruck raus, per Bluetooth, ohne Kabel und ohne
-Anmeldung. Er sendet alle paar Sekunden einfach in die Gegend. Wer zuhören mag, hört
-zu.
+Fünf **RuuviTags** sind im Fahrzeug verteilt: Wohnraum, Kühlschrank, Kühlbox,
+Technikfach und außen. Jeder ist ein Sensor in der Größe eines Flaschendeckels, der
+per Bluetooth Temperatur und Luftfeuchte in die Gegend funkt. Der Cerbo hört zu, ganz
+von allein. **Kein Treiber, kein Node-RED, keine zusätzliche Hardware** – nach dem
+Gasflaschensensor und dem Dieselgeber, die beide erst mühsam beigebracht werden
+mussten, eine ausgesprochen angenehme Abwechslung. Wie das eingerichtet wird, steht
+in einer eigenen [Notiz](/notizen/ruuvitag-victron-cerbo).
 
-Und genau das tut Venus OS, die Software auf dem Cerbo, von Haus aus. In den
-Einstellungen gibt es einen Punkt für Bluetooth-Sensoren, dort taucht jeder Tag in
-Reichweite von allein auf, man gibt ihm einen Namen und ist fertig. **Kein Treiber,
-kein Node-RED, keine zusätzliche Hardware.** Nach dem Gasflaschensensor und dem
-Dieselgeber, die beide erst mühsam beigebracht werden mussten, ist das eine
-ausgesprochen angenehme Abwechslung.
-
-Fünf Stück sind im Fahrzeug verteilt:
-
-| Wo | Wofür |
-|---|---|
-| Wohnraum | Die Zahl, die abends entscheidet, ob die Heizung noch anspringt |
-| Kühlschrank | Kühlt der Absorberkühlschrank wirklich, oder tut er nur so? |
-| Kühlbox | Dasselbe für die Kompressorbox, die deutlich kälter läuft |
-| Technikfach | Dort sitzen Wechselrichter, Laderegler und die beiden Batterien |
-| Außen | Temperatur und Luftfeuchte draußen, ohne Griff zur Wetter-App |
-
-Der interessanteste ist der im **Technikfach**. Während ich das schreibe, stehen dort
-34 °C, bei 24 °C draußen. Das ist kein Alarm, aber es ist die Art von Wert, die man
-kennen sollte: Zehn Grad über Außentemperatur sind an einem milden Tag harmlos, auf
-einem Stellplatz ohne Schatten im Hochsommer wird daraus eine andere Zahl. Und
-Lithiumzellen mögen Hitze ähnlich wenig wie Kälte.
+Der interessanteste ist der im **Technikfach**, dort wo Wechselrichter, Laderegler
+und Batterien sitzen. Während ich das schreibe, stehen dort 34 °C, bei 24 °C draußen.
+Das ist kein Alarm, aber es ist die Art von Wert, die man kennen sollte: An einem
+milden Tag ist das harmlos, auf einem Stellplatz ohne Schatten im Hochsommer wird
+daraus eine andere Zahl.
 
 Der zweite Nutzen ist banaler und trotzdem der, den ich am häufigsten habe: **Man
-sieht, ob der Kühlschrank arbeitet, ohne ihn aufzumachen.** Ein Absorberkühlschrank
-von 1998 ist kein Präzisionsgerät, und jedes Öffnen kostet genau die Kälte, die man
-gerade prüfen wollte. Steht er morgens bei 10 °C statt bei 6, weiß ich das jetzt vor
-dem Frühstück und nicht danach.
-
-Dass alles über Bluetooth läuft, hat einen Preis, den man kennen sollte: **Reichweite
-und Batterie.** Die Knopfzelle hält je nach Sendetakt ein bis zwei Jahre, und wenn
-sie leer ist, verschwindet der Fühler nicht mit einer Meldung, sondern der Wert wird
-einfach alt. Für die Anzeige gilt hier dasselbe wie für den Dieselgeber: Ein Sensor,
-der nichts mehr sagt, ist kein Sensor, der 0 °C misst.
-
-> **Eine Zeile in derselben Liste ist gar kein Tag.** Ganz unten steht ein Fühler
-> namens „Router" mit gut 70 °C. Der ist virtuell: Dahinter steckt kein RuuviTag,
-> sondern der [Router im Fahrzeug](/projekte/wohnmobil-netzwerk), der seine eigene
-> Gehäusetemperatur alle fünf Minuten an den Cerbo meldet. Für die Anzeige sieht das
-> aus wie ein Sensor unter vielen. Wer die Liste zum ersten Mal sieht, sollte das
-> wissen, bevor er sich über 70 Grad im Wohnraum wundert.
+sieht, ob der Kühlschrank arbeitet, ohne ihn aufzumachen.** Jedes Öffnen kostet genau
+die Kälte, die man gerade prüfen wollte.
 
 ## Drei Dinge, die ich vorher gern gewusst hätte
 
