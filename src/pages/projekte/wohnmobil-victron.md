@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Die Energieanlage – Victron und Cerbo GX im Flair
+titel: Was im neuen alten Flair steckt
 kurz: 560 Ah Lithium, ein Wechselrichter, zwei Solarregler, drei Ladebooster und ein Cerbo GX, der alles zusammenhält. Mit Fotos aus den Fächern – und dem Abend, an dem beide Booster nicht luden.
 meta_titel: Victron-Anlage im Wohnmobil mit Cerbo GX – Aufbau, Verkabelung, Praxis
 meta_beschreibung: MultiPlus-II, zwei SmartSolar MPPT, drei Ladebooster, 560 Ah LiFePO4 und ein Victron Cerbo GX im Wohnmobil. Lynx-Verteiler mit selbst nachgerüsteten Sicherungen, Querschnitte, Sicherungsplan und die Fehlersuche, die einen ganzen Abend gekostet hat.
