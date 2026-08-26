@@ -48,50 +48,70 @@ Anleitung vorkommt: **die Dachantenne.**
 Ab Werk hat der Router kurze Stabantennen. Auf einem Schreibtisch reicht das. In
 einem Wohnmobil steckt der Router in einem geschlossenen Fach hinter einer
 Bedieneinheit, ringsum Metall, Kabelbäume und Möbel. Das ist ungefähr die
-schlechteste Position, die man einem Funkgerät zumuten kann. Nach oben aufs Dach
-verlegt, hat dieselbe SIM in derselben Zelle plötzlich Empfang, wo vorher nichts war.
-Verbaut ist eine **Panorama-Dachantenne**, die alles mitbringt, was der Router
-braucht: **vier Wege für 5G und LTE, zwei fürs WLAN und einen für GPS.**
+schlechteste Position, die man einem Funkgerät zumuten kann. Oben auf dem Dach hat
+dieselbe SIM in derselben Zelle plötzlich Empfang, wo vorher nichts war.
 
-**Und hier die Falle, an der man Geld und einen Nachmittag verliert:** Es gibt zwei
-Kabelsätze. Der eine hat **30 cm**, der andere **einen Meter**, und sie haben nicht
-dieselben Stecker. Wer den falschen erwischt, kommt entweder nicht bis zum Router
-oder bekommt die Stecker nicht angeschraubt. Deshalb die Antenne **gleich mit dem
-passenden Satz für den RUTX50 kaufen**, nicht Antenne und Kabel getrennt
-zusammensuchen.
+Verbaut ist eine **Panorama-Dachantenne der Serie LGMDM4-6-60-24-58**, weiß, flach,
+180 mm im Durchmesser und 81 mm hoch. Unter der Haube sitzen **sieben Antennen in
+einer**:
 
-Der Meter ist dabei kein Luxus, sondern auch keine Reserve. **Antenne und Router muss
-man zusammen planen**, nicht nacheinander: Der Router muss dorthin, wo das Kabel
-hinreicht. Verlängern kann man zwar, aber jeder zusätzliche Meter Koaxkabel kostet
-bei diesen Frequenzen spürbar Signal. Kurz ist besser als bequem.
+| Wofür | Elemente | Gewinn |
+|---|---|---|
+| 5G und LTE | 4 | bis 9 dBi |
+| WLAN (2,4 und 5 GHz) | 2 | 9 dBi |
+| GPS und GNSS | 1 | mit 26 dB Vorverstärker |
+
+Der GPS-Teil ist dabei kein Beiwerk: Er ist der Grund, warum der Router seine Position
+sauber kennt, ohne dass dafür noch etwas Zusätzliches aufs Dach müsste.
+
+### Die Falle: es gibt zwei Kabelsätze
+
+Hier verliert man Geld und einen Nachmittag, wenn man nicht aufpasst. Dieselbe Antenne
+gibt es mit unterschiedlichen Kabelsätzen, und der Unterschied ist keine Kleinigkeit.
+
+Der richtige Satz für einen Teltonika bringt **1 m Kabel, ab Werk mit genau den
+Steckern bestückt, die der Router hat**: vier SMA für 5G und LTE, zwei **RP**-SMA fürs
+WLAN, einer SMA für GPS. Damit schraubt man sieben Stecker an und ist fertig. Der
+andere Satz ist kürzer und hat diese Bestückung nicht, dann braucht man Adapter oder
+Zwischenkabel, und man merkt es genau in dem Moment, in dem man auf dem Dach steht.
+
+Also **die Antenne gleich mit dem passenden Satz kaufen** statt Antenne und Kabel
+getrennt zusammenzusuchen. Passend ist sie damit für RUTX50, RUTX14, RUTX12, RUTM51
+und RUTM54, abwärts auch für die älteren RUT-Modelle.
+
+Der Meter ist dabei kein Puffer, sondern die Vorgabe: **Antenne und Router muss man
+zusammen planen**, nicht nacheinander. Der Router gehört dorthin, wo das Kabel
+hinreicht. Es gibt fertige Verlängerungssätze bis 7,5 m, aber jeder zusätzliche Meter
+Koaxkabel kostet bei diesen Frequenzen Signal. Kurz ist besser als bequem.
 
 ### Was ich beim Montieren gelernt habe
 
 <figure>
   <img src="/bilder/netzwerk/antenne-durchfuehrung.jpg" alt="Blick von innen an die Decke, eine selbst zugeschnittene Edelstahlplatte als Gegenhalter, darin die verschraubte Gewindedurchführung der Dachantenne mit dem schwarzen Kabelbündel" />
-  <figcaption>Die Stelle, an der es tatsächlich knifflig wird. Die Platte ist selbst zugeschnitten, weil das vorhandene Loch von innen zu groß war. Darin sitzt die Gewindeverlängerung, gekontert mit der Mutter, und daraus kommt das Kabelbündel.</figcaption>
+  <figcaption>Die Stelle, an der es tatsächlich knifflig wird. Die Platte ist selbst zugeschnitten, weil das vorhandene Loch von innen zu groß war. Darin sitzt die Gewindeverlängerung, gekontert mit der M18-Mutter, und daraus kommt das Kabelbündel.</figcaption>
 </figure>
 
-**Sie klebt genau einmal.** Die Antenne sitzt auf einer vollflächigen Klebefläche.
-Das ist gut so, aber es heißt eben auch: einmal aufgesetzt, ist die Entscheidung
-gefallen. Also vorher trocken auflegen, ausrichten, anzeichnen, Fläche gründlich
-reinigen. Und erst dann.
+**Sie klebt genau einmal.** Die Antenne sitzt auf einem wasserdichten Klebepad, das
+die ganze Fläche trägt. Das ist gut so, aber es heißt eben auch: einmal aufgesetzt,
+ist die Entscheidung gefallen. Also vorher trocken auflegen, ausrichten, anzeichnen,
+Fläche gründlich reinigen. Und erst dann.
 
 **Abstand zu allem, was oben sonst noch steht.** Bei mir sitzt sie vorne rechts, mit
 Luft zu den übrigen Aufbauten. Alles, was daneben in die Höhe ragt, steht der Antenne
 im Weg.
 
-**Man braucht fast immer eine Gewindeverlängerung.** Das Gewinde am Antennenfuß ist
-für dünnere Dächer gedacht als das Sandwich eines Wohnmobils. Ich habe mir eine
-passende Verlängerung in Durchmesser und Länge bestellt, und die war schneller da als
-das Originalteil.
+**Man braucht fast immer eine Gewindeverlängerung.** Die Antenne wird durch ein
+**19-mm-Loch** gesteckt und mit einer **M18-Mutter** gekontert. Das serienmäßige
+Gewinde ist für dünnere Dächer gedacht als das isolierte Sandwich eines Wohnmobils.
+Panorama hat dafür eine 70-mm-Verlängerung im Programm, ich habe mir stattdessen eine
+in Durchmesser und Länge passende bestellt. Die war schneller da als das Originalteil.
 
 **Ein altes Loch ist ein Geschenk und ein Problem zugleich.** Bei mir steckte an der
 Stelle eine schlechte Radioantenne. Das erspart das Bohren, aber die Öffnung war von
-innen zu groß, um darin etwas zu kontern. Die Lösung war eine kleine, selbst
-zugeschnittene **Edelstahlplatte**, gegen die die Verschraubung zieht. Abgedichtet ist
-das Ganze mit **Dekasil**, dem Zeug, mit dem im Wohnmobilbau ohnehin alles geklebt und
-gedichtet wird.
+innen zu groß, um die Mutter irgendwo dagegen zu kontern. Die Lösung war eine kleine,
+selbst zugeschnittene **Edelstahlplatte**, gegen die die Verschraubung zieht.
+Abgedichtet ist das Ganze mit **Dekasil**, dem Zeug, mit dem im Wohnmobilbau ohnehin
+alles geklebt und gedichtet wird.
 
 ## 1. Der Campingplatz benutzt dasselbe Subnetz wie du
 
