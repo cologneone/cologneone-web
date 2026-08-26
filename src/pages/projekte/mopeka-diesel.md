@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Projekt.astro
 titel: Mopeka-Dieselgeber am Cerbo GX – und warum er falsch rechnet
-kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen – jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin.
+kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen – jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin. Und ein ehrliches Fazit, nachkaufen würde ich ihn nicht.
 meta_titel: Mopeka Dieseltank am Victron Cerbo GX – Kalibrierung und Ausfälle
 meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX – warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
 bild: /bilder/rotarex/cerbo-tanks.png
@@ -142,10 +142,45 @@ Ultraschallweg messbar.
 Als Ausgangswert dient ein gemessener Verbrauch von **12,63 l/100 km**, sauber von
 randvoll bis randvoll über 2376 km ermittelt.
 
+## Würde ich ihn wieder kaufen? Nein
+
+Damit niemand aus dieser Seite den falschen Schluss zieht: **Ich rate vom Nachkaufen
+ab.** Der Sensor hängt hier, er liefert, und mit den beiden Filterstufen ist das
+Ergebnis brauchbar. Aber er ist nicht die Lösung, für die ich ihn gehalten habe.
+
+Drei Gründe, alle weiter oben ausführlich:
+
+**Jede vierte Messung ist unbrauchbar**, und daran ändert keine Einstellung etwas.
+Die Ursache liegt in der Ankopplung an den Tankboden, nicht in einem Parameter.
+
+**Die Rechnung dahinter stimmt nicht.** Diesel bekommt die Kurve von Benzin, und das
+lässt sich in der Oberfläche nicht abstellen.
+
+**Die eigentliche Arbeit leistet am Ende nicht der Sensor**, sondern das
+Restmengenmodell aus Tankungen und Kilometern. Der Sensor darf nur noch korrigierend
+eingreifen, wenn er eine Reihe von Plausibilitätsprüfungen besteht. Ein Messgerät,
+das man derart einhegen muss, ist eher eine zweite Meinung als ein Messgerät.
+
+Und ganz konkret, weil das die häufigste Kombination sein dürfte: **Wer einen
+Goldschmitt-Ersatztank fährt, ob im Ducato oder auf einem anderen Basisfahrzeug,
+lässt es besser.** Genau an diesem Tank bekomme ich die Ankopplung nicht zuverlässig
+hin, und das ist kein exotischer Einzelfall.
+
+Fair bleiben muss man trotzdem. Mopeka ist mit Gasflaschen groß geworden, und ein
+Stahlzylinder mit dickem, glattem Boden ist eine andere Aufgabe als ein großer
+Kunststoff-Ersatztank unter einem Fahrzeugboden. Beurteilen kann ich hier meinen
+Dieseltank, nicht das ganze Unternehmen.
+
+**Und was stattdessen?** Daran arbeite ich. Eine Messung, die nicht davon abhängt,
+wie gut ein Sensor von außen an den Tankboden gekoppelt ist, wäre der naheliegende
+Weg. Solange nichts Besseres steht, bleibt der Mopeka drin, denn er ist nun einmal
+da, und ein gefilterter Wert schlägt immer noch die Nadel im Cockpit, die unterhalb
+von 70 Litern anfängt zu raten. Wenn es so weit ist, steht es hier.
+
 ## Was noch offen ist
 
+- Eine andere Messmethode für den Dieseltank, die ohne Ankopplung von außen auskommt
 - Genügend Tankungen für eine belastbare eigene Kennlinie, das dauert eine Saison
-- Die Ankopplung des Sensors am Tankboden noch einmal ansehen; 27 % Ausfall ist viel
 - Kalibrierpunkte im unteren Tankbereich, wo bisher am wenigsten Messungen liegen
 
 ## Stolpersteine für Nachbauer
