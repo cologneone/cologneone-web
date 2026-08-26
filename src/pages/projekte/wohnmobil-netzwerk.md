@@ -68,14 +68,12 @@ laufen dürfen.
 Sofort. Mit genau einer Einschränkung: Ich würde die **eSIM-Variante** nehmen.
 
 Den RUTX50 gibt es auch mit fest eingebauter eSIM, zusätzlich zu den beiden
-Kartenschächten. Der Unterschied zeigt sich im Ausland. Ein Datenpaket eines örtlichen
+Kartenschächten. Der Unterschied zeigt sich im Ausland: Ein Datenpaket eines örtlichen
 Anbieters bucht man damit am Bildschirm, statt einen Laden zu suchen, eine Karte zu
-kaufen und sie einzulegen.
-
-Dazu kommt bei mir die Einbaulage. Der Router sitzt hinter der originalen
-Bedieneinheit, und für einen Kartenwechsel muss erst das Nachbarfach auf und die
-Schaltleiste heruntergeklappt werden. Nichts Dramatisches, aber auch nichts, was man
-an einem Regentag auf einem Parkplatz machen möchte.
+kaufen und sie einzulegen. Wer ein paar Wochen in einem Land unterwegs ist, in dem das
+eigene Roaming teuer wird oder nach ein paar Gigabyte kriecht, spart sich damit einen
+halben Urlaubsnachmittag. Und beide Kartenschächte bleiben trotzdem frei für das, was
+man ohnehin dabeihat.
 
 ## 5G steht dran. Ankommen muss es trotzdem
 
@@ -97,6 +95,13 @@ einer**:
 
 Der GPS-Teil ist dabei kein Beiwerk: Er ist der Grund, warum der Router seine Position
 sauber kennt, ohne dass dafür noch etwas Zusätzliches aufs Dach müsste.
+
+> **Der Fehler, den man erst abends merkt:** Zwei der sieben Elemente sind fürs WLAN.
+> Wer beide WLAN-Anschlüsse des Routers mit aufs Dach nimmt, funkt sein eigenes Netz
+> von außen gegen einen Aufbau aus Alu und Isolierung. Das Ergebnis ist hervorragendes
+> WLAN auf dem Stellplatz und drinnen fast keins. **Mindestens eine WLAN-Antenne
+> gehört nach innen.** Die sinnvolle Aufteilung ist eine oben für die Reichweite zum
+> Campingplatz-WLAN und eine drinnen für die eigenen Geräte.
 
 ### Die Falle: es gibt zwei Kabelsätze
 
