@@ -21,7 +21,7 @@ eine Konfiguration, einen gespeicherten Zustand –, kommt die Überraschung.
 
 ## Das Symptom
 
-Der Pfad sieht vernünftig aus, der Ordner existiert – und es passiert nichts. Keine
+Der Pfad sieht vernünftig aus, der Ordner existiert, und es passiert nichts. Keine
 Fehlermeldung im Debug-Fenster, keine Datei. Nur Schweigen.
 
 ## Die Ursache
@@ -38,7 +38,7 @@ Dort kann man sich beliebige Unterordner anlegen.
 
 ## Zwei Dinge, die daraus folgen
 
-**Alles, was Abläufe ablegen, gehört dorthin** – Messreihen, Konfigurationsdateien,
+**Alles, was Abläufe ablegen, gehört dorthin**: Messreihen, Konfigurationsdateien,
 Zustände.
 
 **Und `/data` ist die richtige Ebene**, weil sie Firmware-Updates übersteht. Der Rest
@@ -46,5 +46,5 @@ des Dateisystems nicht: Was außerhalb von `/data` liegt, ist nach dem nächsten
 weg. Das ist der Grund, warum man den Umweg über den langen Pfad geht, statt sich
 einen bequemeren Ort zu suchen.
 
-Wer den Fehler nicht kennt, sucht ihn im Ablauf. Er steckt aber im Dateisystem – und
+Wer den Fehler nicht kennt, sucht ihn im Ablauf. Er steckt aber im Dateisystem, und
 zwar auf eine Weise, die keine Fehlermeldung produziert, sondern einfach nichts tut.

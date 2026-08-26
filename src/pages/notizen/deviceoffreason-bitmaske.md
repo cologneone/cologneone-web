@@ -37,7 +37,7 @@ dann deren Summe. Der Wert stammt aus dem VE.Direct-Protokoll, Register `0x0207`
 
 ## Der Fehler
 
-Das Naheliegende ist falsch – in beide Richtungen:
+Das Naheliegende ist falsch, und zwar in beide Richtungen:
 
 ```js
 if (reason === 0) { /* Motor laeuft */ }    // genau so stand es bei mir im Flow
@@ -60,7 +60,7 @@ Ist dieses eine Bit gesetzt?
 
 Die Folge war unauffällig und deshalb besonders lästig: Die Motorerkennung
 funktionierte im Normalfall tadellos und setzte immer genau dann aus, wenn zusätzlich
-noch etwas anderes anlag – also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
+noch etwas anderes anlag, also ausgerechnet dann, wenn wirklich etwas nicht stimmte.
 
 Dieselbe Falle steckt in vielen Statuswerten von Victron-Geräten. Wenn in einer
 Dokumentation eine Tabelle mit Bit-Nummern steht, ist es eine Bitmaske.

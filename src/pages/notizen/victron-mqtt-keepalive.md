@@ -47,7 +47,7 @@ Gegend funken, wenn niemand zuhört. Nur merkt man davon nichts, bis alles steht
 Bei mir schickt ein Zeitgeber alle 30 Sekunden dieses Lebenszeichen. Der Haken: Dieser
 eine unscheinbare Knoten hält die Datenversorgung **sämtlicher** Automatisierungen
 aufrecht. Wer den Ablauf abschaltet, in dem er zufällig liegt, legt nebenbei alles
-andere still – Tankanzeige, Motorautomatik, Protokolle.
+andere still: Tankanzeige, Motorautomatik, Protokolle.
 
 **Wenn also alle Werte gleichzeitig einfrieren, ist die erste Frage nicht „welcher
 Sensor ist kaputt", sondern „wer schickt eigentlich das Lebenszeichen, und läuft der

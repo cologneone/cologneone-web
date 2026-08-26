@@ -22,7 +22,7 @@ tags:
 Das Energiesystem im Fahrzeug läuft auf Victron-Komponenten, mit einem **Cerbo GX**
 als Kopf der Anlage. Das Ziel war nie die maximale Ausbaustufe, sondern ein System,
 das ich verstehe, im Zweifel selbst reparieren kann und dessen Zustand jederzeit
-ablesbar ist – auch dann, wenn ich gerade nicht daneben stehe.
+ablesbar ist, auch wenn ich gerade nicht daneben stehe.
 
 Diese Seite ist die Übersicht: was drin ist, wie es zusammenhängt und was ich dabei
 gelernt habe. Die Details, bei denen es richtig interessant wurde, stehen in eigenen
@@ -32,10 +32,10 @@ Beiträgen.
 
 | Aufgabe | Gerät | Wozu das gut ist |
 |---|---|---|
-| Landstrom und 230 V an Bord | MultiPlus-II 12/3000/120-32 | Lädt an der Säule und macht aus 12 V wieder 230 V – beides im selben Kasten |
+| Landstrom und 230 V an Bord | MultiPlus-II 12/3000/120-32 | Lädt an der Säule und macht aus 12 V wieder 230 V, beides im selben Kasten |
 | Strom vom Dach | zwei SmartSolar MPPT 100/30 | Zwei Dachbereiche getrennt, damit ein verschattetes Panel nicht das andere mitzieht |
 | Strom vom Motor | zwei Orion XS 12/12-50 | Laden die Wohnraumbatterie während der Fahrt, je 50 A |
-| Starterbatterie nachladen | ein Orion-Tr Smart 12/12-30 | Lädt in die andere Richtung – dazu unten mehr |
+| Starterbatterie nachladen | ein Orion-Tr Smart 12/12-30 | Lädt in die andere Richtung, dazu unten mehr |
 | Speicher | zwei LiFePO4 mit je 280 Ah | Zusammen 560 Ah bei 12,8 V, jede mit eigenem BMS |
 | Der Zähler | BMV-712 Smart | Zählt Amperestunden rein und raus, statt nur Spannung zu raten |
 | Der Kopf | Cerbo GX mit Node-RED | Sammelt alles ein, zeigt es an und schaltet, wo es nötig ist |
@@ -45,24 +45,24 @@ Temperaturfühler im Fahrzeug und eine Handvoll Funkschaltaktoren für Licht und
 Verbraucher.
 
 Eine Zahl, die im Winter zählt: **Unter 5 °C wird nicht geladen.** Das Datenblatt
-erlaubt 0 °C, aber das BMS kennt die Zelltemperatur nur ungefähr – und eine
+erlaubt 0 °C, aber das BMS kennt die Zelltemperatur nur ungefähr. Und eine
 LiFePO4-Zelle, die man kalt lädt, nimmt dauerhaft Schaden, ohne dass man es merkt.
 Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
 
 ## Das Technikfach
 
 Das meiste davon sitzt in einem einzigen Fach unter der Sitzbank. Wer dort zum ersten
-Mal die Klappe aufmacht, sieht erst mal gar nichts – deshalb hier zwei Aufnahmen, in
+Mal die Klappe aufmacht, sieht erst mal gar nichts. Deshalb hier zwei Aufnahmen, in
 denen man sich zurechtfinden kann.
 
 <figure>
   <img src="/bilder/victron/technikfach-gesamt.jpg" alt="Technikfach mit Lynx-Verteiler, MultiPlus-II, beschrifteten Kabeln und den beiden 280-Ah-Batterien" />
-  <figcaption>Die Gesamtaufnahme: oben links der Lynx, rechts der MultiPlus-II, unten die beiden 280-Ah-Batterien. Jedes Kabel trägt ein Schild – „Bordnetz", „Ladeverteiler", „Multiplus Ltg 1+", „Haupt Masse". Das ist der Unterschied zwischen einer Anlage, die man versteht, und einer, die man beim nächsten Mal wieder auseinandernehmen muss.</figcaption>
+  <figcaption>Die Gesamtaufnahme: oben links der Lynx, rechts der MultiPlus-II, unten die beiden 280-Ah-Batterien. Jedes Kabel trägt ein Schild: „Bordnetz", „Ladeverteiler", „Multiplus Ltg 1+", „Haupt Masse". Das ist der Unterschied zwischen einer Anlage, die man versteht, und einer, die man beim nächsten Mal wieder auseinandernehmen muss.</figcaption>
 </figure>
 
 <figure>
   <img src="/bilder/victron/technikfach.jpg" alt="Blick ins Technikfach mit zwei SmartSolar MPPT, Cerbo GX, Ladeverteiler und Votronic-Sicherungsverteilern" />
-  <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und oben das originale Kontroll- und Verteilungsmodul des Fahrzeugs – alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
+  <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und oben das originale Kontroll- und Verteilungsmodul des Fahrzeugs. Alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
 </figure>
 
 Genau das ist der Punkt, den man an einem gewachsenen Wohnmobil sieht und der in
@@ -74,13 +74,13 @@ hat es CBE.
 
 Und dieses Modul ist der Grund, warum die Verkabelung heute so aussieht, wie sie
 aussieht: **Auf seiner Platine ist ein Steckplatz defekt.** Eine Reparatur wäre
-unwirtschaftlich gewesen – die Einheit ist alt, Ersatzteile sind es auch. Also sind
+unwirtschaftlich gewesen: Die Einheit ist alt, Ersatzteile sind es auch. Also sind
 mehrere Stromkreise auf die neue Verteilung umgezogen, die aus dem Victron-Block
 gespeist wird. Der schwarze Votronic-Plusverteiler unten im nächsten Bild ist genau
 das: die Kreise, die das Originalmodul nicht mehr sicher tragen konnte.
 
 Das ist die realistische Reihenfolge bei einem älteren Fahrzeug. Man reißt nicht die
-ganze Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis – immer dann, wenn
+ganze Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis, immer dann, wenn
 ein Stück davon aufgibt.
 
 <figure>
@@ -92,21 +92,21 @@ ein Stück davon aufgibt.
 
 <figure>
   <img src="/bilder/victron/technikfach-lynx.jpg" alt="Victron Lynx Power In 1000 im Technikfach, links daneben der rote Batterietrennschalter" />
-  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batteriehauptschalter – der trennt die ganze Anlage, nicht nur einen Zweig.</figcaption>
+  <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batteriehauptschalter. Er trennt die ganze Anlage, nicht nur einen Zweig.</figcaption>
 </figure>
 
 Alles Dicke trifft sich an einer Stelle: dem **Lynx Power In 1000**. Der ist ab Werk
-eine reine Sammelschiene *ohne* Sicherungen – vier Abgänge, alle direkt auf dem
+eine reine Sammelschiene *ohne* Sicherungen: vier Abgänge, alle direkt auf dem
 Batterieplus. Ich habe ihn selbst auf Sicherungen umgebaut.
 
 Die Regel für die Querschnitte ist im ganzen Fahrzeug dieselbe und leicht zu merken:
 
-- **50 mm²** für alles Dicke – Batterien, MultiPlus, Lichtmaschine, Ladeverteiler
-- **16 mm²** für alles Dünnere – Bordversorgung, Booster, Solar
+- **50 mm²** für alles Dicke: Batterien, MultiPlus, Lichtmaschine, Ladeverteiler
+- **16 mm²** für alles Dünnere: Bordversorgung, Booster, Solar
 
 Und der Satz, der beim Sicherungenaussuchen wirklich hilft: **Eine Sicherung schützt
 die Leitung, nicht das Gerät.** Sie muss also zum Kabel passen, nicht zum
-Verbraucher. Deshalb steht am Lynx überall 200 A, wo 50 mm² liegt – und nur dort
+Verbraucher. Deshalb steht am Lynx überall 200 A, wo 50 mm² liegt, und nur dort
 60 A, wo es dünner wird:
 
 | Weg | Querschnitt | Sicherung |
@@ -129,7 +129,7 @@ große Sicherung, die die halbe Anlage mitnimmt.
 
 <figure>
   <img src="/bilder/victron/lynx-offen.jpg" alt="Geöffneter Lynx Power In: vier Bolzen, darunter je eine Sicherung zur gemeinsamen Sammelschiene" />
-  <figcaption>Der Lynx ohne Deckel – hier wird der Umbau erst verständlich. Unten die durchgehende Sammelschiene, darüber je Abgang ein eigener Bolzen, und dazwischen die Sicherung. Ab Werk sind die vier Bolzen einfach nur miteinander verbunden.</figcaption>
+  <figcaption>Der Lynx ohne Deckel. Hier wird der Umbau erst verständlich. Unten die durchgehende Sammelschiene, darüber je Abgang ein eigener Bolzen, und dazwischen die Sicherung. Ab Werk sind die vier Bolzen einfach nur miteinander verbunden.</figcaption>
 </figure>
 
 > **Ein Fehler, den ich fast gemacht hätte:** Empfohlen war mir zuerst eine
@@ -148,24 +148,24 @@ große Sicherung, die die halbe Anlage mitnimmt.
 
 **Booster 1 und 2** machen das Erwartbare: Sie holen sich Strom von der
 Lichtmaschine und laden damit die Wohnraumbatterie. Zusammen bis zu 100 A. Sie
-hängen per Datenkabel am Cerbo und wissen selbst, wann sie dürfen – über **D+**,
+hängen per Datenkabel am Cerbo und wissen selbst, wann sie dürfen, nämlich über **D+**,
 also das Signal, das im Fahrzeug sagt „der Motor läuft".
 
 **Booster 3 lädt in die andere Richtung**: aus der Wohnraumbatterie zurück in die
 **Starterbatterie**. Das klingt verkehrt herum, ist aber der praktischste Booster von
-allen. Denn die Wohnraumbatterie hat 560 Ah, Solar auf dem Dach und drei Ladewege –
-die geht so schnell nicht leer. Liegenbleiben tut man an der *Starterbatterie*, und
+allen. Denn die Wohnraumbatterie hat 560 Ah, Solar auf dem Dach und drei Ladewege.
+Die geht so schnell nicht leer. Liegenbleiben tut man an der *Starterbatterie*, und
 die hängt bei den meisten Fahrzeugen einfach nur da und entlädt sich still vor sich
 hin.
 
 Dieser dritte Booster hat keinen Datenanschluss. Er wird über ein **Relais des
 Cerbo** geschaltet, und alle Schwellenwerte liegen nicht im Gerät, sondern in einem
 Node-RED-Ablauf auf dem Cerbo. Ein alter Aufkleber am Gehäuse behauptet noch etwas
-anderes – der gehört abgemacht.
+anderes. Der gehört abgemacht.
 
 ## Der Flow, der Booster 3 steuert
 
-Booster 3 hat keinen Datenanschluss und **keine eigenen Schwellenwerte mehr** – die
+Booster 3 hat keinen Datenanschluss und **keine eigenen Schwellenwerte mehr**: Die
 sind bewusst aus dem Gerät heraus und in den Cerbo hinein gewandert. Er kann nur noch
 eins: an oder aus, geschaltet über **Relais 1** des Cerbo. Alles, was entscheidet
 *wann*, steckt in einem Node-RED-Ablauf.
@@ -188,11 +188,11 @@ Das ist der Teil, der mich am meisten Zeit gekostet hat – und die Lösung brau
 **D+** ist eine alte Bekannte aus der Fahrzeugelektrik: eine Klemme, die nur dann
 Spannung führt, wenn die Lichtmaschine dreht. Früher hing daran die
 Ladekontrollleuchte im Cockpit. Sie ist damit das ehrlichste „der Motor läuft"-Signal,
-das ein Fahrzeug hat – ehrlicher als die Zündung, denn die steht auch beim
+das ein Fahrzeug hat, ehrlicher als die Zündung, denn die steht auch beim
 Radiohören an.
 
 An den Cerbo geht dieses Signal aber gar nicht. Es liegt an den **Fernsteuereingängen
-von Booster 1 und 2** – dort gehört es hin, denn die sollen ja nur bei laufendem
+von Booster 1 und 2**. Dort gehört es hin, denn sie sollen ja nur bei laufendem
 Motor laden. Und genau da wird es abgegriffen:
 
 Beide Orion XS melden über ihr Datenkabel einen Wert namens **`DeviceOffReason`** –
@@ -220,7 +220,7 @@ werde noch gefahren.
 
 ### Was der Flow entscheidet
 
-Vier Regeln, in dieser Reihenfolge – die erste, die zutrifft, gewinnt:
+Vier Regeln in dieser Reihenfolge. Die erste, die zutrifft, gewinnt:
 
 | Vorrang | Bedingung | Relais | Warum |
 |---|---|---|---|
@@ -254,12 +254,12 @@ weitergemacht.
 
 Im selben Tab sitzt der Zeitgeber, der alle 30 Sekunden das
 [MQTT-Lebenszeichen](/notizen/victron-mqtt-keepalive) schickt. **Ohne ihn verstummen
-sämtliche Messwerte im ganzen Haus** – Dieselgeber, virtueller Tank, Wasserflow,
+sämtliche Messwerte im ganzen Haus**: Dieselgeber, virtueller Tank, Wasserflow,
 alles. Wer diesen Tab zum Testen deaktiviert, legt nebenbei die halbe Anlage still
 und sucht den Fehler danach an der falschen Stelle.
 
 Sauber wäre er in einem eigenen Tab. Er steht hier, weil dieser Tab historisch der
-erste war – und bleibt vorerst, weil ein Umzug genau die Art von Änderung ist, die
+erste war, und bleibt vorerst, weil ein Umzug genau die Art von Änderung ist, die
 man nicht kurz vor einer Reise macht.
 
 ### Diagnose statt Raten
@@ -270,7 +270,7 @@ den Zeitpunkt, an dem dort zuletzt mehr als 5 V anlagen.
 
 Der letzte Wert klingt unscheinbar und ist Gold wert: Wackelt man an einer Sicherung
 oder einer Klemme und es kommt für einen Sekundenbruchteil Spannung an, sieht man das
-danach – auch wenn man in dem Moment gar nicht auf den Bildschirm geschaut hat. Genau
+danach, auch wenn man in dem Moment gar nicht auf den Bildschirm geschaut hat. Genau
 diese Antwort holt sich auch der [Router](/projekte/wohnmobil-netzwerk) alle paar
 Minuten ab, um im Ernstfall eine SMS zu schicken.
 
@@ -298,7 +298,7 @@ die Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit s
    bei laufendem Motor nahezu null, muss man im Gerät gar nicht weitersuchen.
 2. **Den Abschaltgrund lesen – als Bitmaske.** Victron meldet nicht *einen* Grund,
    sondern alle gleichzeitig, als Summe von Zweierpotenzen. `1` heißt „keine
-   Eingangsspannung", `8` heißt „D+ fehlt". Stehen beide an, steht dort `9` – und
+   Eingangsspannung", `8` heißt „D+ fehlt". Stehen beide an, steht dort `9`. Und
    wer auf Gleichheit prüft, findet nichts. [Die Kurzfassung dazu
    hier](/notizen/deviceoffreason-bitmaske).
 3. **Wenn keine Eingangsspannung ankommt, ist die Ursache mechanisch.**
@@ -312,7 +312,7 @@ Boostern.
 
 Ehrlicherweise gehört dazu, was ich vorher falsch vermutet hatte: eine lose oder
 korrodierte Hochstromverbindung, samt Sorge vor Wärmeentwicklung. Das war überzogen,
-und es hätte mir früher auffallen können – 41 Minuten völlig ruhiger Spannungsverlauf
+und es hätte mir früher auffallen können: 41 Minuten völlig ruhiger Spannungsverlauf
 sprachen dagegen. **Eine wackelnde Verbindung erzeugt Rauschen. Eine ausgeschaltete
 Verbindung erzeugt Stille.** Wer im Log nur eine glatte Linie sieht, sucht am
 falschen Ende.
@@ -356,12 +356,12 @@ Wer nach dem Voltmeter geht, rät.
 
 Deshalb der **BMV-712**: ein Shunt in der Minusleitung, der jede Amperestunde zählt,
 die rein- und rausgeht. Das ist der Unterschied zwischen einer gemessenen und einer
-geschätzten Anzeige – und der Grund, warum man morgens weiß, ob der Kaffee noch
+geschätzten Anzeige, und der Grund, warum man morgens weiß, ob der Kaffee noch
 drin ist.
 
 Ein Nebeneffekt, der oft übersehen wird: Der BMV hat einen **zweiten
 Spannungseingang**, und der liegt hier auf der **Starterbatterie**. Damit hat der
-Cerbo ohne weitere Hardware auch deren Spannung – genau die Größe, die die
+Cerbo ohne weitere Hardware auch deren Spannung, genau die Größe, die die
 Rückladeautomatik von Booster 3 braucht.
 
 ## Wie die Teile zusammenspielen
@@ -382,7 +382,7 @@ Oberfläche auf. **Drei Dinge tun das nicht** und mussten dazugebaut werden:
 - Der **Booster für die Starterbatterie** hat keinen Datenanschluss und wird über ein
   Relais geschaltet.
 
-Die Logik dafür liegt in Node-RED auf dem Cerbo selbst – ein Tab je Aufgabe, jeder
+Die Logik dafür liegt in Node-RED auf dem Cerbo selbst: ein Tab je Aufgabe, jeder
 für sich importierbar und mit eigener Änderungshistorie. Node-RED ist bei Victron
 Teil der „large"-Firmware, kostet also nichts extra und läuft direkt auf dem Gerät.
 
@@ -416,4 +416,4 @@ kaputter Sensor und ist keiner –
 Das ist eine gewachsene Anlage in einem gebrauchten Fahrzeug, kein Musterbau aus dem
 Katalog. Sie steht in keiner Verbindung zu Victron Energy; alle Angaben stammen aus
 dem eigenen Fahrzeug. Wer nachbaut, prüft Querschnitte und Absicherung an seiner
-eigenen Anlage – und im Zweifel bei jemandem, der es beruflich macht.
+eigenen Anlage, und im Zweifel bei jemandem, der es beruflich macht.
