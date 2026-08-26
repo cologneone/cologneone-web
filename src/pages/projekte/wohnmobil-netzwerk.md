@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Internet im Wohnmobil – sechs Fallen, die dich offline lassen
-kurz: 5G-Router mit zwei SIM-Karten und Campingplatz-WLAN. Die Technik ist der einfache Teil – die Fallen sind es nicht, und die meisten zeigen dir währenddessen „verbunden" an.
-meta_titel: Internet im Wohnmobil – Router-Fallen, die niemand erwähnt
-meta_beschreibung: Campingplatz-WLAN, 5G-Failover und zwei SIM-Karten im Wohnmobil mit einem Teltonika RUTX50. Dazu der Einbau der Panorama-Dachantenne mit dem richtigen Kabelsatz. Warum ein Platz mit demselben Subnetz dein Routing zerlegt, warum die Anmeldeseite nicht lädt und warum volle Balken nichts bedeuten.
+titel: Internet im Wohnmobil, wenn das Handy längst aufgegeben hat
+kurz: Ein 5G-Router und eine Dachantenne, mehr ist es nicht. Was verbaut ist, warum es diese Teile geworden sind, wo ich sie herhabe – und die sechs Fallen, die mich am meisten Zeit gekostet haben.
+meta_titel: Internet im Wohnmobil mit Teltonika RUTX50 und Panorama-Dachantenne
+meta_beschreibung: 5G-Router, Dachantenne, zwei SIM-Karten und Campingplatz-WLAN im Wohnmobil. Welche Teile verbaut sind, warum es der Teltonika RUTX50 wurde, worauf man beim Kabelsatz der Antenne achten muss und welche sechs Fallen einen offline lassen, während alle Anzeigen "verbunden" melden.
 rang: 4
 status: Laufend
 bild: /bilder/netzwerk/router-front.jpg
@@ -14,36 +14,70 @@ tags:
   - Router
 ---
 
-**Der Aufbau, um den es geht:** Im Fahrzeug sitzt ein **Teltonika RUTX50**, ein
-5G-Router für den Dauerbetrieb, mit zwei SIM-Kartenplätzen, vier LAN-Buchsen und
-eigenem WLAN. Er spannt das Bordnetz auf, in dem alles hängt, was im Wohnmobil ins
-Internet will oder untereinander redet: Laptop, Fernseher, die Steuerung der
-Energieanlage, ein paar Funkschalter.
+**Worum es geht:** Unterwegs zuverlässig online sein, ohne dass es davon abhängt, was
+der Campingplatz anbietet, und ohne dass ein Handy als Hotspot herhalten muss. Hier
+steht, was dafür im Fahrzeug steckt, warum es genau diese Teile geworden sind, wo ich
+sie herhabe und was ich auf dem Weg dahin gelernt habe.
+
+## Was verbaut ist
+
+Zwei Teile, mehr ist es nicht.
+
+- Ein **Teltonika RUTX50**, ein 5G-Router für den Dauerbetrieb: zwei
+  SIM-Kartenplätze, vier LAN-Buchsen, eigenes WLAN, Versorgung aus dem 12-V-Bordnetz.
+- Eine **Panorama-Dachantenne**, in der sieben Antennen in einem flachen Gehäuse
+  stecken. Zu der weiter unten mehr, denn sie ist der unterschätzte Teil.
+
+Der Router spannt das Bordnetz auf, in dem alles hängt, was im Wohnmobil ins Internet
+will oder untereinander redet: Laptop, Fernseher, die Steuerung der Energieanlage, ein
+paar Funkschalter.
 
 <figure>
   <img src="/bilder/netzwerk/router-front.jpg" alt="Frontblende eines Teltonika RUTX50 mit zwei SIM-Schächten, vier LAN-Buchsen und 3G/4G/5G-Anzeigen" />
   <figcaption>Zwei SIM-Schächte nebeneinander, vier LAN-Buchsen, darüber die Anzeigen für 3G, 4G und 5G. Der Kippschalter links gehört nicht zum Router, sondern trennt ihn vom Bordnetz.</figcaption>
 </figure>
 
-Die gewünschte Reihenfolge ist banal: **Campingplatz-WLAN, wenn es taugt – sonst
-SIM 1 – sonst SIM 2.** Fällt eines aus, übernimmt das nächste. Fachbegriff dafür ist
-*Failover*; der Router prüft dazu im Sekundentakt, ob über den gerade aktiven Weg
-überhaupt noch etwas nach draußen geht.
-
-Das einzurichten ist eine Nachmittagsaufgabe. Der Rest dieses Textes handelt davon,
-was danach passiert ist. Alle sechs Punkte haben echte Zeit gekostet, und fünf davon
-haben eines gemeinsam: **Während sie auftreten, sagen dir sämtliche Anzeigen, dass
-alles in Ordnung ist.**
-
 <figure>
   <img src="/bilder/netzwerk/router-einbau.jpg" alt="Der Router im Klappfach hinter der originalen Wohnmobil-Bedienung, daneben Kabelbäume und ein Schaltmodul" />
   <figcaption>Der Einbauort: ein totes Klappfach vorne hinter der originalen Bedieneinheit. Lüftungsöffnungen mussten nachgerüstet werden, das Fach kühlt auch nachts nicht aus.</figcaption>
 </figure>
 
-## 5G steht dran. Ankommen muss es trotzdem
+## Warum überhaupt ein Router, es gibt doch Handys
 
-Bevor es zu den Fallen geht, das Bauteil, das am meisten gebracht hat und in keiner
-Anleitung vorkommt: **die Dachantenne.**
+Die ehrliche Alternative heißt Hotspot am Handy. Das funktioniert, bis es das nicht
+mehr tut, und dann aus vier Gründen gleichzeitig.
+
+**Das Handy geht mit.** Wer damit zum Brötchenholen läuft, nimmt das halbe Wohnmobil
+mit offline – auch alles, was man aus der Ferne sehen möchte, während man weg ist.
+
+**Ein Handy kann kein Campingplatz-WLAN weiterreichen.** Der Router kann das
+Platz-WLAN als Zugang nach draußen benutzen und trotzdem sein eigenes Netz aufspannen.
+Alle Geräte an Bord bleiben, wo sie sind, und merken vom Wechsel nichts.
+
+**Ein Handy hat keinen Antennenanschluss.** Und daran hängt am Ende alles: **Mit der
+Dachantenne hat der Router noch brauchbares Netz, wenn das Handy längst aufgegeben
+hat.** Das ist kein Gefühl, das erlebt man auf jedem einsamen Stellplatz aufs Neue.
+
+**Und er ist ein richtiges Gerät.** Zwei SIM-Karten mit automatischer Umschaltung,
+Dauerbetrieb an 12 V, und ein Betriebssystem, in das man hineinkommt. Alles, was auf
+dieser Seite an Automatik vorkommt, gibt es nur, weil auf dem Router eigene Skripte
+laufen dürfen.
+
+## Würde ich ihn wieder kaufen? Ja, aber die eSIM-Version
+
+Sofort. Mit genau einer Einschränkung: Ich würde die **eSIM-Variante** nehmen.
+
+Den RUTX50 gibt es auch mit fest eingebauter eSIM, zusätzlich zu den beiden
+Kartenschächten. Der Unterschied zeigt sich im Ausland. Ein Datenpaket eines örtlichen
+Anbieters bucht man damit am Bildschirm, statt einen Laden zu suchen, eine Karte zu
+kaufen und sie einzulegen.
+
+Dazu kommt bei mir die Einbaulage. Der Router sitzt hinter der originalen
+Bedieneinheit, und für einen Kartenwechsel muss erst das Nachbarfach auf und die
+Schaltleiste heruntergeklappt werden. Nichts Dramatisches, aber auch nichts, was man
+an einem Regentag auf einem Parkplatz machen möchte.
+
+## 5G steht dran. Ankommen muss es trotzdem
 
 Ab Werk hat der Router kurze Stabantennen. Auf einem Schreibtisch reicht das. In
 einem Wohnmobil steckt der Router in einem geschlossenen Fach hinter einer
@@ -112,6 +146,40 @@ innen zu groß, um die Mutter irgendwo dagegen zu kontern. Die Lösung war eine 
 selbst zugeschnittene **Edelstahlplatte**, gegen die die Verschraubung zieht.
 Abgedichtet ist das Ganze mit **Dekasil**, dem Zeug, mit dem im Wohnmobilbau ohnehin
 alles geklebt und gedichtet wird.
+
+## Wo ich das Zeug herhabe
+
+Router und Antenne sind von **Antennentechnik Dietz**. Das steht hier, weil die Frage
+sonst als Erstes kommt, und weil dort jemand sitzt, der die Sachen wirklich kennt: Zu
+den Antennen und den Routern gibt es Videos, in denen der Kram erklärt und montiert
+wird, statt nur Datenblätter abzuschreiben. Genau daher weiß ich auch von der Sache
+mit den zwei Kabelsätzen.
+
+Ich bekomme dafür nichts, und es gibt hier keine Provisionslinks. Das ist einfach der
+Laden, bei dem es gekauft ist und bei dem ich wieder kaufen würde.
+
+## Wie wir überhaupt ins Internet kommen
+
+Jetzt der eigentliche Betrieb, und der ist banaler, als es klingt. Es gibt drei Wege
+nach draußen, und sie haben eine feste Reihenfolge:
+
+1. **Campingplatz-WLAN**, wenn es taugt. Kostet kein Datenvolumen.
+2. **SIM 1**, die deutsche Hauptkarte.
+3. **SIM 2** als Reserve.
+
+Fällt der aktive Weg aus, übernimmt der nächste. Der Fachbegriff dafür ist
+*Failover*. Damit das nicht erst auffällt, wenn man selbst etwas anklickt, prüft der
+Router im Sekundentakt, ob über den gerade aktiven Weg überhaupt noch etwas nach
+draußen geht: Drei Fehlschläge hintereinander, und er schaltet um. Ein Ausfall ist
+damit nach rund **neun Sekunden** erkannt.
+
+Das alles einzurichten ist eine Nachmittagsaufgabe.
+
+## Und jetzt die Stolperfallen
+
+Der Rest dieser Seite handelt davon, was **nach** dem Nachmittag passiert ist. Sechs
+Punkte, alle haben echte Zeit gekostet, und fünf davon haben eines gemeinsam:
+**Während sie auftreten, sagen dir sämtliche Anzeigen, dass alles in Ordnung ist.**
 
 ## 1. Der Campingplatz benutzt dasselbe Subnetz wie du
 
