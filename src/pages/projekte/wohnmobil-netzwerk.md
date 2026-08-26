@@ -75,6 +75,11 @@ kein Netzteil braucht. Er sitzt unter einem Schrank an einer eingebauten USB-Dos
 trägt eine Holzfolie im Möbelton, damit man ihn nicht sieht. Seitdem sage ich im
 Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". **Das ist Luxus.**
 
+<figure>
+  <img src="/bilder/netzwerk/alexa-dot.jpg" alt="Ein kleiner Sprachassistent mit Holzfolie beklebt, unter einem Oberschrank neben einer eingebauten Steckdose mit USB-Anschluss" />
+  <figcaption>Aus zwei Metern Entfernung ist das kein Gerät, sondern ein Möbelteil. Strom kommt aus der USB-Buchse der eingebauten Dose daneben, ein Netzteil braucht es nicht.</figcaption>
+</figure>
+
 ## Würde ich ihn wieder kaufen? Ja, aber die eSIM-Version
 
 Sofort. Mit genau einer Einschränkung: Ich würde die **eSIM-Variante** nehmen.
