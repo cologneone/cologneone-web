@@ -4,7 +4,7 @@
    Vorlage: Dekor des Niesmann+Bischoff Flair – Creme-Aufbau, Nachtblau,
             Gold-Ocker, dazu die charakteristischen Zierstreifen
 
-   Version: 2.9.0
+   Version: 3.0.0
    Historie:
      1.0.0 (2026-08-18) – Erstanlage, neutrale Farben, hell und dunkel
      1.1.0 (2026-08-18) – Flair-Farben übernommen, Zierstreifen ergänzt
@@ -31,7 +31,7 @@
   --navy: #1b2a54;
   --navy-soft: #5b6478;
   --gold: #d9a02b;
-  --gold-deep: #a97612;
+  --gold-deep: #8a5f0c;
   --creme: #f2ede3;
   --creme-hell: #faf7f1;
   --linie: #e2dacb;
@@ -386,7 +386,7 @@ a { color: var(--gold-deep); }
 
 /* ---------- Artikel ---------- */
 
-.prose { max-width: 46rem; }
+.prose { max-width: 46rem; margin-left: auto; margin-right: auto; }
 .prose img { max-width: 100%; height: auto; border-radius: var(--radius); }
 
 .prose figure {
@@ -534,3 +534,147 @@ a { color: var(--gold-deep); }
   nav.main a { margin: 0 1.2rem 0 0; }
   .site-header .wrap { padding-top: 0.6rem; padding-bottom: 0.6rem; }
 }
+
+
+/* ===========================================================================
+   Ab Version 3.0.0: Bilder tragen die Uebersichten
+   =========================================================================== */
+
+/* Kopfbereiche und Fliesstext mittig setzen, damit rechts keine tote
+   Spalte stehen bleibt. Karten und Bildstrecken duerfen breit bleiben. */
+.hero:not(.hero-start),
+.back,
+.notizen,
+main > h2,
+main > p {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Titelbereich der Startseite: Text links, Foto rechts ---------------- */
+.hero-start .hero-bild {
+  margin: 1.4rem 0 0;
+  max-width: none;
+}
+
+.hero-start .hero-bild img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 58rem) {
+  .hero-start {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    column-gap: 2.8rem;
+    align-items: center;
+  }
+  .hero-start .eyebrow { grid-column: 1; grid-row: 1; }
+  .hero-start h1 { grid-column: 1; grid-row: 2; }
+  .hero-start .lead { grid-column: 1; grid-row: 3; }
+  .hero-start .hero-fahrzeug { grid-column: 1; grid-row: 4; }
+  .hero-start .hero-bild {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    align-self: center;
+    margin: 0;
+  }
+}
+
+/* --- Karten mit Vorschaubild -------------------------------------------- */
+.card {
+  padding: 0;
+  gap: 0;
+}
+
+.card-bild {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--creme);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .card-bild img { transform: scale(1.04); }
+
+.card-text {
+  padding: 1.15rem 1.3rem 1.35rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+/* Auf einer Uebersicht zaehlt der Blick, nicht der ganze Absatz. */
+.card-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Die erste Karte bekommt Gewicht ------------------------------------ */
+@media (min-width: 50rem) {
+  .cards .karte-gross {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+  .cards .karte-gross .card-bild {
+    flex: 1 1 56%;
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-right: 1px solid var(--border);
+  }
+  .cards .karte-gross .card-text {
+    flex: 1 1 44%;
+    justify-content: center;
+    padding: 2rem 2.1rem;
+  }
+  .cards .karte-gross h3 { font-size: 1.45rem; line-height: 1.25; }
+  .cards .karte-gross .card-text p {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    font-size: 1.02rem;
+  }
+}
+
+/* --- Wer hier schreibt --------------------------------------------------- */
+.wer {
+  max-width: 46rem;
+  margin: 3.6rem auto 0;
+  padding: 1.6rem 1.7rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wer img {
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  flex: none;
+}
+
+.wer div { flex: 1 1 16rem; }
+.wer h2 { margin: 0 0 0.5rem; font-size: 1.15rem; max-width: none; }
+.wer p { margin: 0 0 0.6rem; color: var(--text-dim); font-size: 0.99rem; max-width: none; }
+.wer p:last-child { margin-bottom: 0; }

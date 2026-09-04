@@ -21,6 +21,9 @@
 //                         zur Fahrzeuggrafik im Titelbereich
 //   1.11.0 (2026-08-26) – neues Bandfoto: Abendlicht an der Cote d'Azur
 //   1.12.0 (2026-08-26) – Projekte nach Wichtigkeit sortiert (Feld 'rang')
+//   2.0.0  (2026-09-04) – Das Fahrzeugfoto steht jetzt oben statt unten, die
+//                         Projektkarten zeigen ihr Vorschaubild, und unten
+//                         kommt der Mensch vor, der das alles baut
 import Base from '../layouts/Base.astro';
 
 const projektDateien = import.meta.glob('./projekte/*.md', { eager: true });
@@ -44,9 +47,18 @@ const notizen = Object.values(notizDateien)
   bild="/bilder/flair-band.jpg"
   description="Ein Niesmann+Bischoff Flair 6000 von 1998, nachgerüstet mit Victron-Energiesystem, Bluetooth-Sensorik und Node-RED – mit Verkabelung, Messwerten, Fallstricken und fertigem Code."
 >
-  <section class="hero">
+  <section class="hero hero-start">
     <p class="eyebrow">cologneone.de</p>
     <h1>Ein Flair 6000 von 1998 – mit der Technik, die andere erst im Neufahrzeug bekommen.</h1>
+    <figure class="hero-bild">
+      <img
+        src="/bilder/flair-band.jpg"
+        alt="Der Flair 6000 im Abendlicht an der Côte d'Azur, dahinter das Meer und die Küste des Esterel"
+        width="1600"
+        height="842"
+        loading="eager"
+      />
+    </figure>
     <p class="lead">
       Niesmann+Bischoff baut den Flair bis heute. Meiner ist der von damals, Stück
       für Stück nachgerüstet: Gas, Diesel, Wasser, Batterien und das Bordnetz melden
@@ -60,7 +72,7 @@ const notizen = Object.values(notizDateien)
       alt="Zeichnung des Wohnmobils Niesmann+Bischoff Flair in Silber, Nachtblau und Gold-Ocker"
       width="1400"
       height="719"
-      loading="eager"
+      loading="lazy"
     />
   </section>
 
@@ -68,27 +80,24 @@ const notizen = Object.values(notizDateien)
   <ul class="cards">
     {projekte.map((projekt) => (
       <li class="card">
-        <p class="meta">
-          <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
-          {projekt.stand && <span>{projekt.stand}</span>}
-        </p>
-        <h3><a href={projekt.url}>{projekt.titel}</a></h3>
-        <p>{projekt.kurz}</p>
+        {projekt.bild && (
+          <a class="card-bild" href={projekt.url} tabindex="-1" aria-hidden="true">
+            <img src={projekt.bild} alt="" loading="lazy" />
+          </a>
+        )}
+        <div class="card-text">
+          <p class="meta">
+            <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
+            {projekt.stand && <span>{projekt.stand}</span>}
+          </p>
+          <h3><a href={projekt.url}>{projekt.titel}</a></h3>
+          <p>{projekt.kurz}</p>
+        </div>
       </li>
     ))}
   </ul>
 
   <p><a href="/projekte">Alle Projekte ansehen →</a></p>
-
-  <figure class="bild-band">
-    <img
-      src="/bilder/flair-band.jpg"
-      alt="Der Flair 6000 im Abendlicht an der Côte d'Azur, dahinter das Meer und die Küste des Esterel"
-      width="1600"
-      height="842"
-      loading="lazy"
-    />
-  </figure>
 
   <h2>Kurz notiert</h2>
   <p class="lead">
@@ -104,4 +113,23 @@ const notizen = Object.values(notizDateien)
   </ul>
 
   <p><a href="/notizen">Alle Notizen ansehen →</a></p>
+
+  <section class="wer">
+    <img
+      src="/bilder/daniel-pisa.jpg"
+      alt="Daniel Großmann"
+      width="600"
+      height="600"
+      loading="lazy"
+    />
+    <div>
+      <h2>Wer hier schraubt</h2>
+      <p>
+        Ich heiße Daniel, bin Notfallsanitäter und habe nichts Technisches gelernt.
+        Alles hier ist angelesen, ausprobiert, ein paarmal falsch gemacht und dann
+        aufgeschrieben – damit der Nächste nicht denselben Abend verliert.
+      </p>
+      <p><a href="/ueber">Mehr über mich und den Flair →</a></p>
+    </div>
+  </section>
 </Base>

@@ -1,11 +1,13 @@
 ---
 // Projektübersicht – listet automatisch alle Markdown-Dateien in diesem Ordner
-// Version: 1.2.0
+// Version: 2.0.0
 // Historie:
 //   1.0.0 (2026-08-18) – Erstanlage
 //   1.1.0 (2026-08-18) – aussagekraeftige Beschreibung fuer Suchmaschinen
 //   1.2.0 (2026-08-26) – Reihenfolge nach Wichtigkeit ueber das Feld 'rang',
 //                        nicht mehr nach Datum
+//   2.0.0 (2026-09-04) – Karten mit Vorschaubild; die erste Karte steht gross
+//                        und quer, damit die Uebersicht einen Einstieg hat
 import Base from '../../layouts/Base.astro';
 
 const dateien = import.meta.glob('./*.md', { eager: true });
@@ -31,14 +33,21 @@ const projekte = Object.values(dateien)
   </section>
 
   <ul class="cards">
-    {projekte.map((projekt) => (
-      <li class="card">
-        <p class="meta">
-          <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
-          {projekt.stand && <span>{projekt.stand}</span>}
-        </p>
-        <h3><a href={projekt.url}>{projekt.titel}</a></h3>
-        <p>{projekt.kurz}</p>
+    {projekte.map((projekt, i) => (
+      <li class={i === 0 ? 'card karte-gross' : 'card'}>
+        {projekt.bild && (
+          <a class="card-bild" href={projekt.url} tabindex="-1" aria-hidden="true">
+            <img src={projekt.bild} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+          </a>
+        )}
+        <div class="card-text">
+          <p class="meta">
+            <span class={`tag status-${projekt.status?.toLowerCase()}`}>{projekt.status}</span>
+            {projekt.stand && <span>{projekt.stand}</span>}
+          </p>
+          <h3><a href={projekt.url}>{projekt.titel}</a></h3>
+          <p>{projekt.kurz}</p>
+        </div>
       </li>
     ))}
   </ul>

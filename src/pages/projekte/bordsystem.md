@@ -4,7 +4,7 @@ titel: Das Bordsystem auf dem Handy
 kurz: Ein eigenes Bedienbild für Batterie, Tanks, Licht, Klima und Ladebooster. Gebaut in Node-RED auf dem Cerbo GX, ohne zusätzliche Hardware, ohne Cloud, im eigenen WLAN erreichbar.
 meta_titel: Eigene Bedienoberfläche im Wohnmobil mit Node-RED auf dem Cerbo GX
 meta_beschreibung: Sechs selbst gebaute Bedienseiten für Tanks, Temperaturen, Licht, Klimaanlage, Solar, MultiPlus und Ladebooster. Sie laufen auf dem Victron Cerbo GX selbst, ohne Cloud und ohne zusätzlichen Rechner, und sind im Fahrzeug-WLAN mit dem Telefon erreichbar.
-bild: /bilder/bordsystem/uebersicht-hell.png
+bild: /bilder/bordsystem/vorschau.jpg
 rang: 2
 status: Fertig
 stand: 2026-09
