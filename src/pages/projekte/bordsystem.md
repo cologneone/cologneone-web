@@ -15,11 +15,19 @@ tags:
   - Wohnmobil
 ---
 
-Die Frage kommt immer spät. Ist die Kühlbox noch an? Wie viel Wasser ist noch drin?
-Reicht die Batterie bis morgen früh? Früher hieß das: aufstehen, drei Klappen
-aufmachen, an drei verschiedenen Stellen nachsehen.
+Das hier war der Ausgangspunkt.
 
-Im Wohnmobil hängt eine GX Touch, und daneben liegt ein Tablet mit der
+<figure>
+  <img src="/bilder/bordsystem/panel-original.jpg" alt="Originales Niesmann+Bischoff Bedienpanel von 1998 mit einzeiligem grünen Display, vier Tasten und fünf Kippschaltern" />
+  <figcaption>Das Bedienpanel, mit dem der Flair 1998 ausgeliefert wurde. Eine Zeile, grün hinterleuchtet.</figcaption>
+</figure>
+
+Eine Zeile Text, vier Tasten: eine für die Batterie, eine fürs Wasser, dazu SET und
+Eingabe. Im Display steht `FRISCHW. 10%`. Mehr als eine Zahl gleichzeitig gibt es
+nicht. Wer den zweiten Wert sehen will, drückt weiter. Für 1998 war das ordentlich.
+Informativ war es nie, und zeitgemäß ist es lange nicht mehr.
+
+Heute hängt im Wohnmobil eine GX Touch, und daneben liegt ein Tablet mit der
 Victron-Oberfläche. Beide zeigen das meiste von dem, was hier zählt: Batterie, Solar,
 Wechselrichter, Tanks, Temperaturen. Das ist gut gemacht, und ehrlicherweise fehlt
 inhaltlich wenig.
