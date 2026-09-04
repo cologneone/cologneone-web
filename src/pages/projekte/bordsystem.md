@@ -16,20 +16,25 @@ tags:
 ---
 
 Im Wohnmobil hängt eine GX Touch, und daneben liegt ein Tablet mit der
-Victron-Oberfläche. Beide zeigen, was Victron für wichtig hält: Batterie, Solar,
-Wechselrichter. Das ist gut gemacht, aber es ist eben nur der halbe Wagen. Wie viel
-Wasser noch im Tank ist, ob die Kühlbox läuft, wie warm es draußen ist, wie viel die
-beiden Ladebooster auf der letzten Fahrt geschafft haben: dafür muss man an drei
-verschiedene Stellen.
+Victron-Oberfläche. Beide zeigen das meiste von dem, was hier zählt: Batterie, Solar,
+Wechselrichter, Tanks, Temperaturen. Das ist gut gemacht, und ehrlicherweise fehlt
+inhaltlich wenig.
 
 <figure class="hochformat">
   <img src="/bilder/bordsystem/uebersicht-hell.png" alt="Übersichtsseite auf dem Telefon mit MultiPlus-Zustand, 99 Prozent Batterie, den Quellen Landstrom, Solar und Lichtmaschine sowie den Verbrauchern" />
   <figcaption>Die Eingangstür: der Zustand des MultiPlus im Klartext, darunter die Batterie, dann woher der Strom kommt und wohin er geht.</figcaption>
 </figure>
 
-Diese Seiten sind der Versuch, das zusammenzuziehen. Sie laufen auf dem Cerbo GX
-selbst, im eigenen WLAN, und werden mit dem Telefon aufgerufen, das ohnehin in der
-Tasche steckt.
+Warum dann noch etwas Eigenes? Weil „das meiste" nicht dasselbe ist wie „so, wie ich
+es brauche". Die Reihenfolge ist vorgegeben, die Gewichtung auch, und manches war nie
+dabei. Die **Klimaanlage** zum Beispiel lief immer über einen eigenen Weg, und die
+Gasheizung soll später dazukommen, sobald die Frage nach dem Thermostat geklärt ist.
+
+Diese Seiten sind also der Versuch, eigene Prioritäten zu setzen und alles an eine
+Stelle zu holen. Sie laufen auf dem Cerbo GX selbst, im eigenen WLAN, und werden mit
+dem Telefon aufgerufen, das ohnehin in der Tasche steckt. Der eigentliche Gewinn ist
+dabei nicht die Technik, sondern die Freiheit: Was oben steht und wie es aussieht,
+entscheide ich.
 
 ## Wo das läuft
 
@@ -38,10 +43,10 @@ sind dort ein paar zusätzliche Abläufe: einer liefert die Seite, einer liefert
 Werte als JSON, einer nimmt Schaltbefehle entgegen. Kein zusätzlicher Rechner, kein
 Server, kein Dienst im Internet.
 
-Das ist keine Sparsamkeit, sondern eine Betriebsentscheidung. Auf dem Campingplatz
-gibt es oft kein brauchbares Netz, und [der Router hängt regelmäßig ohne Internet
-da](/projekte/wohnmobil-netzwerk). Was ohne Internet nicht funktioniert, taugt im
-Wohnmobil nicht. Alles, was diese Seiten brauchen, liegt im Fahrzeug: die Werte, die
+Das ist keine Sparsamkeit, sondern eine Betriebsentscheidung. [Der Router im
+Fahrzeug](/projekte/wohnmobil-netzwerk) steht selten ohne Verbindung da, aber
+vorkommen kann es immer. Und grundsätzlich gilt: Ein Bordsystem muss ohne Hilfe von
+außen laufen. Was ohne Internet nicht funktioniert, taugt im Wohnmobil nicht. Alles, was diese Seiten brauchen, liegt im Fahrzeug: die Werte, die
 Schriftarten, die Symbole, die Zeichnungen. Es wird nichts nachgeladen.
 
 ## Die Seiten
@@ -102,8 +107,8 @@ wirklich etwas verrät. Ein einzelner Tag sagt bloß, ob die Sonne schien.
 </figure>
 
 **MultiPlus** ist die Seite für den Stellplatz: Betriebsart umschalten und vor allem
-die Landstrom-Grenze setzen. 3, 6, 10 oder 16 Ampere, je nachdem, was die Säule
-hergibt und was die anderen auf dem Platz noch ziehen.
+die Landstrom-Grenze setzen. 3, 6, 10 oder 16 Ampere, je nachdem, was an der Säule
+steht.
 
 <figure class="hochformat">
   <img src="/bilder/bordsystem/multiplus-hell.png" alt="MultiPlus-Seite mit Betriebsart und der einstellbaren Landstrom-Grenze von 3, 6, 10 oder 16 Ampere" />
@@ -154,12 +159,6 @@ Wimpernschlag die falsche Farbe aufblitzen. Nachts merkt man das sofort.
 schickt jede Minute alles noch einmal, was jemand abonniert hat. Wer daraus schließt,
 ein Gerät melde sich gerade, irrt. Jeder Wert trägt hier ein Alter mit sich, und die
 Seiten rechnen damit.
-
-**Erst rendern, dann ausliefern.** Jede Seite wird vor dem Aufspielen in
-Telefongröße aufgenommen und angesehen, hell und dunkel. Das klingt umständlich und
-hat mehr Fehler gefunden als jedes Durchlesen. Ein weißes Logo auf cremefarbenem
-Grund zum Beispiel, das im Quelltext völlig in Ordnung aussieht und auf dem
-Bildschirm schlicht verschwunden ist.
 
 **Die günstige Lösung ist die, die keine neue Schicht braucht.** Es gab bei jedem
 Schritt die Möglichkeit, noch einen Dienst, noch einen Rechner, noch eine Datenbank
