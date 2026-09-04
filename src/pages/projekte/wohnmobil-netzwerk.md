@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Projekt.astro
 titel: Internet im Wohnmobil, wenn das Handy längst aufgegeben hat
-kurz: Ein 5G-Router und eine Dachantenne, mehr ist es nicht. Was verbaut ist, warum es diese Teile geworden sind, wo ich sie herhabe – und die sechs Fallen, die mich am meisten Zeit gekostet haben.
+kurz: Internet, das trägt. Fernsehen wie zu Hause. Und von der eigenen Küche aus sehen, ob im Wohnmobil alles in Ordnung ist. Dafür braucht es einen 5G-Router und eine Dachantenne – und das Wissen um sechs Fallen, die einen offline lassen.
 meta_titel: Internet im Wohnmobil mit Teltonika RUTX50 und Panorama-Dachantenne
 meta_beschreibung: 5G-Router, Dachantenne, zwei SIM-Karten und Campingplatz-WLAN im Wohnmobil. Welche Teile verbaut sind, warum es der Teltonika RUTX50 wurde, worauf man beim Kabelsatz der Antenne achten muss und welche sechs Fallen einen offline lassen, während alle Anzeigen "verbunden" melden.
 rang: 5
@@ -42,15 +42,30 @@ paar Funkschalter.
   <figcaption>Der Einbauort: ein totes Klappfach vorne hinter der originalen Bedieneinheit. Lüftungsöffnungen mussten nachgerüstet werden, das Fach kühlt auch nachts nicht aus.</figcaption>
 </figure>
 
-## Warum überhaupt ein Router, es gibt doch Handys
+## Wofür ich das überhaupt brauche
 
-Die ehrliche Alternative heißt Hotspot am Handy. Sie hält genau so lange, bis eine
-dieser fünf Sachen passiert.
+Drei Dinge, mehr steckt nicht dahinter.
+
+**Ich will Internet.** Nicht „Empfang", sondern eine Verbindung, die trägt. Abends
+auf einem Platz, an dem sonst nichts geht, und ohne dass ich vorher überlege, ob das
+heute wohl reicht.
+
+**Ich will fernsehen.** Der Fernseher im Fahrzeug hängt am Netz wie zu Hause. Keine
+Schüssel ausrichten, kein Sendersuchlauf, und im Ausland läuft dasselbe Programm wie
+in Köln.
+
+**Ich will von zu Hause aus nach dem Fahrzeug sehen.** Das Wohnmobil steht nicht vor
+der Haustür. Ich möchte am Küchentisch nachschauen können, ob die Batterie voll ist,
+ob die Heizung aus ist und ob die Temperatur im Fahrzeug stimmt. Dafür muss dort
+etwas stehen, das dauerhaft online ist und auch dann noch antwortet, wenn seit Wochen
+niemand da war.
+
+Vor allem der dritte Punkt schließt den Hotspot am Handy aus, und er ist nicht der
+einzige Grund.
 
 **Ohne Netz an Bord steht der ganze Rest still.** Die Funkschalter fürs Licht, die
 Steuerung der Energieanlage, die Klimaanlage. Der Router ist nicht das Zubehör zum
-Ausbau, er ist die Grundlage darunter. Was rein örtlich läuft, läuft zwar auch ohne
-Verbindung nach draußen weiter, aber alles darüber hinaus hängt am Internet.
+Ausbau, er ist die Grundlage darunter.
 
 **Das Handy geht mit.** Wer damit zum Brötchenholen läuft, nimmt das halbe Wohnmobil
 mit offline – auch alles, was man aus der Ferne sehen möchte, während man weg ist.
