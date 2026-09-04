@@ -540,16 +540,17 @@ a { color: var(--gold-deep); }
    Ab Version 3.0.0: Bilder tragen die Uebersichten
    =========================================================================== */
 
-/* Kopfbereiche und Fliesstext mittig setzen, damit rechts keine tote
-   Spalte stehen bleibt. Karten und Bildstrecken duerfen breit bleiben. */
-.hero:not(.hero-start),
-.back,
-.notizen,
-main > h2,
-main > p {
+/* Fliesstext mittig in einer lesbaren Spalte, damit rechts keine tote
+   Spalte stehen bleibt. Karten und der Titelbereich duerfen breit bleiben. */
+main .wrap > * {
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+main .wrap > .cards,
+main .wrap > .hero-start {
+  max-width: none;
 }
 
 /* --- Titelbereich der Startseite: Text links, Foto rechts ---------------- */
@@ -569,19 +570,20 @@ main > p {
 @media (min-width: 58rem) {
   .hero-start {
     display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-    column-gap: 2.8rem;
-    align-items: center;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    column-gap: 2.4rem;
+    align-items: start;
   }
   .hero-start .eyebrow { grid-column: 1; grid-row: 1; }
   .hero-start h1 { grid-column: 1; grid-row: 2; }
-  .hero-start .lead { grid-column: 1; grid-row: 3; }
+  .hero-start .lead { grid-column: 1; grid-row: 3; max-width: none; }
   .hero-start .hero-fahrzeug { grid-column: 1; grid-row: 4; }
+  /* Das Foto beginnt auf Hoehe der Ueberschrift, nicht ueber der Vorzeile. */
   .hero-start .hero-bild {
     grid-column: 2;
-    grid-row: 1 / 5;
-    align-self: center;
-    margin: 0;
+    grid-row: 2 / 5;
+    align-self: start;
+    margin: 0.4rem 0 0;
   }
 }
 
