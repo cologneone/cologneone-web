@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Mopeka-Dieselgeber am Cerbo GX – und warum er falsch rechnet
-kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überraschungen – jede vierte Messung ist unbrauchbar, und der Treiber rechnet Diesel mit den Koeffizienten von Benzin. Und ein ehrliches Fazit, nachkaufen würde ich ihn nicht.
+titel: Ein anderer Tank, und die Tankuhr ist blind
+kurz: Im Flair steckt ein Goldschmitt-Austauschtank, und der Originalgeber misst darin praktisch nichts. Der Versuch, den Dieselvorrat trotzdem in dasselbe System zu holen, in dem auch Wasser, Gas und Batterie stehen.
 meta_titel: Mopeka Dieseltank am Victron Cerbo GX – Kalibrierung und Ausfälle
 meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX – warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
 bild: /bilder/rotarex/cerbo-tanks.png
@@ -15,31 +15,30 @@ tags:
   - Wohnmobil
 ---
 
-**Kurz vorweg, damit die Sache nicht verrückter klingt als sie ist:** Ich habe nicht
-aus Spaß einen Ultraschallsensor unter meinen Dieseltank geklebt. Es gab zwei Gründe.
+Eine Tankuhr ist das Selbstverständlichste am ganzen Fahrzeug. Bei diesem hier ist
+sie nutzlos, und daran ist nichts kaputt.
 
-**Erstens ist es nicht mehr der Serientank.** Verbaut ist ein
+**Der Grund ist der Tank.** Im Flair sitzt kein Serientank mehr, sondern ein
 **Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug, deutlich größer als
-das Original. Auf dem Papier fasst er 135 Liter, tatsächlich sind es **139**. Ein
-größerer Tank verschiebt aber alles, was man über Reichweite zu wissen glaubt: Die
-Nadel im Armaturenbrett gehört zum Serientank, nicht zu diesem hier.
+das Original: auf dem Papier 135 Liter, tatsächlich **139**. Wer den Tank tauscht,
+tauscht damit auch alles, was das Fahrzeug über seine Reichweite zu wissen glaubt.
 
-**Zweitens taugt der originale Tankgeber nichts.** Und zwar nicht ein bisschen,
-sondern grundsätzlich: Er sitzt **unterhalb der Diesellinie**, sein Messbereich
-beginnt erst bei etwa 70 Litern. Alles darüber sieht er schlicht nicht. Ein randvoller
-Tank steht im Cockpit auf halb und bleibt dort, bis der Stand tatsächlich in seinen
-Bereich gefallen ist. Auch darunter ist die Anzeige eher ein Schätzeisen als eine
-Messung.
+Der Originalgeber steckt darin weiter, nur passt er nicht mehr. Er sitzt
+**unterhalb der Diesellinie**, sein Messbereich beginnt erst bei etwa 70 Litern.
+Alles darüber sieht er schlicht nicht: Ein randvoller Tank steht im Cockpit auf halb
+und bleibt dort, bis der Stand tatsächlich in seinen Bereich gefallen ist. Darunter
+ist die Anzeige eher ein Schätzeisen als eine Messung.
 
-Er bewegt also die Nadel. Nur sagt die Nadel wenig darüber, wie viel wirklich drin
-ist. Und selbst wenn sie es täte: Sein Wert kommt nirgendwo digital heraus. Er
-erreicht den **Cerbo GX** nicht, das kleine Steuergerät, bei dem im Fahrzeug alle
-anderen Werte zusammenlaufen: Batterie, Solar, Wasser, Gas. Weder protokollieren
-noch für eine Reichweitenrechnung verwenden noch aus der Ferne ansehen.
+Die Nadel bewegt sich also, sie sagt nur nichts. Und ihr Wert kommt nirgendwo
+digital heraus: Er erreicht den **Cerbo GX** nicht, das Steuergerät, bei dem im
+Fahrzeug alle anderen Werte zusammenlaufen.
 
-Damit bleibt genau eine Frage offen, und es ist ausgerechnet die, die man auf einer
-Reise tatsächlich hat: **Wie weit komme ich noch, und wie viel habe ich seit der
-letzten Tankstelle wirklich verbraucht?**
+Damit stehen zwei Dinge im Weg. Erstens die Frage, die man auf einer Reise
+tatsächlich hat: **Wie weit komme ich noch, und wie viel ist seit der letzten
+Tankstelle wirklich durchgelaufen?** Zweitens der Bruch im System: Wasser, Gas,
+Batterie und Solar stehen längst an einer Stelle, ablesbar auch aus der Ferne.
+Ausgerechnet der Diesel fehlte, und ein Wert, den man woanders suchen muss, ist ein
+Wert, den man nicht anschaut.
 
 Deshalb der zweite Sensor.
 
@@ -62,7 +61,7 @@ Ursache, und keine davon war die, die ich zuerst vermutet hatte.
 Wert nicht traut.
 
 Der naheliegende Verdacht war die Funkstrecke. Der ist falsch: Am selben
-Bluetooth-Baustein hängt die Gasflasche, und die liefert zuverlässig. Es liegt also
+Bluetooth-Baustein hängt die Gastankflasche, und die liefert zuverlässig. Es liegt also
 nicht an der Übertragung, sondern an der **Messung selbst**, am Ultraschall in der
 Flüssigkeit. Verdächtig sind die Ankopplung des Sensors an den Tankboden und das Gel
 darunter.

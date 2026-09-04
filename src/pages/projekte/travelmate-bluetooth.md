@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Alugas TravelMate 2.0 über Bluetooth im Cerbo GX sichtbar machen
-kurz: Den Füllstand einer Alugas TravelMate 2.0 im Cerbo GX anzeigen – ohne die Hersteller-App, direkt über BlueZ und Node-RED.
+titel: Die neue TravelMate 2.0 lässt sich doch auslesen
+kurz: Beim Vorgängersystem war der Füllstand leicht auszulesen, beim neuen nicht mehr. Deshalb bleiben viele bei der alten Generation. Hier steht, wie die Alugas TravelMate 2.0 trotzdem im Cerbo GX landet.
 meta_titel: Alugas TravelMate / Rotarex DIMES im Victron Cerbo GX auslesen
 meta_beschreibung: Gasfüllstand einer Alugas TravelMate 2.0 per Bluetooth auslesen – Rotarex DIMES WAVE / SRG-1-WAVE über BlueZ, D-Bus und Node-RED im Victron Cerbo GX.
 bild: /bilder/rotarex/gaskasten.jpg
@@ -15,16 +15,20 @@ tags:
   - Wohnmobil
 ---
 
-Die Alugas TravelMate 2.0 meldet ihren Füllstand über ein Bluetooth-Modul von
-Rotarex (DIMES WAVE, im BLE-Scan als `SRG-1-WAVE`). Die Hersteller-App zeigt
-den Wert an – aber eben nur dort, auf dem Handy, wenn man danebensteht.
-Naheliegende Frage: Wie kommt der Wert dahin, wo die anderen Bordwerte auch
-stehen, nämlich in den **Victron Cerbo GX**? Das ist das kleine Steuergerät, bei dem
-im Fahrzeug alles zusammenläuft: Batterie, Solar, Frisch- und Grauwasser, Diesel.
-Nur eben bisher nicht das Gas.
+Unter Campern ist das ein bekanntes Ärgernis. Die **Alugas TravelMate 2.0** ist die
+aktuelle Gastankflasche, und ihr Füllstand ist über ein Bluetooth-Modul von Rotarex
+zu haben – DIMES WAVE, im BLE-Scan als `SRG-1-WAVE`. Nur eben abgeschottet: Die
+Werte gibt es in der Hersteller-App und sonst nirgends.
 
-Antwort: Er steht jetzt dort. Als ganz normale Tankanzeige neben Frischwasser,
-Grauwasser und Diesel, aktualisiert alle 15 Minuten.
+Beim Vorgängersystem war das anders. Dessen Geber ließ sich ohne großen Aufwand in
+die eigene Anlage holen, und genau deshalb greifen bis heute viele zur älteren
+Generation, obwohl sie eigentlich die neue haben wollen. Wer die 2.0 kauft, bekommt
+die bessere Flasche und verliert die Anbindung.
+
+**Beides geht.** Der Füllstand der 2.0 steht hier im **Victron Cerbo GX**, dem
+Steuergerät, bei dem im Fahrzeug alles zusammenläuft. Als ganz normale Tankanzeige
+neben Frischwasser, Grauwasser und Diesel, aktualisiert alle 15 Minuten. Wie das
+geht, steht weiter unten, und der Code liegt offen.
 
 <figure>
   <img src="/bilder/rotarex/cerbo-tanks.png" alt="Füllstandsanzeige im Cerbo GX mit fünf Tanks: Frischwasser, Grauwasser, Diesel, Diesel gefiltert und LPG bei 25 Prozent" />
@@ -69,7 +73,7 @@ Minuten für wenige Sekunden läuft, stört das im Alltag nicht.
 > Der silberne Topf mit dem gelben Aufkleber daneben ist der eigentliche Regler.
 
 <figure>
-  <img src="/bilder/rotarex/druckregler.jpg" alt="Gasdruckregler GOK Caramatic SafeDrive mit blauem Crash-Sensor am Ventil der Gasflasche" />
+  <img src="/bilder/rotarex/druckregler.jpg" alt="Gasdruckregler GOK Caramatic SafeDrive mit blauem Crash-Sensor am Ventil der Gastankflasche" />
   <figcaption>Der GOK Caramatic SafeDrive am Multiventil: blau der Crash-Sensor, silbern der Regler.</figcaption>
 </figure>
 

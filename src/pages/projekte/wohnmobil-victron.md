@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Projekt.astro
 titel: Was im neuen alten Flair steckt
-kurz: 560 Ah Lithium, ein Wechselrichter, zwei Solarregler, drei Ladebooster und ein Cerbo GX, der alles zusammenhält. Mit Fotos aus den Fächern – und dem Abend, an dem beide Booster nicht luden.
+kurz: 560 Ah Lithium, ein 3000-VA-Wechselrichter, zwei Solarregler und drei Ladebooster in einem Fahrzeug von 1998. Genug, um tagelang zu stehen, ohne zu rechnen. Mit Fotos aus den Fächern, Querschnitten und dem Sicherungsplan.
 meta_titel: Victron-Anlage im Wohnmobil mit Cerbo GX – Aufbau, Verkabelung, Praxis
 meta_beschreibung: MultiPlus-II, zwei SmartSolar MPPT, drei Ladebooster, 560 Ah LiFePO4 und ein Victron Cerbo GX im Wohnmobil. Lynx-Verteiler mit selbst nachgerüsteten Sicherungen, Querschnitte, Sicherungsplan und die Fehlersuche, die einen ganzen Abend gekostet hat.
 bild: /bilder/victron/technikfach-gesamt.jpg
@@ -20,10 +20,15 @@ tags:
   <figcaption>Darum geht der ganze Aufwand: ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne Rechnen.</figcaption>
 </figure>
 
-Das Energiesystem im Fahrzeug läuft auf Victron-Komponenten, mit einem **Cerbo GX**
-als Kopf der Anlage. Das Ziel war nie die maximale Ausbaustufe, sondern ein System,
-das ich verstehe, im Zweifel selbst reparieren kann und dessen Zustand jederzeit
-ablesbar ist, auch wenn ich gerade nicht daneben stehe.
+Der Anspruch ist einfach: ein paar Tage stehen, wo es schön ist, ohne Landstrom und
+ohne zu rechnen. Dafür stecken in einem Fahrzeug von 1998 heute **560 Ah Lithium**,
+ein **3000-VA-Wechselrichter**, zwei Solarregler und drei Ladebooster – eine
+Ausstattung, die in vielen Neufahrzeugen so nicht ab Werk drin ist.
+
+Zusammengehalten wird das von einem **Cerbo GX**. Wichtig war mir dabei nicht die
+maximale Ausbaustufe, sondern eine Anlage, die ich verstehe, im Zweifel selbst
+reparieren kann und deren Zustand jederzeit ablesbar ist, auch wenn ich gerade
+nicht daneben stehe.
 
 Diese Seite ist die Übersicht: was drin ist, wie es zusammenhängt und was ich dabei
 gelernt habe. Die Details, bei denen es richtig interessant wurde, stehen in eigenen
@@ -332,17 +337,18 @@ ohne ein zusätzliches Kabel zu ziehen – und wie schalte ich damit etwas?** Di
 Bausteine dafür – Bitmaske statt Gleichheit, Altersprüfung der Messwerte, Hysterese,
 Puffer beim Einschalten, Prüfung nach dem Schalten – sind übertragbar.
 
-Der Gasflaschen-Teil dieser Seite liegt schon
+Der Gas-Teil dieser Seite liegt schon
 [als eigenes Repository](https://github.com/cologneone/dbus-rotarex-dime) mit
 Installationsskript und Lizenz. Für den Motor-Flow wäre dasselbe naheliegend: der Tab
 als importierbare Datei, die Schwellen sauber oben als Konstanten, eine ehrliche
 Liesmich-Datei dazu, was er tut und was er ausdrücklich nicht tut. Steht auf der
 Liste – noch nicht gemacht.
 
-## Der Abend, an dem beide Booster nicht luden
+## Wenn der Motor läuft und trotzdem nichts lädt
 
-Motor lief, beide Orion XS meldeten: nichts. Das kostete einen ganzen Abend, und
-die Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit spart:
+Der häufigste Notruf in einschlägigen Foren, und er hat selten die Ursache, die man
+zuerst vermutet. Bei mir meldeten beide Orion XS bei laufendem Motor nichts. Die
+Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit spart:
 
 1. **Eingangsspannung ansehen.** Was sieht der Booster an seinem Eingang? Steht dort
    bei laufendem Motor nahezu null, muss man im Gerät gar nicht weitersuchen.
@@ -424,7 +430,7 @@ Rückladeautomatik von Booster 3 braucht.
 Die meisten Geräte hängen per Kabel am Cerbo und tauchen ohne Zutun in der
 Oberfläche auf. **Drei Dinge tun das nicht** und mussten dazugebaut werden:
 
-- Die **Gasflasche** funkt nur per Bluetooth, und zwar in einem undokumentierten
+- Die **Gastankflasche** funkt nur per Bluetooth, und zwar in einem undokumentierten
   Protokoll – [wie sie trotzdem im Cerbo landet](/projekte/travelmate-bluetooth).
 - Der **Dieselgeber** liefert brauchbare Werte nur mit Filter, und der Treiber
   rechnet anders, als die Oberfläche vermuten lässt –
@@ -442,7 +448,7 @@ Fünf **RuuviTags** sind im Fahrzeug verteilt: Wohnraum, Kühlschrank, Kühlbox,
 Technikfach und außen. Jeder ist ein Sensor in der Größe eines Flaschendeckels, der
 per Bluetooth Temperatur und Luftfeuchte in die Gegend funkt. Der Cerbo hört zu, ganz
 von allein. **Kein Treiber, kein Node-RED, keine zusätzliche Hardware** – nach dem
-Gasflaschensensor und dem Dieselgeber, die beide erst mühsam beigebracht werden
+Gassensor und dem Dieselgeber, die beide erst mühsam beigebracht werden
 mussten, eine ausgesprochen angenehme Abwechslung. Wie das eingerichtet wird, steht
 in einer eigenen [Notiz](/notizen/ruuvitag-victron-cerbo).
 
