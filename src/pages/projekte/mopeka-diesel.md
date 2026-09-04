@@ -20,7 +20,7 @@ sie etwas an, das mit dem Inhalt wenig zu tun hat, und daran ist nichts kaputt.
 
 **Der Grund ist der Tank.** Im Flair sitzt kein Serientank mehr, sondern ein
 **Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug, deutlich größer als
-das Original: auf dem Papier 135 Liter, tatsächlich **139**. Wer den Tank tauscht,
+das Original: auf dem Papier 135 Liter, tatsächlich 139. Wer den Tank tauscht,
 tauscht damit auch alles, was das Fahrzeug über seine Reichweite zu wissen glaubt.
 
 Der Originalgeber steckt darin weiter, nur passt er nicht mehr. Er sitzt
@@ -30,7 +30,7 @@ und bleibt dort, bis der Stand tatsächlich in seinen Bereich gefallen ist. Daru
 ist die Anzeige eher ein Schätzeisen als eine Messung.
 
 Die Nadel bewegt sich also, sie sagt nur nichts. Und ihr Wert kommt nirgendwo
-digital heraus: Er erreicht den **Cerbo GX** nicht, das Steuergerät, bei dem im
+digital heraus: Er erreicht den Cerbo GX nicht, das Steuergerät, bei dem im
 Fahrzeug alle anderen Werte zusammenlaufen.
 
 Damit stehen zwei Dinge im Weg. Erstens die Frage, die man auf einer Reise
@@ -44,7 +44,7 @@ Deshalb der zweite Sensor.
 
 ## Was da klebt
 
-Am Tank sitzt ein **Mopeka Pro**, ein Ultraschallsensor, der von außen an den
+Am Tank sitzt ein Mopeka Pro, ein Ultraschallsensor, der von außen an den
 Tankboden geklebt wird und die Füllhöhe misst, ohne dass irgendwo ein Loch gebohrt
 oder ein Geber getauscht werden muss. Er funkt per Bluetooth, läuft mit einer
 Knopfzelle und wird von Venus OS, dem Betriebssystem des Cerbo, ab Werk unterstützt:
@@ -56,13 +56,13 @@ Ursache, und keine davon war die, die ich zuerst vermutet hatte.
 
 ## Überraschung 1: Jede vierte Messung ist Müll
 
-Über **32 Stunden** mitgeschrieben, jede Messung mit ihrem Qualitätswert: rund
+Über 32 Stunden mitgeschrieben, jede Messung mit ihrem Qualitätswert: rund
 **27 % der Messungen kamen mit `Quality 0`**. Der Sensor sagt selbst, dass er dem
 Wert nicht traut.
 
 Der naheliegende Verdacht war die Funkstrecke. Der ist falsch: Am selben
 Bluetooth-Baustein hängt die Gastankflasche, und die liefert zuverlässig. Es liegt also
-nicht an der Übertragung, sondern an der **Messung selbst**, am Ultraschall in der
+nicht an der Übertragung, sondern an der Messung selbst, am Ultraschall in der
 Flüssigkeit. Verdächtig sind die Ankopplung des Sensors an den Tankboden und das Gel
 darunter.
 
@@ -89,11 +89,11 @@ Die zweite Sache habe ich erst gefunden, als ich aufgehört habe zu raten und in
 Quelltext des Treibers geschaut habe: `victronenergy/dbus-ble-sensors`, Datei
 `src/mopeka.c`.
 
-Beim **Hardware-Typ 12** („universal", also dem Sensor, der für beliebige
+Beim Hardware-Typ 12 („universal", also dem Sensor, der für beliebige
 Flüssigkeiten verkauft wird) steht im Code `coefs = NULL`. Es gibt also keinen
 sensorspezifischen Koeffizientensatz. Stattdessen entscheidet der in der Oberfläche
-eingestellte **FluidType**, welche Kurve benutzt wird. Und dort teilen sich
-`FLUID_TYPE_GASOLINE` und `FLUID_TYPE_DIESEL` **denselben** Satz.
+eingestellte FluidType, welche Kurve benutzt wird. Und dort teilen sich
+`FLUID_TYPE_GASOLINE` und `FLUID_TYPE_DIESEL` denselben Satz.
 
 Gerechnet wird so:
 
@@ -116,7 +116,7 @@ Zwei Dinge stehen damit fest, und eines davon widerlegt meine eigene frühere An
 
 ## Was das praktisch bedeutet
 
-Der Sensor ist damit nicht unbrauchbar, aber er ist **kein absoluter Messgeber**. Er
+Der Sensor ist damit nicht unbrauchbar, aber er ist kein absoluter Messgeber. Er
 misst eine Höhe, und diese Höhe hat einen systematischen Faktor drin, den man nicht
 wegkonfigurieren kann.
 
@@ -139,7 +139,7 @@ Die Neigung ist dabei kein Beiwerk. Der Tank liegt quer im Fahrzeug, und schon w
 Grad Schräglage – ein Stellplatz mit Gefälle genügt – verschieben den
 Ultraschallweg messbar.
 
-Als Ausgangswert dient ein gemessener Verbrauch von **12,63 l/100 km**, sauber von
+Als Ausgangswert dient ein gemessener Verbrauch von 12,63 l/100 km, sauber von
 randvoll bis randvoll über 2376 km ermittelt.
 
 ## Würde ich ihn wieder kaufen? Nein

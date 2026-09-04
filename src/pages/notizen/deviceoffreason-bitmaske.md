@@ -21,7 +21,7 @@ Und genau da liegt die Falle: **Es ist keine Aufzählung, sondern eine Bitmaske.
 ## Was das heißt
 
 Eine Bitmaske ist eine Zahl, in der jedes Bit für sich eine eigene Ja/Nein-Aussage
-trägt. Es kann also **mehr als ein Grund gleichzeitig** anliegen, und die Zahl ist
+trägt. Es kann also mehr als ein Grund gleichzeitig anliegen, und die Zahl ist
 dann deren Summe. Der Wert stammt aus dem VE.Direct-Protokoll, Register `0x0207`:
 
 | Bit | Wert | Bedeutung |

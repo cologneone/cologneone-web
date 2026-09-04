@@ -11,8 +11,8 @@ tags:
   - Sensorik
 ---
 
-**Worum es geht:** In vielen Wohnmobilen und Booten sitzt ein **GX-Gerät von
-Victron**, zum Beispiel ein Cerbo GX. Das ist der kleine Rechner, bei dem
+**Worum es geht:** In vielen Wohnmobilen und Booten sitzt ein GX-Gerät von
+Victron, zum Beispiel ein Cerbo GX. Das ist der kleine Rechner, bei dem
 Batteriewächter, Solarregler und Tankgeber zusammenlaufen und der die Werte anzeigt.
 Was dort standardmäßig fehlt, ist die schlichteste Angabe überhaupt: **Wie warm ist
 es eigentlich?** Im Wohnraum, im Kühlschrank, im Fach mit den Batterien.
@@ -24,7 +24,7 @@ ausgebauten Fahrzeug eine Nachmittagsbeschäftigung mit ungewissem Ausgang.
 ## Die kurze Antwort
 
 **Es gibt nichts zu bauen.** Venus OS, die Software auf dem GX-Gerät, liest
-Bluetooth-Sensoren von Haus aus. Der bekannteste davon ist der **RuuviTag**, ein
+Bluetooth-Sensoren von Haus aus. Der bekannteste davon ist der RuuviTag, ein
 finnischer Sensor in der Größe eines Flaschendeckels: Knopfzelle drin, Temperatur,
 Luftfeuchte und Luftdruck raus. Er funkt einfach alle paar Sekunden in die Gegend,
 ohne Anmeldung, ohne Konto, ohne App-Zwang.
@@ -37,7 +37,7 @@ ohne Anmeldung, ohne Konto, ohne App-Zwang.
 Der Ablauf:
 
 1. Sensor auspacken, Lasche aus dem Batteriefach ziehen, er sendet ab sofort.
-2. Am GX-Gerät unter **Einstellungen → Integrationen → Bluetooth-Sensoren** die
+2. Am GX-Gerät unter Einstellungen → Integrationen → Bluetooth-Sensoren die
    Sensoren einschalten. In älteren Venus-Versionen lag der Punkt woanders, aber er
    hieß immer so ähnlich.
 3. Jeder Sensor in Reichweite taucht in der Liste auf. Umlegen, fertig.
@@ -57,9 +57,9 @@ Modelle unterscheiden sich mehr, als der gemeinsame Name vermuten lässt:
 
 | Modell | Misst | Dicht | Temperaturbereich |
 |---|---|---|---|
-| RuuviTag, weiß | Temperatur, Luftfeuchte, **Luftdruck**, Bewegung | IP67 | −20 bis +70 °C |
+| RuuviTag, weiß | Temperatur, Luftfeuchte, Luftdruck, Bewegung | IP67 | −20 bis +70 °C |
 | RuuviTag Pro 3in1 | Temperatur, Luftfeuchte, Bewegung | IP67, atmungsaktive Membran | −40 bis +85 °C |
-| RuuviTag Pro 4in1 | wie 3in1, **plus Luftdruck** | IP67 | −40 bis +85 °C |
+| RuuviTag Pro 4in1 | wie 3in1, plus Luftdruck | IP67 | −40 bis +85 °C |
 | RuuviTag Pro 2in1 | nur Temperatur und Bewegung | IP68 und IP69K | −40 bis +85 °C |
 
 Der weiße Standard-Tag ist leichter und reagiert dadurch schneller auf
@@ -73,8 +73,8 @@ hereinzulassen. Der fehlende Luftdruck ist draußen verschmerzbar, drinnen liefe
 ihn ja vier andere.
 
 > **Kleine Falle am Rande:** Das GX-Gerät nennt jeden davon schlicht „RuuviTag". Wer
-> nach zwei Jahren wissen will, welches Modell wo verbaut ist, sieht es **an den
-> Werten**: Kommt ein Luftdruck an, steckt ein Barometer drin. Fehlt die
+> nach zwei Jahren wissen will, welches Modell wo verbaut ist, sieht es an den
+> Werten: Kommt ein Luftdruck an, steckt ein Barometer drin. Fehlt die
 > Luftfeuchte, ist es ein 2in1. So habe ich meinen eigenen Bestand nachträglich
 > auseinandersortiert.
 
@@ -85,7 +85,7 @@ Stück im Fahrzeug ist das unbrauchbar. Unter **Einstellungen → Geräte → [S
 Gerät** lässt sich der Name frei setzen: Innen, Kühlschrank, Kühlbox, Technik,
 Aussen.
 
-Eine Ebene daneben, unter **Setup → Typ**, steht die zweite Einstellung, die man
+Eine Ebene daneben, unter Setup → Typ, steht die zweite Einstellung, die man
 gemacht haben sollte:
 
 <figure>
@@ -102,7 +102,7 @@ einer Liste, die man liest, und einer, die man überfliegt.
 ## Was der Cerbo über die Knopfzelle verrät
 
 Das ist der Punkt, den ich selbst unterschätzt hatte. Auf der Geräteseite steht
-nicht nur der Messwert, sondern auch die **Spannung der Knopfzelle**, samt eigener
+nicht nur der Messwert, sondern auch die Spannung der Knopfzelle, samt eigener
 Statusbewertung:
 
 <figure>
@@ -114,7 +114,7 @@ Und es bleibt nicht bei der Anzeige: **Das GX-Gerät meldet sich von allein, wen
 Zelle leer wird.** Damit erledigt sich die schlimmste Sorge bei Funksensoren, nämlich
 dass man den Ausfall erst bemerkt, wenn ein Wert seit drei Tagen derselbe ist.
 
-Erwarten sollte man rund **ein Jahr je Zelle**. Das Datenblatt nennt zwölf bis
+Erwarten sollte man rund ein Jahr je Zelle. Das Datenblatt nennt zwölf bis
 vierundzwanzig Monate, in meinem Fahrzeug ist es eher das untere Ende. Kein Wunder:
 Der eine liegt im Kühlschrank, der andere im Sommer bei 34 °C im Technikfach, und
 Knopfzellen mögen beides nicht besonders.
@@ -134,12 +134,12 @@ zuverlässig, der im hintersten Stauraum eines Fahrzeugs mit Aluaufbau vielleich
 nicht. Das probiert man aus, bevor man den Deckel zuschraubt.
 
 **Drittens: Ein Fühler in der Liste ist womöglich gar keiner.** Ein GX-Gerät kann
-auch **virtuelle Temperatursensoren** führen, also Werte, die irgendein anderes Gerät
+auch virtuelle Temperatursensoren führen, also Werte, die irgendein anderes Gerät
 im Netzwerk hineinschreibt. Bei mir ist das der Router im Fahrzeug, der seine eigene
 Gehäusetemperatur meldet und mit rund 70 °C zwischen lauter Wohnraumwerten steht. Auf
 den ersten Blick sieht das nach einem sehr dringenden Problem aus. Wenn in der
 Temperaturliste also ein Wert steht, der unmöglich erscheint, ist die erste Frage
-nicht „welcher Sensor ist kaputt", sondern **„ist das überhaupt ein Sensor"**.
+nicht „welcher Sensor ist kaputt", sondern „ist das überhaupt ein Sensor".
 
 Wie das bei mir im Fahrzeug aussieht und wo die fünf Sensoren sitzen, steht auf der
 Seite zur [Energieanlage](/projekte/wohnmobil-victron).

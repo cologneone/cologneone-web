@@ -21,11 +21,11 @@ tags:
 </figure>
 
 Der Anspruch ist einfach: ein paar Tage stehen, wo es schön ist, ohne Landstrom und
-ohne zu rechnen. Dafür stecken in einem Fahrzeug von 1998 heute **560 Ah Lithium**,
-ein **3000-VA-Wechselrichter**, zwei Solarregler und drei Ladebooster – eine
+ohne zu rechnen. Dafür stecken in einem Fahrzeug von 1998 heute 560 Ah Lithium,
+ein 3000-VA-Wechselrichter, zwei Solarregler und drei Ladebooster – eine
 Ausstattung, die in vielen Neufahrzeugen so nicht ab Werk drin ist.
 
-Zusammengehalten wird das von einem **Cerbo GX**. Wichtig war mir dabei nicht die
+Zusammengehalten wird das von einem Cerbo GX. Wichtig war mir dabei nicht die
 maximale Ausbaustufe, sondern eine Anlage, die ich verstehe, im Zweifel selbst
 reparieren kann und deren Zustand jederzeit ablesbar ist, auch wenn ich gerade
 nicht daneben stehe.
@@ -62,25 +62,25 @@ jedem sofort erzählen würde, dann diese hier. Sie kostet nichts extra, sie ste
 MultiPlus bereits drin, und die meisten wissen gar nicht, dass es sie gibt.
 
 Die Ausgangslage kennt jeder, der schon einmal auf einem älteren Platz gestanden hat:
-An der Säule steht **6 A**. Das sind knapp 1400 Watt für das ganze Fahrzeug.
+An der Säule steht 6 A. Das sind knapp 1400 Watt für das ganze Fahrzeug.
 Wasserkocher an, und es wird dunkel. Dann läuft man mit der Taschenlampe zum
 Verteilerkasten, sucht im Regen seinen Automaten und drinnen fragt jemand, ob der
 Kaffee noch kommt.
 
 Der MultiPlus löst das mit zwei Funktionen, die zusammenarbeiten.
 
-**Erstens sagt man ihm die Wahrheit.** Man stellt die **Eingangsstrombegrenzung** auf
+**Erstens sagt man ihm die Wahrheit.** Man stellt die Eingangsstrombegrenzung auf
 genau das, was die Säule hergibt: 6 A, 4 A, 10 A, je nach Platz. Das dauert zehn
 Sekunden am Display oder am Handy und ist bei mir das Erste nach dem Einstöpseln.
 
 **Zweitens hält er sich daran, ohne einen einzuschränken.** Und genau das ist der
 Punkt:
 
-- Zieht das Fahrzeug **weniger** als die eingestellte Grenze, lädt er mit dem Rest die
+- Zieht das Fahrzeug weniger als die eingestellte Grenze, lädt er mit dem Rest die
   Batterie. Wird es knapp, drosselt er das Laden, statt die Sicherung am Platz zu
   werfen. Victron nennt das *Power Control*.
-- Zieht das Fahrzeug **mehr**, trennt er nicht ab. Er holt die fehlende Leistung aus
-  der **Batterie** und schiebt sie in Echtzeit dazu, ohne dass drinnen auch nur eine
+- Zieht das Fahrzeug mehr, trennt er nicht ab. Er holt die fehlende Leistung aus
+  der Batterie und schiebt sie in Echtzeit dazu, ohne dass drinnen auch nur eine
   Lampe flackert. Das ist *PowerAssist*.
 
 Das Ergebnis ist ein 2000-Watt-Wasserkocher an einer 6-Ampere-Säule. Die Säule liefert
@@ -89,7 +89,7 @@ sich die Batterie in aller Ruhe zurück, was sie gerade vorgestreckt hat.
 
 **Und da liegt der Gedanke, der mich daran wirklich begeistert:** Die Säule ist keine
 Obergrenze mehr dafür, was ich gleichzeitig anschalten darf. Sie ist nur noch eine
-Obergrenze für das, was ich **über den Tag** verbrauche. Spitzenleistung und
+Obergrenze für das, was ich über den Tag verbrauche. Spitzenleistung und
 Energiemenge sind entkoppelt. Und Spitzen sind im Wohnmobil fast immer kurz:
 Wasserkocher, Föhn, Kaffeemaschine, Mikrowelle. Drei Minuten, nicht drei Stunden.
 
@@ -122,8 +122,8 @@ denen man sich zurechtfinden kann.
 
 Genau das ist der Punkt, den man an einem gewachsenen Wohnmobil sieht und der in
 keinem Katalogfoto vorkommt: **Die Victron-Anlage ersetzt die Werksinstallation
-nicht, sie löst sie stückweise ab.** Das Fahrzeug ist von **1998**; die originale
-Verteilung darin ist ein **CBE-Modul, Modell M 2005** – das ist die Typbezeichnung des
+nicht, sie löst sie stückweise ab.** Das Fahrzeug ist von 1998; die originale
+Verteilung darin ist ein CBE-Modul, Modell M 2005 – das ist die Typbezeichnung des
 Herstellers, kein Baujahr. Aufgedruckt ist der Name des Wohnmobilherstellers, gebaut
 hat es CBE.
 
@@ -150,7 +150,7 @@ ein Stück davon aufgibt.
   <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batteriehauptschalter. Er trennt die ganze Anlage, nicht nur einen Zweig.</figcaption>
 </figure>
 
-Alles Dicke trifft sich an einer Stelle: dem **Lynx Power In 1000**. Der ist ab Werk
+Alles Dicke trifft sich an einer Stelle: dem Lynx Power In 1000. Der ist ab Werk
 eine reine Sammelschiene *ohne* Sicherungen: vier Abgänge, alle direkt auf dem
 Batterieplus. Ich habe ihn selbst auf Sicherungen umgebaut.
 
@@ -173,7 +173,7 @@ Verbraucher. Deshalb steht am Lynx überall 200 A, wo 50 mm² liegt, und nur dor
 | Ladeverteiler (Solar und Booster) | 50 mm² | 200 A |
 | Bordnetz | 16 mm² | 60 A |
 
-Beide Batterien hängen **einzeln** am Lynx, jede mit eigenem Kabel und eigener
+Beide Batterien hängen einzeln am Lynx, jede mit eigenem Kabel und eigener
 Sicherung – nicht in Reihe durchgeschleift. Der MultiPlus ebenso doppelt, weil ein
 3000-VA-Wechselrichter im Spitzenfall Ströme zieht, die eine einzelne Leitung nicht
 sinnvoll trägt.
@@ -203,7 +203,7 @@ große Sicherung, die die halbe Anlage mitnimmt.
 
 **Booster 1 und 2** machen das Erwartbare: Sie holen sich Strom von der
 Lichtmaschine und laden damit die Wohnraumbatterie. Zusammen bis zu 100 A. Sie
-hängen per Datenkabel am Cerbo und wissen selbst, wann sie dürfen, nämlich über **D+**,
+hängen per Datenkabel am Cerbo und wissen selbst, wann sie dürfen, nämlich über D+,
 also das Signal, das im Fahrzeug sagt „der Motor läuft".
 
 **Booster 3 lädt in die andere Richtung**: aus der Wohnraumbatterie zurück in die
@@ -213,16 +213,16 @@ Die geht so schnell nicht leer. Liegenbleiben tut man an der *Starterbatterie*, 
 die hängt bei den meisten Fahrzeugen einfach nur da und entlädt sich still vor sich
 hin.
 
-Dieser dritte Booster hat keinen Datenanschluss. Er wird über ein **Relais des
-Cerbo** geschaltet, und alle Schwellenwerte liegen nicht im Gerät, sondern in einem
+Dieser dritte Booster hat keinen Datenanschluss. Er wird über ein Relais des
+Cerbo geschaltet, und alle Schwellenwerte liegen nicht im Gerät, sondern in einem
 Node-RED-Ablauf auf dem Cerbo. Ein alter Aufkleber am Gehäuse behauptet noch etwas
 anderes. Der gehört abgemacht.
 
 ## Der Flow, der Booster 3 steuert
 
-Booster 3 hat keinen Datenanschluss und **keine eigenen Schwellenwerte mehr**: Die
+Booster 3 hat keinen Datenanschluss und keine eigenen Schwellenwerte mehr: Die
 sind bewusst aus dem Gerät heraus und in den Cerbo hinein gewandert. Er kann nur noch
-eins: an oder aus, geschaltet über **Relais 1** des Cerbo. Alles, was entscheidet
+eins: an oder aus, geschaltet über Relais 1 des Cerbo. Alles, was entscheidet
 *wann*, steckt in einem Node-RED-Ablauf.
 
 Der Grund dafür ist praktisch. Ein Ladebooster kennt nur seine eigenen zwei Klemmen.
@@ -250,7 +250,7 @@ An den Cerbo geht dieses Signal aber gar nicht. Es liegt an den **Fernsteuereing
 von Booster 1 und 2**. Dort gehört es hin, denn sie sollen ja nur bei laufendem
 Motor laden. Und genau da wird es abgegriffen:
 
-Beide Orion XS melden über ihr Datenkabel einen Wert namens **`DeviceOffReason`** –
+Beide Orion XS melden über ihr Datenkabel einen Wert namens `DeviceOffReason` –
 „warum ich gerade nicht lade". Ist darin das Bit für „Fernsteuereingang inaktiv"
 gesetzt, liegt kein D+ an, also steht der Motor. Ist es nicht gesetzt, läuft er.
 Der Cerbo fragt also nicht das Fahrzeug, sondern die beiden Booster – die wissen es
@@ -265,7 +265,7 @@ const dPlusAktiv = (reason & BIT_REMOTE) === 0;
 `reason === 0`, also „gar kein Abschaltgrund = Motor läuft". Das geht gut, solange
 wirklich nur ein einziger Grund anliegen kann. Kam ein zweiter dazu – etwa Bit 0,
 „keine Eingangsspannung", weil ein Trennschalter aus war –, stand dort `1` statt `0`,
-und der laufende Motor wurde nie erkannt. `DeviceOffReason` ist eine **Bitmaske**,
+und der laufende Motor wurde nie erkannt. `DeviceOffReason` ist eine Bitmaske,
 keine Aufzählung; [die Kurzfassung dazu hier](/notizen/deviceoffreason-bitmaske).
 
 Dazu eine zweite Absicherung, die genauso wichtig ist: **Meldungen, die älter als
@@ -279,8 +279,8 @@ Vier Regeln in dieser Reihenfolge. Die erste, die zutrifft, gewinnt:
 
 | Vorrang | Bedingung | Relais | Warum |
 |---|---|---|---|
-| 1 | Motor läuft (D+ aktiv) | **aus** | Während der Fahrt lädt die Lichtmaschine über Booster 1 und 2. Ein dritter Verbraucher am selben Netz wäre nur Gegenverkehr. Gleichzeitig geht die Motorvorwärmung aus |
-| 2 | Starterbatterie unter 12,2 V | **ein** | Notfall. Endet erst wieder oberhalb von 13,0 V |
+| 1 | Motor läuft (D+ aktiv) | aus | Während der Fahrt lädt die Lichtmaschine über Booster 1 und 2. Ein dritter Verbraucher am selben Netz wäre nur Gegenverkehr. Gleichzeitig geht die Motorvorwärmung aus |
+| 2 | Starterbatterie unter 12,2 V | ein | Notfall. Endet erst wieder oberhalb von 13,0 V |
 | 3 | Ladezustand der Bordbatterie unter 80 % | aus | Die Bordbatterie hat Vorrang. Wieder frei ab 85 % |
 | 4 | sonst | ein | Normalbetrieb: Es ist Strom übrig, die Starterbatterie darf mittrinken |
 
@@ -308,8 +308,8 @@ weitergemacht.
 ### Der unscheinbare Knoten oben links
 
 Im selben Tab sitzt der Zeitgeber, der alle 30 Sekunden das
-[MQTT-Lebenszeichen](/notizen/victron-mqtt-keepalive) schickt. **Ohne ihn verstummen
-sämtliche Messwerte im ganzen Haus**: Dieselgeber, virtueller Tank, Wasserflow,
+[MQTT-Lebenszeichen](/notizen/victron-mqtt-keepalive) schickt. Ohne ihn verstummen
+sämtliche Messwerte im ganzen Haus: Dieselgeber, virtueller Tank, Wasserflow,
 alles. Wer diesen Tab zum Testen deaktiviert, legt nebenbei die halbe Anlage still
 und sucht den Fehler danach an der falschen Stelle.
 
@@ -332,8 +332,8 @@ Minuten ab, um im Ernstfall eine SMS zu schicken.
 ### Vielleicht wird ein Repo daraus
 
 Der Ablauf ist nichts fahrzeugspezifisch Gebasteltes mehr, sondern beantwortet eine
-Frage, die viele haben: **Wie erkenne ich im Cerbo zuverlässig, dass der Motor läuft,
-ohne ein zusätzliches Kabel zu ziehen – und wie schalte ich damit etwas?** Die
+Frage, die viele haben: Wie erkenne ich im Cerbo zuverlässig, dass der Motor läuft,
+ohne ein zusätzliches Kabel zu ziehen – und wie schalte ich damit etwas? Die
 Bausteine dafür – Bitmaske statt Gleichheit, Altersprüfung der Messwerte, Hysterese,
 Puffer beim Einschalten, Prüfung nach dem Schalten – sind übertragbar.
 
@@ -343,39 +343,6 @@ Installationsskript und Lizenz. Für den Motor-Flow wäre dasselbe naheliegend: 
 als importierbare Datei, die Schwellen sauber oben als Konstanten, eine ehrliche
 Liesmich-Datei dazu, was er tut und was er ausdrücklich nicht tut. Steht auf der
 Liste – noch nicht gemacht.
-
-## Wenn der Motor läuft und trotzdem nichts lädt
-
-Der häufigste Notruf in einschlägigen Foren, und er hat selten die Ursache, die man
-zuerst vermutet. Bei mir meldeten beide Orion XS bei laufendem Motor nichts. Die
-Reihenfolge, die am Ende geholfen hat, steht hier, damit sie jemandem Zeit spart:
-
-1. **Eingangsspannung ansehen.** Was sieht der Booster an seinem Eingang? Steht dort
-   bei laufendem Motor nahezu null, muss man im Gerät gar nicht weitersuchen.
-2. **Den Abschaltgrund lesen – als Bitmaske.** Victron meldet nicht *einen* Grund,
-   sondern alle gleichzeitig, als Summe von Zweierpotenzen. `1` heißt „keine
-   Eingangsspannung", `8` heißt „D+ fehlt". Stehen beide an, steht dort `9`. Und
-   wer auf Gleichheit prüft, findet nichts. [Die Kurzfassung dazu
-   hier](/notizen/deviceoffreason-bitmaske).
-3. **Wenn keine Eingangsspannung ankommt, ist die Ursache mechanisch.**
-
-Genau so war es: Der **Trennschalter in der Zuleitung von der Lichtmaschine** stand
-auf aus. Kein Defekt, kein Bauteil, ein Schalter – und zwar nicht der große rote
-Hauptschalter vom Foto weiter oben, sondern ein eigener, der nur diesen einen Zweig
-abklemmt. Die Wohnraumbatterie versorgte deshalb alles weiter wie gewohnt, im
-Fahrzeug war nichts auffällig. Unterbrochen war nur der Weg vom Motor zu den
-Boostern.
-
-Ehrlicherweise gehört dazu, was ich vorher falsch vermutet hatte: eine lose oder
-korrodierte Hochstromverbindung, samt Sorge vor Wärmeentwicklung. Das war überzogen,
-und es hätte mir früher auffallen können: 41 Minuten völlig ruhiger Spannungsverlauf
-sprachen dagegen. **Eine wackelnde Verbindung erzeugt Rauschen. Eine ausgeschaltete
-Verbindung erzeugt Stille.** Wer im Log nur eine glatte Linie sieht, sucht am
-falschen Ende.
-
-Damit dieser Zustand nicht wieder tagelang unbemerkt bleibt, [schickt der Router im
-Fahrzeug](/projekte/wohnmobil-netzwerk) heute eine SMS, sobald der Motor läuft und
-beide Booster am Eingang unter 5 V melden.
 
 ## Sicherung 13 ist die wichtigste Zeile im Fahrzeug
 
@@ -389,7 +356,7 @@ Cerbo GX – 3 A."** Die WC-Spülung und das Gehirn der ganzen Anlage hängen am
 Kreis. Wer die Spülung stromlos macht, macht den Cerbo stromlos – und damit
 Messwerte, Automatik und Fernzugriff.
 
-Das ist kein Baufehler, sondern eine gewachsene Belegung. Aber es ist die Art von
+Gewachsen ist das so, ein Baufehler ist es nicht. Aber es ist die Art von
 Zusammenhang, die man kennen muss, bevor man an einem Regentag „mal eben" eine
 Sicherung zieht. Deshalb steht sie hier so deutlich.
 
@@ -410,13 +377,13 @@ Bei Blei konnte man aus der Ruhespannung noch grob auf den Füllstand schließen
 nahezu flach. Zwei Zehntelvolt Unterschied trennen dort ein Drittel der Kapazität.
 Wer nach dem Voltmeter geht, rät.
 
-Deshalb der **BMV-712**: ein Shunt in der Minusleitung, der jede Amperestunde zählt,
+Deshalb der BMV-712: ein Shunt in der Minusleitung, der jede Amperestunde zählt,
 die rein- und rausgeht. Das ist der Unterschied zwischen einer gemessenen und einer
 geschätzten Anzeige, und der Grund, warum man morgens weiß, ob der Kaffee noch
 drin ist.
 
-Ein Nebeneffekt, der oft übersehen wird: Der BMV hat einen **zweiten
-Spannungseingang**, und der liegt hier auf der **Starterbatterie**. Damit hat der
+Ein Nebeneffekt, der oft übersehen wird: Der BMV hat einen zweiten
+Spannungseingang, und der liegt hier auf der Starterbatterie. Damit hat der
 Cerbo ohne weitere Hardware auch deren Spannung, genau die Größe, die die
 Rückladeautomatik von Booster 3 braucht.
 
@@ -428,14 +395,14 @@ Rückladeautomatik von Booster 3 braucht.
 </figure>
 
 Die meisten Geräte hängen per Kabel am Cerbo und tauchen ohne Zutun in der
-Oberfläche auf. **Drei Dinge tun das nicht** und mussten dazugebaut werden:
+Oberfläche auf. Drei Dinge tun das nicht und mussten dazugebaut werden:
 
-- Die **Gastankflasche** funkt nur per Bluetooth, und zwar in einem undokumentierten
+- Die Gastankflasche funkt nur per Bluetooth, und zwar in einem undokumentierten
   Protokoll – [wie sie trotzdem im Cerbo landet](/projekte/travelmate-bluetooth).
-- Der **Dieselgeber** liefert brauchbare Werte nur mit Filter, und der Treiber
+- Der Dieselgeber liefert brauchbare Werte nur mit Filter, und der Treiber
   rechnet anders, als die Oberfläche vermuten lässt –
   [was dahintersteckt](/projekte/mopeka-diesel).
-- Der **Booster für die Starterbatterie** hat keinen Datenanschluss und wird über ein
+- Der Booster für die Starterbatterie hat keinen Datenanschluss und wird über ein
   Relais geschaltet.
 
 Die Logik dafür liegt in Node-RED auf dem Cerbo selbst: ein Tab je Aufgabe, jeder
@@ -444,7 +411,7 @@ Teil der „large"-Firmware, kostet also nichts extra und läuft direkt auf dem 
 
 ## Fünf kleine Kästchen, die Temperatur funken
 
-Fünf **RuuviTags** sind im Fahrzeug verteilt: Wohnraum, Kühlschrank, Kühlbox,
+Fünf RuuviTags sind im Fahrzeug verteilt: Wohnraum, Kühlschrank, Kühlbox,
 Technikfach und außen. Jeder ist ein Sensor in der Größe eines Flaschendeckels, der
 per Bluetooth Temperatur und Luftfeuchte in die Gegend funkt. Der Cerbo hört zu, ganz
 von allein. **Kein Treiber, kein Node-RED, keine zusätzliche Hardware** – nach dem
@@ -452,7 +419,7 @@ Gassensor und dem Dieselgeber, die beide erst mühsam beigebracht werden
 mussten, eine ausgesprochen angenehme Abwechslung. Wie das eingerichtet wird, steht
 in einer eigenen [Notiz](/notizen/ruuvitag-victron-cerbo).
 
-Der interessanteste ist der im **Technikfach**, dort wo Wechselrichter, Laderegler
+Der interessanteste ist der im Technikfach, dort wo Wechselrichter, Laderegler
 und Batterien sitzen. Während ich das schreibe, stehen dort 34 °C, bei 24 °C draußen.
 Das ist kein Alarm, aber es ist die Art von Wert, die man kennen sollte: An einem
 milden Tag ist das harmlos, auf einem Stellplatz ohne Schatten im Hochsommer wird

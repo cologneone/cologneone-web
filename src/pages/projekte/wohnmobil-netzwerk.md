@@ -23,9 +23,9 @@ sie herhabe und was ich auf dem Weg dahin gelernt habe.
 
 Zwei Teile, mehr ist es nicht.
 
-- Ein **Teltonika RUTX50**, ein 5G-Router für den Dauerbetrieb: zwei
+- Ein Teltonika RUTX50, ein 5G-Router für den Dauerbetrieb: zwei
   SIM-Kartenplätze, vier LAN-Buchsen, eigenes WLAN, Versorgung aus dem 12-V-Bordnetz.
-- Eine **Panorama-Dachantenne**, in der sieben Antennen in einem flachen Gehäuse
+- Eine Panorama-Dachantenne, in der sieben Antennen in einem flachen Gehäuse
   stecken. Zu der weiter unten mehr, denn sie ist der unterschätzte Teil.
 
 Der Router spannt das Bordnetz auf, in dem alles hängt, was im Wohnmobil ins Internet
@@ -73,7 +73,7 @@ Und dann ist da noch die Sache, wegen der ich am meisten grinse. Im Fahrzeug hä
 **alter Echo Dot** – und zwar genau der, weil er seinen Strom über USB bekommt und
 kein Netzteil braucht. Er sitzt unter einem Schrank an einer eingebauten USB-Dose und
 trägt eine Holzfolie im Möbelton, damit man ihn nicht sieht. Seitdem sage ich im
-Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". **Das ist Luxus.**
+Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". Das ist Luxus.
 
 <figure>
   <img src="/bilder/netzwerk/alexa-dot.jpg" alt="Ein kleiner Sprachassistent mit Holzfolie beklebt, unter einem Oberschrank neben einer eingebauten Steckdose mit USB-Anschluss" />
@@ -82,7 +82,7 @@ Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". **Das is
 
 ## Würde ich ihn wieder kaufen? Ja, aber die eSIM-Version
 
-Sofort. Mit genau einer Einschränkung: Ich würde die **eSIM-Variante** nehmen.
+Sofort. Mit genau einer Einschränkung: Ich würde die eSIM-Variante nehmen.
 
 Den RUTX50 gibt es auch mit fest eingebauter eSIM, zusätzlich zu den beiden
 Kartenschächten. Der Unterschied zeigt sich im Ausland: Ein Datenpaket eines örtlichen
@@ -100,9 +100,9 @@ Bedieneinheit, ringsum Metall, Kabelbäume und Möbel. Das ist ungefähr die
 schlechteste Position, die man einem Funkgerät zumuten kann. Oben auf dem Dach hat
 dieselbe SIM in derselben Zelle plötzlich Empfang, wo vorher nichts war.
 
-Verbaut ist eine **Panorama-Dachantenne der Serie LGMDM4-6-60-24-58**, weiß, flach,
-180 mm im Durchmesser und 81 mm hoch. Unter der Haube sitzen **sieben Antennen in
-einer**:
+Verbaut ist eine Panorama-Dachantenne der Serie LGMDM4-6-60-24-58, weiß, flach,
+180 mm im Durchmesser und 81 mm hoch. Unter der Haube sitzen sieben Antennen in
+einer:
 
 | Wofür | Elemente | Gewinn |
 |---|---|---|
@@ -126,17 +126,17 @@ Hier verliert man Geld und einen Nachmittag, wenn man nicht aufpasst. Dieselbe A
 gibt es mit unterschiedlichen Kabelsätzen, und der Unterschied ist keine Kleinigkeit.
 
 Der richtige Satz für einen Teltonika bringt **1 m Kabel, ab Werk mit genau den
-Steckern bestückt, die der Router hat**: vier SMA für 5G und LTE, zwei **RP**-SMA fürs
+Steckern bestückt, die der Router hat**: vier SMA für 5G und LTE, zwei RP-SMA fürs
 WLAN, einer SMA für GPS. Damit schraubt man sieben Stecker an und ist fertig. Der
 andere Satz ist kürzer und hat diese Bestückung nicht, dann braucht man Adapter oder
 Zwischenkabel, und man merkt es genau in dem Moment, in dem man auf dem Dach steht.
 
-Also **die Antenne gleich mit dem passenden Satz kaufen** statt Antenne und Kabel
+Also die Antenne gleich mit dem passenden Satz kaufen statt Antenne und Kabel
 getrennt zusammenzusuchen. Passend ist sie damit für RUTX50, RUTX14, RUTX12, RUTM51
 und RUTM54, abwärts auch für die älteren RUT-Modelle.
 
-Der Meter ist dabei kein Puffer, sondern die Vorgabe: **Antenne und Router muss man
-zusammen planen**, nicht nacheinander. Der Router gehört dorthin, wo das Kabel
+Der Meter ist dabei kein Puffer, sondern die Vorgabe: Antenne und Router muss man
+zusammen planen, nicht nacheinander. Der Router gehört dorthin, wo das Kabel
 hinreicht. Es gibt fertige Verlängerungssätze bis 7,5 m, aber jeder zusätzliche Meter
 Koaxkabel kostet bei diesen Frequenzen Signal. Kurz ist besser als bequem.
 
@@ -157,7 +157,7 @@ Luft zu den übrigen Aufbauten. Alles, was daneben in die Höhe ragt, steht der 
 im Weg.
 
 **Man braucht fast immer eine Gewindeverlängerung.** Die Antenne wird durch ein
-**19-mm-Loch** gesteckt und mit einer **M18-Mutter** gekontert. Das serienmäßige
+**19-mm-Loch** gesteckt und mit einer M18-Mutter gekontert. Das serienmäßige
 Gewinde ist für dünnere Dächer gedacht als das isolierte Sandwich eines Wohnmobils.
 Panorama hat dafür eine 70-mm-Verlängerung im Programm, ich habe mir stattdessen eine
 in Durchmesser und Länge passende bestellt. Die war schneller da als das Originalteil.
@@ -165,13 +165,13 @@ in Durchmesser und Länge passende bestellt. Die war schneller da als das Origin
 **Ein altes Loch ist ein Geschenk und ein Problem zugleich.** Bei mir steckte an der
 Stelle eine schlechte Radioantenne. Das erspart das Bohren, aber die Öffnung war von
 innen zu groß, um die Mutter irgendwo dagegen zu kontern. Die Lösung war eine kleine,
-selbst zugeschnittene **Edelstahlplatte**, gegen die die Verschraubung zieht.
-Abgedichtet ist das Ganze mit **Dekasil**, dem Zeug, mit dem im Wohnmobilbau ohnehin
+selbst zugeschnittene Edelstahlplatte, gegen die die Verschraubung zieht.
+Abgedichtet ist das Ganze mit Dekasil, dem Zeug, mit dem im Wohnmobilbau ohnehin
 alles geklebt und gedichtet wird.
 
 ## Wo ich das Zeug herhabe
 
-Router und Antenne sind von **Antennentechnik Dietz**. Das steht hier, weil die Frage
+Router und Antenne sind von Antennentechnik Dietz. Das steht hier, weil die Frage
 sonst als Erstes kommt, und weil dort jemand sitzt, der die Sachen wirklich kennt: Zu
 den Antennen und den Routern gibt es Videos, in denen der Kram erklärt und montiert
 wird, statt nur Datenblätter abzuschreiben. Genau daher weiß ich auch von der Sache
@@ -193,13 +193,13 @@ Fällt der aktive Weg aus, übernimmt der nächste. Der Fachbegriff dafür ist
 *Failover*. Damit das nicht erst auffällt, wenn man selbst etwas anklickt, prüft der
 Router im Sekundentakt, ob über den gerade aktiven Weg überhaupt noch etwas nach
 draußen geht: Drei Fehlschläge hintereinander, und er schaltet um. Ein Ausfall ist
-damit nach rund **neun Sekunden** erkannt.
+damit nach rund neun Sekunden erkannt.
 
 Das alles einzurichten ist eine Nachmittagsaufgabe.
 
 ## Und jetzt die Stolperfallen
 
-Der Rest dieser Seite handelt davon, was **nach** dem Nachmittag passiert ist. Sechs
+Der Rest dieser Seite handelt davon, was nach dem Nachmittag passiert ist. Sechs
 Punkte, alle haben echte Zeit gekostet, und fünf davon haben eines gemeinsam:
 **Während sie auftreten, sagen dir sämtliche Anzeigen, dass alles in Ordnung ist.**
 
@@ -228,7 +228,7 @@ Steht dort dein eigener Bereich, hast du die Ursache in zehn Sekunden.
 
 Das Subnetz zu wechseln ist schnell gemacht, und genau deshalb übersieht man den
 zweiten Teil. Alles, was seine Adresse per DHCP bekommt, zieht von allein mit. Alles,
-was eine **feste Adresse im Gerät** eingetragen hat, bleibt im alten Bereich zurück
+was eine feste Adresse im Gerät eingetragen hat, bleibt im alten Bereich zurück
 und meldet sich nie wieder.
 
 Bei mir traf es einen Schaltaktor für die Beleuchtung. Die Kopplung der Wohnraumlichter
@@ -245,7 +245,7 @@ soll kommen, und es passiert: nichts. Kein Fehler, keine Meldung, nur eine leere
 
 Die Ursache ist wunderbar absurd. Ein Captive Portal kapert die DNS-Antworten und
 liefert für jede beliebige Domain eine private Adresse zurück, damit dein Browser bei
-ihm landet. Das ist **exakt die Signatur eines DNS-Rebinding-Angriffs**. Also wirft
+ihm landet. Das ist exakt die Signatur eines DNS-Rebinding-Angriffs. Also wirft
 der Schutzmechanismus im Router die Antworten weg, und die Anmeldeseite lädt nie.
 
 Der Schutz tut genau das, wofür er gebaut wurde. Nur im falschen Moment.
@@ -257,8 +257,8 @@ ein kleines Skript genau dieses Zeitfenster.
 ## 4. Volle Balken heißen nichts
 
 RSSI ist die Zahl, die überall angezeigt wird, und sie ist die am wenigsten
-aussagekräftige. In Kroatien und Italien standen mehrfach **−58 dBm** an – nach jeder
-Anzeige „sehr gut" – bei einem **SINR von −1**.
+aussagekräftige. In Kroatien und Italien standen mehrfach −58 dBm an – nach jeder
+Anzeige „sehr gut" – bei einem SINR von −1.
 
 Übersetzt: Der Sendemast ist laut zu hören, aber alle anderen auch. Die Zelle ist
 überlastet. Dagegen hilft keine Einstellung, kein Antennenwechsel und kein Neustart.
@@ -285,7 +285,7 @@ läuft.
 ## 6. Zwei SIM-Karten sind nicht zwei Verbindungen
 
 Zwei SIM-Schächte heißt nicht zwei gleichzeitige Verbindungen: Beide Karten teilen
-sich **ein Funkmodul**, es kann immer nur **eine** aktiv sein. Der Wechsel ist ein
+sich ein Funkmodul, es kann immer nur eine aktiv sein. Der Wechsel ist ein
 Umschaltvorgang mit Abbruch, kein Failover im eigentlichen Sinn. Und wenn die
 Umschaltautomatik nicht ausdrücklich aktiviert ist, existiert die dritte Stufe
 deiner schönen Ausfallkette nur auf dem Papier.
@@ -297,11 +297,11 @@ Auslöser greift, kein Failover passiert. Hier muss man von Hand ran.
 ## Was ich daraus mitgenommen habe
 
 Reisenetzwerke scheitern selten daran, dass etwas kaputtgeht. Sie scheitern daran,
-dass etwas **anders ist als angenommen**: ein fremdes Netz mit deinen Adressen, ein
+dass etwas anders ist als angenommen: ein fremdes Netz mit deinen Adressen, ein
 Schutz, der im falschen Moment greift, eine Priorität, die dir jemand hinter dem
 Rücken umsortiert hat.
 
-Deshalb ist die wichtigste Diagnose nicht „geht es?", sondern „**worüber** geht es
+Deshalb ist die wichtigste Diagnose nicht „geht es?", sondern „worüber geht es
 gerade, und mit welcher Adresse?". Diese beiden Fragen decken fünf der sechs Punkte
 oben in unter einer Minute auf.
 

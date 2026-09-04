@@ -10,7 +10,7 @@ tags:
   - Cerbo GX
 ---
 
-**Worum es geht:** Ein **Cerbo GX** bringt eine eigene Weboberfläche mit, in der
+**Worum es geht:** Ein Cerbo GX bringt eine eigene Weboberfläche mit, in der
 Ausbaustufe „large" zusätzlich Node-RED. Erreichbar ist das über die Adresse des
 Geräts im heimischen Netz, per HTTPS. Das Zertifikat dafür stellt das Gerät sich
 selbst aus.
@@ -32,9 +32,9 @@ gegangen.
 
 Das mitgelieferte Zertifikat verletzt zwei Regeln, die Apple seit iOS 13 durchsetzt:
 
-- Es hat **keinen `subjectAltName`**. Der Rechnername steht nur im veralteten
+- Es hat keinen `subjectAltName`. Der Rechnername steht nur im veralteten
   `CN`-Feld, und das wertet iOS nicht mehr aus.
-- Es läuft **rund tausend Jahre**. Apple akzeptiert höchstens 398 Tage.
+- Es läuft rund tausend Jahre. Apple akzeptiert höchstens 398 Tage.
 
 Jede der beiden Regeln allein reicht für die Warnung. Deshalb wirkt der erste
 Versuch wie eine Sackgasse.
@@ -51,5 +51,5 @@ vermeiden will, baut die Pfade relativ zur aktuellen Adresse statt absolut.
 
 ## Korrektur
 
-Hier stand vorher, es gebe **keinen** Weg außer VRM, und „Trotzdem öffnen" sei
+Hier stand vorher, es gebe keinen Weg außer VRM, und „Trotzdem öffnen" sei
 wirkungslos. Das war zu absolut. Es wirkt, nur eben nicht beim ersten Anlauf.

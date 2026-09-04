@@ -15,7 +15,7 @@ tags:
   - Wohnmobil
 ---
 
-Unter Campern ist das ein bekanntes Ärgernis. Die **Alugas TravelMate 2.0** ist die
+Unter Campern ist das ein bekanntes Ärgernis. Die Alugas TravelMate 2.0 ist die
 aktuelle Gastankflasche, und ihr Füllstand ist über ein Bluetooth-Modul von Rotarex
 zu haben – DIMES WAVE, im BLE-Scan als `SRG-1-WAVE`. Nur eben abgeschottet: Die
 Werte gibt es in der Hersteller-App und sonst nirgends.
@@ -25,7 +25,7 @@ die eigene Anlage holen, und genau deshalb greifen bis heute viele zur älteren
 Generation, obwohl sie eigentlich die neue haben wollen. Wer die 2.0 kauft, bekommt
 die bessere Flasche und verliert die Anbindung.
 
-**Beides geht.** Der Füllstand der 2.0 steht hier im **Victron Cerbo GX**, dem
+**Beides geht.** Der Füllstand der 2.0 steht hier im Victron Cerbo GX, dem
 Steuergerät, bei dem im Fahrzeug alles zusammenläuft. Als ganz normale Tankanzeige
 neben Frischwasser, Grauwasser und Diesel, aktualisiert alle 15 Minuten. Wie das
 geht, steht weiter unten, und der Code liegt offen.
@@ -40,7 +40,7 @@ geht, steht weiter unten, und der Code liegt offen.
 
 ## Die Hardware
 
-Im Gaskasten steht eine **Alugas TravelMate 2.0**, eine wiederbefüllbare
+Im Gaskasten steht eine Alugas TravelMate 2.0, eine wiederbefüllbare
 Alu-Gastankflasche mit elektronischem Multiventil.
 
 <figure>
@@ -48,7 +48,7 @@ Alu-Gastankflasche mit elektronischem Multiventil.
   <figcaption>Die TravelMate 2.0 im Gaskasten, festgezurrt und angeschlossen.</figcaption>
 </figure>
 
-Die Füllstandsmessung besteht aus **drei Teilen**, und nur der dritte hat mit
+Die Füllstandsmessung besteht aus drei Teilen, und nur der dritte hat mit
 Bluetooth zu tun:
 
 1. **Der Sensor im Multiventil.** Er greift den Stand des Schwimmers magnetisch
@@ -58,7 +58,7 @@ Bluetooth zu tun:
 3. **Die WAVE-BLE-Einheit von Rotarex.** Eine schwarze Sendebox mit einem Meter
    Anschlusskabel und Klett-Halter, die an die Anzeige gesteckt wird. Sie läuft
    mit zwei AAA-Batterien und funkt den Wert per Bluetooth Low Energy. Dieser
-   Teil muss **separat gekauft** werden.
+   Teil muss separat gekauft werden.
 
 Eine Eigenheit der Sendebox, die für dieses Projekt wichtig ist: Sie lässt
 **immer nur eine Bluetooth-Verbindung gleichzeitig** zu. Wenn der Cerbo gerade
@@ -84,8 +84,8 @@ Minuten für wenige Sekunden läuft, stört das im Alltag nicht.
   <figcaption>Unter der Sitzbank, oben auf dem Gaskasten: rund die DIMES-Anzeige mit ihren 43 %, links die schwarze WAVE-Sendebox am Klettband. Der weiße Klumpen rechts daneben ist die gasdicht verschlossene Kabeldurchführung.</figcaption>
 </figure>
 
-Der Gaskasten sitzt bei diesem Fahrzeug **unter der Sitzbank**. Anzeige und
-Sendebox habe ich bewusst **nicht hineingebaut**, sondern obenauf gesetzt, also
+Der Gaskasten sitzt bei diesem Fahrzeug unter der Sitzbank. Anzeige und
+Sendebox habe ich bewusst nicht hineingebaut, sondern obenauf gesetzt, also
 außerhalb des Gaskastens, aber noch unter der Bank.
 
 Das hat zwei Gründe. Erstens ist ein Gaskasten kein Ort für Elektronik: Er ist nach
@@ -94,9 +94,8 @@ schlagen könnte, hat darin nichts verloren. Zweitens will man an eine
 batteriebetriebene Sendebox gelegentlich heran, ohne erst die Flasche losschnallen
 zu müssen.
 
-Die dafür nötige Kabeldurchführung ist **gasdicht verschlossen**: auf dem Foto der
-weiße Klumpen. Das ist kein Schönheitsfehler, sondern der Punkt, an dem die ganze
-Sache steht oder fällt: Ein Gaskasten muss nach innen dicht sein, sonst ist er
+Die dafür nötige Kabeldurchführung ist gasdicht verschlossen: auf dem Foto der
+weiße Klumpen. An dieser Stelle steht und fällt die ganze Sache: Ein Gaskasten muss nach innen dicht sein, sonst ist er
 sinnlos. Wer diesen Weg nachbaut, sollte genau diese Stelle sorgfältig machen und
 danach kontrollieren.
 
@@ -132,13 +131,13 @@ einmal einen Discovery-Durchlauf.
 ## Der Durchbruch
 
 Statt weiter zu raten: der App beim Arbeiten zusehen. Offizielle Rotarex-App auf
-einem Android-Tablet, **Bluetooth-HCI-Snoop-Log** eingeschaltet, einmal normal
+einem Android-Tablet, Bluetooth-HCI-Snoop-Log eingeschaltet, einmal normal
 verbinden, Mitschnitt auswerten.
 
 Damit war es in zehn Minuten klar:
 
-> Der PIN wird als **reiner ASCII-Text** auf eine Characteristic einer **ganz
-> anderen Service** geschrieben – nicht auf die, die den Füllstand anbietet.
+> Der PIN wird als reiner ASCII-Text auf eine Characteristic einer ganz
+> anderen Service geschrieben – nicht auf die, die den Füllstand anbietet.
 > Danach ist der Read sofort erfolgreich.
 
 Die vollständige Zuordnung der UUIDs steht im Repository. Die gerätespezifischen
@@ -147,9 +146,9 @@ findet jeder auf dem Typenschild seiner eigenen Box.
 
 ## Wie es jetzt läuft
 
-Ein Python-Script spricht direkt über **BlueZ/D-Bus** mit der Flasche, ohne
+Ein Python-Script spricht direkt über BlueZ/D-Bus mit der Flasche, ohne
 `bleak`, ohne `gatttool`. Auf dem Venus OS des Cerbo ist das der Weg des
-geringsten Widerstands. **Node-RED** ruft es alle 15 Minuten auf und schreibt
+geringsten Widerstands. Node-RED ruft es alle 15 Minuten auf und schreibt
 das Ergebnis in einen virtuellen Tank-Service.
 
 <figure>
@@ -187,7 +186,7 @@ selbständig in Liter um.
 > im Funktionsknoten des Flows ein und nicht in den Einstellungen, oder nimmt
 > die beiden Felder dort heraus und pflegt sie im Cerbo.
 
-Jeder **erfolgreiche** Abruf landet zusätzlich als Zeile in einer CSV:
+Jeder erfolgreiche Abruf landet zusätzlich als Zeile in einer CSV:
 Zeitstempel in UTC, Rohwert, Prozent, Batteriestand des Senders. Fehlversuche
 stehen bewusst nicht drin: Eine Historie voller Lücken mit leeren Werten
 verzerrt jede spätere Verbrauchsauswertung.
@@ -214,7 +213,7 @@ was der 15-Minuten-Takt erwarten lässt.
 </figure>
 
 Dazu sind zwei weitere Punkte gekommen, beide deutlich weiter unten. Am
-24. August stand die Flasche bei **26 %**, am 26. August bei **12 %**, und beide
+24. August stand die Flasche bei 26 %, am 26. August bei 12 %, und beide
 Male zeigten App und Cerbo dasselbe. Damit ist die Zuordnung nicht mehr nur im
 oberen Mittelfeld belegt, sondern **über die ganze Spanne von 78 bis 12 %** – und
 gerade der untere Bereich ist der, auf den es ankommt, wenn man wissen will, ob

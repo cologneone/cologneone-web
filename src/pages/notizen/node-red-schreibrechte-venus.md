@@ -10,13 +10,13 @@ tags:
   - Node-RED
 ---
 
-**Worum es geht:** **Venus OS** ist das Betriebssystem der GX-Geräte von Victron –
-Cerbo GX, Ekrano GX und Verwandte. In der Ausbaustufe „large" bringt es **Node-RED**
+**Worum es geht:** Venus OS ist das Betriebssystem der GX-Geräte von Victron –
+Cerbo GX, Ekrano GX und Verwandte. In der Ausbaustufe „large" bringt es Node-RED
 mit: eine grafische Umgebung, in der man Abläufe zusammensteckt, ohne ein Programm zu
 schreiben. Damit lassen sich Messwerte protokollieren, Relais schalten oder eigene
 Sensoren einbinden.
 
-Sobald ein solcher Ablauf aber eine **Datei** anlegen will – eine Messreihe als CSV,
+Sobald ein solcher Ablauf aber eine Datei anlegen will – eine Messreihe als CSV,
 eine Konfiguration, einen gespeicherten Zustand –, kommt die Überraschung.
 
 ## Das Symptom
@@ -26,8 +26,8 @@ Fehlermeldung im Debug-Fenster, keine Datei. Nur Schweigen.
 
 ## Die Ursache
 
-Node-RED läuft auf Venus OS als eigener Benutzer namens **`nodered`**, und der hat
-sehr wenig Rechte. Insbesondere darf er **nicht** direkt nach `/data/` schreiben, was
+Node-RED läuft auf Venus OS als eigener Benutzer namens `nodered`, und der hat
+sehr wenig Rechte. Insbesondere darf er nicht direkt nach `/data/` schreiben, was
 der naheliegende Ort wäre. Freie Hand hat er nur unterhalb von
 
 ```

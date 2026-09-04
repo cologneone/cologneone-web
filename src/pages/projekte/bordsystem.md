@@ -27,13 +27,13 @@ inhaltlich wenig.
 
 Warum dann noch etwas Eigenes? Weil „das meiste" nicht dasselbe ist wie „so, wie ich
 es brauche". Die Reihenfolge ist vorgegeben, die Gewichtung auch, und manches war nie
-dabei. Die **Klimaanlage** zum Beispiel lief immer über einen eigenen Weg, und die
+dabei. Die Klimaanlage zum Beispiel lief immer über einen eigenen Weg, und die
 Gasheizung soll später dazukommen, sobald die Frage nach dem Thermostat geklärt ist.
 
 Diese Seiten sind also der Versuch, eigene Prioritäten zu setzen und alles an eine
 Stelle zu holen. Sie laufen auf dem Cerbo GX selbst, im eigenen WLAN, und werden mit
-dem Telefon aufgerufen, das ohnehin in der Tasche steckt. Der eigentliche Gewinn ist
-dabei nicht die Technik, sondern die Freiheit: Was oben steht und wie es aussieht,
+dem Telefon aufgerufen, das ohnehin in der Tasche steckt. Der eigentliche Gewinn
+liegt dabei woanders als in der Technik: Was oben steht und wie es aussieht,
 entscheide ich.
 
 ## Wo das läuft
@@ -43,7 +43,7 @@ sind dort ein paar zusätzliche Abläufe: einer liefert die Seite, einer liefert
 Werte als JSON, einer nimmt Schaltbefehle entgegen. Kein zusätzlicher Rechner, kein
 Server, kein Dienst im Internet.
 
-Das ist keine Sparsamkeit, sondern eine Betriebsentscheidung. [Der Router im
+Dahinter steckt keine Sparsamkeit, sondern Erfahrung. [Der Router im
 Fahrzeug](/projekte/wohnmobil-netzwerk) steht selten ohne Verbindung da, aber
 vorkommen kann es immer. Und grundsätzlich gilt: Ein Bordsystem muss ohne Hilfe von
 außen laufen. Was ohne Internet nicht funktioniert, taugt im Wohnmobil nicht. Alles, was diese Seiten brauchen, liegt im Fahrzeug: die Werte, die

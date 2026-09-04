@@ -10,10 +10,10 @@ tags:
   - MQTT
 ---
 
-**Worum es geht:** In vielen Wohnmobilen und Booten sitzt ein **GX-Gerät von
-Victron** – ein Cerbo GX zum Beispiel. Das ist der kleine Rechner, bei dem
+**Worum es geht:** In vielen Wohnmobilen und Booten sitzt ein GX-Gerät von
+Victron – ein Cerbo GX zum Beispiel. Das ist der kleine Rechner, bei dem
 Batteriewächter, Solarregler, Wechselrichter und Tankgeber zusammenlaufen. Wer
-darauf aufbaut, holt sich die Werte meist über **MQTT** heraus: eine Art
+darauf aufbaut, holt sich die Werte meist über MQTT heraus: eine Art
 Nachrichtendienst, bei dem man Themen abonniert und laufend neue Werte zugeschickt
 bekommt. Node-RED, Home Assistant und eigene Skripte machen es genau so.
 
@@ -22,7 +22,7 @@ kann.
 
 ## Das Symptom
 
-Sämtliche Werte aus dem GX-Gerät stehen still. Nicht einer – **alle**. Die Geräte
+Sämtliche Werte aus dem GX-Gerät stehen still. Nicht einer – alle. Die Geräte
 selbst sind in Ordnung, das Display am Cerbo zeigt aktuelle Zahlen, nur über MQTT
 kommt nichts mehr an. Keine Fehlermeldung, keine Trennung der Verbindung. Die
 Meldungen hören einfach auf.
@@ -39,13 +39,13 @@ R/<portal-id>/keepalive
 **mindestens einmal pro Minute** stellt er das Senden ein. Die `<portal-id>` ist die
 Kennung des eigenen Geräts, die in jedem Thema vorkommt.
 
-Das ist kein Fehler, sondern Absicht: Ein GX-Gerät soll nicht dauerhaft Daten in die
+Gewollt ist das so: Ein GX-Gerät soll nicht dauerhaft Daten in die
 Gegend funken, wenn niemand zuhört. Nur merkt man davon nichts, bis alles steht.
 
 ## Was daraus folgt
 
 Bei mir schickt ein Zeitgeber alle 30 Sekunden dieses Lebenszeichen. Der Haken: Dieser
-eine unscheinbare Knoten hält die Datenversorgung **sämtlicher** Automatisierungen
+eine unscheinbare Knoten hält die Datenversorgung sämtlicher Automatisierungen
 aufrecht. Wer den Ablauf abschaltet, in dem er zufällig liegt, legt nebenbei alles
 andere still: Tankanzeige, Motorautomatik, Protokolle.
 
