@@ -109,29 +109,28 @@ denen man sich zurechtfinden kann.
   <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und oben das originale Kontroll- und Verteilungsmodul des Fahrzeugs. Alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
 </figure>
 
-Auf beiden Aufnahmen liegen alt und neu nebeneinander, und das ist kein Zufall.
-**Die Victron-Anlage ersetzt die Werksinstallation nicht, sie löst sie stückweise
-ab.** Ein Zustand, den man an einem gewachsenen Wohnmobil ständig sieht und der in
-keinem Katalogfoto vorkommt. Das Fahrzeug ist von 1998; die originale
-Verteilung darin ist ein CBE-Modul, Modell M 2005 – das ist die Typbezeichnung des
-Herstellers, kein Baujahr. Aufgedruckt ist der Name des Wohnmobilherstellers, gebaut
-hat es CBE.
+## Ein defekter Steckplatz, und die halbe Verteilung zieht um
 
-Und dieses Modul ist der Grund, warum die Verkabelung heute so aussieht, wie sie
-aussieht: **Auf seiner Platine ist ein Steckplatz defekt.** Eine Reparatur wäre
-unwirtschaftlich gewesen: Die Einheit ist alt, Ersatzteile sind es auch. Also sind
-mehrere Stromkreise auf die neue Verteilung umgezogen, die aus dem Victron-Block
-gespeist wird. Der schwarze Votronic-Plusverteiler unten im nächsten Bild ist genau
-das: die Kreise, die das Originalmodul nicht mehr sicher tragen konnte.
-
-Das ist die realistische Reihenfolge bei einem älteren Fahrzeug. Man reißt nicht die
-ganze Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis, immer dann, wenn
-ein Stück davon aufgibt.
+Oben im Fach hängt noch die Werkselektrik: ein CBE-Modul, Modell M 2005. Das ist die
+Typbezeichnung des Herstellers, kein Baujahr – das Fahrzeug ist von 1998. Aufgedruckt
+steht der Name des Wohnmobilherstellers, gebaut hat es CBE.
 
 <figure>
   <img src="/bilder/victron/cbe-modul.jpg" alt="Originales CBE-Kontroll- und Verteilungsmodul Mod. M 2005 mit Flachsicherungen, rechts angeschnitten ein SmartSolar-Laderegler" />
-  <figcaption>Dasselbe Fach von der anderen Seite: oben das originale CBE-Kontroll- und Verteilungsmodul „Mod. M 2005" mit seinen Flachsicherungen, rechts angeschnitten einer der SmartSolar-Laderegler. Unten links der Votronic-Plusverteiler, der die Kreise übernommen hat, die über den defekten Steckplatz des CBE-Moduls liefen.</figcaption>
+  <figcaption>Oben das originale CBE-Modul „Mod. M 2005" mit seinen Flachsicherungen, rechts angeschnitten einer der SmartSolar-Laderegler. Unten links der schwarze Votronic-Verteiler.</figcaption>
 </figure>
+
+Auf seiner Platine ist ein Steckplatz defekt. Reparieren lohnt bei so einem Teil
+nicht: Die Einheit ist alt, Ersatzteile sind es auch. Also sind die betroffenen
+Stromkreise umgezogen, auf den schwarzen Votronic-Verteiler unten im Bild, gespeist
+aus dem Victron-Block. Nicht alle, nur die, die das Originalmodul nicht mehr sicher
+tragen konnte.
+
+Genau so wächst so ein Fahrzeug. Man reißt nicht an einem Wochenende die ganze
+Werkselektrik heraus, sondern übernimmt sie Kreis für Kreis, immer dann, wenn ein
+Stück davon aufgibt. **Die Victron-Anlage ersetzt die Werksinstallation nicht, sie
+löst sie ab, Stück für Stück.** Das sieht man an jedem gewachsenen Wohnmobil, und in
+keinem Katalogfoto.
 
 ## Der Lynx, und warum er ab Werk unfertig ist
 

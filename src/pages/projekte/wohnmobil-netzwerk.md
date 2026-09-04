@@ -14,10 +14,10 @@ tags:
   - Router
 ---
 
-**Worum es geht:** Unterwegs zuverlässig online sein, ohne dass es davon abhängt, was
-der Campingplatz anbietet, und ohne dass ein Handy als Hotspot herhalten muss. Hier
-steht, was dafür im Fahrzeug steckt, warum es genau diese Teile geworden sind, wo ich
-sie herhabe und was ich auf dem Weg dahin gelernt habe.
+Der Platz hat WLAN, sagt die Anmeldung. Es reicht für die Wetter-App und bricht
+zusammen, sobald abends alle gleichzeitig streamen. Das eigene Handy zeigt zwei
+Balken, die nichts bedeuten. Und im Fahrzeug hängt inzwischen so viel am Netz, dass
+„geht gerade nicht" keine Antwort mehr ist.
 
 ## Was verbaut ist
 
@@ -44,8 +44,13 @@ paar Funkschalter.
 
 ## Warum überhaupt ein Router, es gibt doch Handys
 
-Die ehrliche Alternative heißt Hotspot am Handy. Das funktioniert, bis es das nicht
-mehr tut, und dann aus vier Gründen gleichzeitig.
+Die ehrliche Alternative heißt Hotspot am Handy. Sie hält genau so lange, bis eine
+dieser fünf Sachen passiert.
+
+**Ohne Netz an Bord steht der ganze Rest still.** Die Funkschalter fürs Licht, die
+Steuerung der Energieanlage, die Klimaanlage. Der Router ist nicht das Zubehör zum
+Ausbau, er ist die Grundlage darunter. Was rein örtlich läuft, läuft zwar auch ohne
+Verbindung nach draußen weiter, aber alles darüber hinaus hängt am Internet.
 
 **Das Handy geht mit.** Wer damit zum Brötchenholen läuft, nimmt das halbe Wohnmobil
 mit offline – auch alles, was man aus der Ferne sehen möchte, während man weg ist.
@@ -63,13 +68,7 @@ Dauerbetrieb an 12 V, und ein Betriebssystem, in das man hineinkommt. Alles, was
 dieser Seite an Automatik vorkommt, gibt es nur, weil auf dem Router eigene Skripte
 laufen dürfen.
 
-Der wichtigste Grund steht aber noch gar nicht da: **Ohne Netz an Bord steht der ganze
-Rest still.** Die Funkschalter fürs Licht, die Steuerung der Energieanlage, die
-Klimaanlage. Der Router ist nicht das Zubehör zum Ausbau, er ist die Grundlage
-darunter. Was rein örtlich läuft, läuft zwar auch ohne Verbindung nach draußen weiter,
-aber alles darüber hinaus hängt am Internet.
-
-Und dann ist da noch die Sache, wegen der ich am meisten grinse. Im Fahrzeug hängt ein
+Und dann ist da die Sache, wegen der ich am meisten grinse. Im Fahrzeug hängt ein
 **alter Echo Dot** – und zwar genau der, weil er seinen Strom über USB bekommt und
 kein Netzteil braucht. Er sitzt unter einem Schrank an einer eingebauten USB-Dose und
 trägt eine Holzfolie im Möbelton, damit man ihn nicht sieht. Seitdem sage ich im

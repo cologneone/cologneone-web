@@ -15,6 +15,10 @@ tags:
   - Wohnmobil
 ---
 
+Die Frage kommt immer spät. Ist die Kühlbox noch an? Wie viel Wasser ist noch drin?
+Reicht die Batterie bis morgen früh? Früher hieß das: aufstehen, drei Klappen
+aufmachen, an drei verschiedenen Stellen nachsehen.
+
 Im Wohnmobil hängt eine GX Touch, und daneben liegt ein Tablet mit der
 Victron-Oberfläche. Beide zeigen das meiste von dem, was hier zählt: Batterie, Solar,
 Wechselrichter, Tanks, Temperaturen. Das ist gut gemacht, und ehrlicherweise fehlt
@@ -35,19 +39,6 @@ Stelle zu holen. Sie laufen auf dem Cerbo GX selbst, im eigenen WLAN, und werden
 dem Telefon aufgerufen, das ohnehin in der Tasche steckt. Der eigentliche Gewinn
 liegt dabei woanders als in der Technik: Was oben steht und wie es aussieht,
 entscheide ich.
-
-## Wo das läuft
-
-Auf dem [Cerbo GX](/projekte/wohnmobil-victron) läuft ohnehin Node-RED. Die Seiten
-sind dort ein paar zusätzliche Abläufe: einer liefert die Seite, einer liefert die
-Werte als JSON, einer nimmt Schaltbefehle entgegen. Kein zusätzlicher Rechner, kein
-Server, kein Dienst im Internet.
-
-Dahinter steckt keine Sparsamkeit, sondern Erfahrung. [Der Router im
-Fahrzeug](/projekte/wohnmobil-netzwerk) steht selten ohne Verbindung da, aber
-vorkommen kann es immer. Und grundsätzlich gilt: Ein Bordsystem muss ohne Hilfe von
-außen laufen. Was ohne Internet nicht funktioniert, taugt im Wohnmobil nicht. Alles, was diese Seiten brauchen, liegt im Fahrzeug: die Werte, die
-Schriftarten, die Symbole, die Zeichnungen. Es wird nichts nachgeladen.
 
 ## Die Seiten
 
@@ -125,6 +116,20 @@ nebeneinanderlegt.
   <img src="/bilder/bordsystem/booster-fahrten-hell.png" alt="Vergleich der beiden Ladebooster über alle aufgezeichneten Fahrten" />
   <figcaption>Zwei baugleiche Geräte, dieselbe Lichtmaschine, über alle aufgezeichneten Fahrten übereinandergelegt.</figcaption>
 </figure>
+
+## Wo das läuft
+
+Auf dem [Cerbo GX](/projekte/wohnmobil-victron) läuft ohnehin Node-RED. Die Seiten
+sind dort ein paar zusätzliche Abläufe: einer liefert die Seite, einer liefert die
+Werte als JSON, einer nimmt Schaltbefehle entgegen. Kein zusätzlicher Rechner, kein
+Server, kein Dienst im Internet.
+
+Dahinter steckt keine Sparsamkeit, sondern Erfahrung. [Der Router im
+Fahrzeug](/projekte/wohnmobil-netzwerk) steht selten ohne Verbindung da, aber
+vorkommen kann es immer. Und grundsätzlich gilt: Ein Bordsystem muss ohne Hilfe von
+außen laufen. Was ohne Internet nicht funktioniert, taugt im Wohnmobil nicht. Alles, was diese
+Seiten brauchen, liegt im Fahrzeug: die Werte, die Schriftarten, die Symbole, die
+Zeichnungen. Es wird nichts nachgeladen.
 
 ## Tag und Nacht
 
