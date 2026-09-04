@@ -95,16 +95,7 @@ sensorspezifischen Koeffizientensatz. Stattdessen entscheidet der in der Oberfl�
 eingestellte FluidType, welche Kurve benutzt wird. Und dort teilen sich
 `FLUID_TYPE_GASOLINE` und `FLUID_TYPE_DIESEL` denselben Satz.
 
-Gerechnet wird so:
-
-```
-scale(T) = c0 + c1·T + c2·T²        mit T = Temperatur + 40
-c = { 0.7373417462, -0.001978229885, 0.00000202162 }
-
-Höhe [cm] = RawValue · scale(T) / 10
-```
-
-Zwei Dinge stehen damit fest, und eines davon widerlegt meine eigene frühere Annahme:
+Daraus folgen zwei Dinge, und eines davon widerlegt meine eigene frühere Annahme:
 
 - **Die Temperatur wird sehr wohl kompensiert**, sogar quadratisch. Ich hatte vorher
   behauptet, der Sensor rechne ohne Temperaturkorrektur mit einer festen
@@ -113,6 +104,16 @@ Zwei Dinge stehen damit fest, und eines davon widerlegt meine eigene frühere An
 - **Die Kurve ist die von Benzin.** Schall läuft in Diesel messbar anders als in
   Benzin. Wer „Diesel" einstellt, bekommt trotzdem die Benzin-Kurve, und damit eine
   systematische Abweichung, die keine Einstellung in der Oberfläche behebt.
+
+Wer es nachrechnen will, hier steht die Formel; wer nicht, liest beim nächsten
+Absatz weiter.
+
+```
+scale(T) = c0 + c1·T + c2·T²        mit T = Temperatur + 40
+c = { 0.7373417462, -0.001978229885, 0.00000202162 }
+
+Höhe [cm] = RawValue · scale(T) / 10
+```
 
 ## Was das praktisch bedeutet
 

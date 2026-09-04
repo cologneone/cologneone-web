@@ -95,8 +95,8 @@ batteriebetriebene Sendebox gelegentlich heran, ohne erst die Flasche losschnall
 zu müssen.
 
 Die dafür nötige Kabeldurchführung ist gasdicht verschlossen: auf dem Foto der
-weiße Klumpen. An dieser Stelle steht und fällt die ganze Sache: Ein Gaskasten muss nach innen dicht sein, sonst ist er
-sinnlos. Wer diesen Weg nachbaut, sollte genau diese Stelle sorgfältig machen und
+weiße Klumpen. An dieser Stelle steht und fällt die ganze Sache: Ein Gaskasten muss
+nach innen dicht sein, sonst ist er sinnlos. Wer diesen Weg nachbaut, sollte genau diese Stelle sorgfältig machen und
 danach kontrollieren.
 
 ## Warum das nicht einfach ging
@@ -116,17 +116,10 @@ offensichtlich etwas frei, das man erst schreiben muss, bevor man lesen darf.
 
 Wohin und in welchem Format, stand nirgends.
 
-## Die Sackgasse
-
-Zuerst der naheliegende Weg: PIN auf die Write-Characteristics der beworbenen
-Service schreiben, in allen plausiblen Kodierungen: ASCII, UInt16 in beiden
-Byte-Reihenfolgen, BCD, BCD rückwärts. Eine der Characteristics akzeptierte
-ausschließlich exakt zwei Bytes, was nach fester PIN-Länge roch. Keine Variante
-hat den Read freigeschaltet.
-
-Dazu kam eine wacklige Verbindung: BlueZ verliert das Geräteobjekt zwischen zwei
-Aufrufen, wenn währenddessen kein Scan läuft. Jeder Versuch brauchte also erst
-einmal einen Discovery-Durchlauf.
+Der naheliegende Weg führte ins Leere. Ich habe den PIN in jeder Schreibweise, die
+mir eingefallen ist, an die Stellen geschickt, die dafür in Frage kamen. Nichts davon
+gab den Wert frei. Dazu eine Verbindung, die zwischen zwei Versuchen immer wieder
+abriss. Ein Abend, an dessen Ende genau so viel dastand wie am Anfang.
 
 ## Der Durchbruch
 
