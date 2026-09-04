@@ -4,7 +4,7 @@ titel: Internet im Wohnmobil, wenn das Handy längst aufgegeben hat
 kurz: Ein 5G-Router und eine Dachantenne, mehr ist es nicht. Was verbaut ist, warum es diese Teile geworden sind, wo ich sie herhabe – und die sechs Fallen, die mich am meisten Zeit gekostet haben.
 meta_titel: Internet im Wohnmobil mit Teltonika RUTX50 und Panorama-Dachantenne
 meta_beschreibung: 5G-Router, Dachantenne, zwei SIM-Karten und Campingplatz-WLAN im Wohnmobil. Welche Teile verbaut sind, warum es der Teltonika RUTX50 wurde, worauf man beim Kabelsatz der Antenne achten muss und welche sechs Fallen einen offline lassen, während alle Anzeigen "verbunden" melden.
-rang: 4
+rang: 5
 status: Laufend
 bild: /bilder/netzwerk/router-front.jpg
 stand: 2026-08

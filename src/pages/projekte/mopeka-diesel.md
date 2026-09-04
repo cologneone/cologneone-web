@@ -5,7 +5,7 @@ kurz: Ein Ultraschallsensor am Dieseltank, ausgelesen vom Cerbo GX. Zwei Überra
 meta_titel: Mopeka Dieseltank am Victron Cerbo GX – Kalibrierung und Ausfälle
 meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX – warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
 bild: /bilder/rotarex/cerbo-tanks.png
-rang: 3
+rang: 4
 status: Laufend
 stand: 2026-08
 tags:
