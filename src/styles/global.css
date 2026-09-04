@@ -540,18 +540,19 @@ a { color: var(--gold-deep); }
    Ab Version 3.0.0: Bilder tragen die Uebersichten
    =========================================================================== */
 
-/* Fliesstext mittig in einer lesbaren Spalte, damit rechts keine tote
-   Spalte stehen bleibt. Karten und der Titelbereich duerfen breit bleiben. */
-main .wrap > * {
+/* Auf Artikelseiten stand der Text links und rechts blieb eine tote Spalte.
+   Dort wird die Lesespalte jetzt mittig gesetzt, samt Ruecklink darueber.
+   Uebersichtsseiten bleiben linksbuendig, ihre Karten fuellen die Breite
+   ohnehin aus. */
+.back {
+  display: block;
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-main .wrap > .cards,
-main .wrap > .hero-start {
-  max-width: none;
-}
+/* Die Notizenliste bleibt links, aber in lesbarer Breite. */
+.notizen { max-width: 46rem; }
 
 /* --- Titelbereich der Startseite: Text links, Foto rechts ---------------- */
 .hero-start .hero-bild {
@@ -655,8 +656,7 @@ main .wrap > .hero-start {
 
 /* --- Wer hier schreibt --------------------------------------------------- */
 .wer {
-  max-width: 46rem;
-  margin: 3.6rem auto 0;
+  margin: 3.6rem 0 0;
   padding: 1.6rem 1.7rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
