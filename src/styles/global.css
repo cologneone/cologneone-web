@@ -680,3 +680,16 @@ a { color: var(--gold-deep); }
 .wer h2 { margin: 0 0 0.5rem; font-size: 1.15rem; max-width: none; }
 .wer p { margin: 0 0 0.6rem; color: var(--text-dim); font-size: 0.99rem; max-width: none; }
 .wer p:last-child { margin-bottom: 0; }
+
+/* --- Einstiegsszene ------------------------------------------------------
+   Der Moment vor dem Ergebnis. Steht ganz oben auf einer Projektseite,
+   bevor die Technik anfaengt. */
+.prose .szene {
+  font-size: 1.12rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--navy);
+  border-left: 3px solid var(--gold);
+  padding-left: 1.1rem;
+  margin: 0 0 2rem;
+}

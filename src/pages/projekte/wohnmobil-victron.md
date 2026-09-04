@@ -15,6 +15,12 @@ tags:
   - Wohnmobil
 ---
 
+<p class="szene">
+  Der Motor läuft, beide Ladebooster melden null, und ich sitze mit der
+  Taschenlampe davor und verstehe es nicht. Es wird ein ganzer Abend daraus.
+  Am Ende ist es ein Schalter.
+</p>
+
 <figure>
   <img src="/bilder/victron/flair-berge.jpg" alt="Niesmann+Bischoff Flair 6000 auf einem Schotterplatz vor einem Karstberg in Kroatien" />
   <figcaption>Darum geht der ganze Aufwand: ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne Rechnen.</figcaption>
