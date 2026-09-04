@@ -88,6 +88,21 @@ steht daneben, damit man sieht, was ein vergessenes Licht kostet.
   <figcaption>Alles, was über ein Funkrelais hängt, an einer Stelle. Die Wattzahl daneben macht aus einem Schalter eine Entscheidung.</figcaption>
 </figure>
 
+Eine Bedingung war mir dabei von Anfang an wichtig: **Die originalen Schalter müssen
+weiter funktionieren.** Wer den Kippschalter am Panel drückt, schaltet weiter das,
+was er immer geschaltet hat. Das Funkrelais sitzt nicht anstelle des Schalters,
+sondern daneben.
+
+<figure>
+  <img src="/bilder/bordsystem/panel-schalter.jpg" alt="Die originalen Kippschalter am Bedienpanel, beschriftet mit Motor, EIS EX und weiteren Symbolen" />
+  <figcaption>Dieselben Kippschalter wie 1998, und sie tun weiter, was sie immer getan haben.</figcaption>
+</figure>
+
+Damit beide Wege auf dieselbe Leitung dürfen, sitzt ein kleiner Signalumsetzer
+dazwischen, der das originale 12-Volt-Signal für das Funkrelais lesbar macht. Der
+Aufwand lohnt sich: Wer ins Fahrzeug steigt und von der Technik nichts weiß, bedient
+es wie 1998. Nichts ist tot, nichts hat einen Zettel „bitte nicht benutzen".
+
 **Klima** bedient die Gree-Anlage direkt über das Fahrzeugnetz: Sollwert,
 Betriebsart, Lüfterstufe. Die Anlage kann Cloud, aber sie muss nicht.
 
