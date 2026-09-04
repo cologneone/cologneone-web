@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Projekt.astro
-titel: Ein anderer Tank, und die Tankuhr ist blind
+titel: Ein größerer Tank, und die Tankuhr wird zum Schätzeisen
 kurz: Im Flair steckt ein Goldschmitt-Austauschtank, und der Originalgeber misst darin praktisch nichts. Der Versuch, den Dieselvorrat trotzdem in dasselbe System zu holen, in dem auch Wasser, Gas und Batterie stehen.
 meta_titel: Mopeka Dieseltank am Victron Cerbo GX – Kalibrierung und Ausfälle
 meta_beschreibung: Mopeka Pro Ultraschallsensor am Dieseltank im Victron Cerbo GX – warum der Venus-OS-Treiber Diesel mit den Benzin-Koeffizienten rechnet, was die Temperaturkompensation wirklich tut und wie man 27 Prozent unbrauchbare Messungen abfängt.
@@ -15,8 +15,8 @@ tags:
   - Wohnmobil
 ---
 
-Eine Tankuhr ist das Selbstverständlichste am ganzen Fahrzeug. Bei diesem hier ist
-sie nutzlos, und daran ist nichts kaputt.
+Eine Tankuhr ist das Selbstverständlichste am ganzen Fahrzeug. Bei diesem hier zeigt
+sie etwas an, das mit dem Inhalt wenig zu tun hat, und daran ist nichts kaputt.
 
 **Der Grund ist der Tank.** Im Flair sitzt kein Serientank mehr, sondern ein
 **Goldschmitt-Ersatztank** (Art. 05.100) für das Basisfahrzeug, deutlich größer als
