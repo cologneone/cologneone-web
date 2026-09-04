@@ -89,19 +89,24 @@ steht daneben, damit man sieht, was ein vergessenes Licht kostet.
 </figure>
 
 Eine Bedingung war mir dabei von Anfang an wichtig: **Die originalen Schalter müssen
-weiter funktionieren.** Wer den Kippschalter am Panel drückt, schaltet weiter das,
-was er immer geschaltet hat. Das Funkrelais sitzt nicht anstelle des Schalters,
-sondern daneben.
+weiter funktionieren.** Wer den Kippschalter am Panel drückt, bekommt das, was er
+immer bekommen hat.
 
 <figure>
   <img src="/bilder/bordsystem/panel-schalter.jpg" alt="Die originalen Kippschalter am Bedienpanel, beschriftet mit Motor, EIS EX und weiteren Symbolen" />
   <figcaption>Dieselben Kippschalter wie 1998, und sie tun weiter, was sie immer getan haben.</figcaption>
 </figure>
 
-Damit beide Wege auf dieselbe Leitung dürfen, sitzt ein kleiner Signalumsetzer
-dazwischen, der das originale 12-Volt-Signal für das Funkrelais lesbar macht. Der
-Aufwand lohnt sich: Wer ins Fahrzeug steigt und von der Technik nichts weiß, bedient
-es wie 1998. Nichts ist tot, nichts hat einen Zettel „bitte nicht benutzen".
+Technisch schaltet der Kippschalter den Verbraucher allerdings nicht mehr selbst. Er
+liegt auf dem Eingang des Funkrelais, und geschaltet wird dahinter. Damit das
+originale 12-Volt-Signal dort überhaupt ankommt, sitzt ein kleiner Signalumsetzer
+dazwischen.
+
+Der Umweg hat einen Vorteil, den man erst im Betrieb merkt: Beide Wege laufen über
+dasselbe Relais. Es gibt keinen Zustand, in dem das Telefon etwas anderes anzeigt,
+als der Schalter gerade tut. Und wer ins Fahrzeug steigt und von der Technik nichts
+weiß, bedient es wie 1998. Nichts ist tot, nichts hat einen Zettel „bitte nicht
+benutzen".
 
 **Klima** bedient die Gree-Anlage direkt über das Fahrzeugnetz: Sollwert,
 Betriebsart, Lüfterstufe. Die Anlage kann Cloud, aber sie muss nicht.
