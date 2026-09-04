@@ -17,22 +17,18 @@ tags:
 
 <figure>
   <img src="/bilder/victron/flair-berge.jpg" alt="Niesmann+Bischoff Flair 6000 auf einem Schotterplatz vor einem Karstberg in Kroatien" />
-  <figcaption>Darum geht der ganze Aufwand: ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne Rechnen.</figcaption>
+  <figcaption>Kroatien, Schotterplatz, kein Landstrom in Sicht.</figcaption>
 </figure>
 
-Der Anspruch ist einfach: ein paar Tage stehen, wo es schön ist, ohne Landstrom und
-ohne zu rechnen. Dafür stecken in einem Fahrzeug von 1998 heute 560 Ah Lithium,
-ein 3000-VA-Wechselrichter, zwei Solarregler und drei Ladebooster – eine
-Ausstattung, die in vielen Neufahrzeugen so nicht ab Werk drin ist.
+Ein paar Tage stehen, wo es schön ist, ohne Landstrom und ohne zu rechnen. Dafür
+stecken in einem Fahrzeug von 1998 heute 560 Ah Lithium, ein 3000-VA-Wechselrichter,
+zwei Solarregler und drei Ladebooster. Eine Ausstattung, die in vielen Neufahrzeugen
+so nicht ab Werk drin ist.
 
-Zusammengehalten wird das von einem Cerbo GX. Wichtig war mir dabei nicht die
-maximale Ausbaustufe, sondern eine Anlage, die ich verstehe, im Zweifel selbst
-reparieren kann und deren Zustand jederzeit ablesbar ist, auch wenn ich gerade
-nicht daneben stehe.
-
-Diese Seite ist die Übersicht: was drin ist, wie es zusammenhängt und was ich dabei
-gelernt habe. Die Details, bei denen es richtig interessant wurde, stehen in eigenen
-Beiträgen.
+Zusammengehalten wird das von einem Cerbo GX. Er sammelt ein, was die Geräte melden,
+zeigt es an und schaltet, wo es nötig ist, auch wenn ich gerade nicht daneben stehe.
+Gebaut ist alles so, dass ich es unterwegs selbst reparieren kann. Das war die
+einzige Bedingung.
 
 ## Was verbaut ist
 
@@ -57,15 +53,10 @@ Fünf Grad Sicherheitsabstand kosten im Alltag praktisch nichts.
 
 ## Sechs Ampere an der Säule, und trotzdem Wasserkocher
 
-Wenn ich aus dieser ganzen Anlage eine einzige Sache herausgreifen dürfte, die ich
-jedem sofort erzählen würde, dann diese hier. Sie kostet nichts extra, sie steckt im
-MultiPlus bereits drin, und die meisten wissen gar nicht, dass es sie gibt.
-
-Die Ausgangslage kennt jeder, der schon einmal auf einem älteren Platz gestanden hat:
 An der Säule steht 6 A. Das sind knapp 1400 Watt für das ganze Fahrzeug.
 Wasserkocher an, und es wird dunkel. Dann läuft man mit der Taschenlampe zum
-Verteilerkasten, sucht im Regen seinen Automaten und drinnen fragt jemand, ob der
-Kaffee noch kommt.
+Verteilerkasten, sucht seinen Automaten, und drinnen fragt jemand, ob der Kaffee
+noch kommt.
 
 Der MultiPlus löst das mit zwei Funktionen, die zusammenarbeiten.
 
@@ -73,8 +64,7 @@ Der MultiPlus löst das mit zwei Funktionen, die zusammenarbeiten.
 genau das, was die Säule hergibt: 6 A, 4 A, 10 A, je nach Platz. Das dauert zehn
 Sekunden am Display oder am Handy und ist bei mir das Erste nach dem Einstöpseln.
 
-**Zweitens hält er sich daran, ohne einen einzuschränken.** Und genau das ist der
-Punkt:
+**Zweitens hält er sich daran, ohne einen einzuschränken:**
 
 - Zieht das Fahrzeug weniger als die eingestellte Grenze, lädt er mit dem Rest die
   Batterie. Wird es knapp, drosselt er das Laden, statt die Sicherung am Platz zu
@@ -87,16 +77,15 @@ Das Ergebnis ist ein 2000-Watt-Wasserkocher an einer 6-Ampere-Säule. Die Säule
 ihre 1400 Watt, die Batterie legt den Rest drauf, und sobald das Wasser kocht, holt
 sich die Batterie in aller Ruhe zurück, was sie gerade vorgestreckt hat.
 
-**Und da liegt der Gedanke, der mich daran wirklich begeistert:** Die Säule ist keine
-Obergrenze mehr dafür, was ich gleichzeitig anschalten darf. Sie ist nur noch eine
-Obergrenze für das, was ich über den Tag verbrauche. Spitzenleistung und
+Damit ist die Säule keine Obergrenze mehr dafür, was ich gleichzeitig anschalten
+darf, sondern nur noch für das, was ich über den Tag verbrauche. Spitzenleistung und
 Energiemenge sind entkoppelt. Und Spitzen sind im Wohnmobil fast immer kurz:
 Wasserkocher, Föhn, Kaffeemaschine, Mikrowelle. Drei Minuten, nicht drei Stunden.
 
-Man steht damit an der schlechtesten Säule des Platzes und merkt es einfach nicht.
-Das ist kein Trick und keine Bastelei, das ist die Funktion, für die dieses Gerät
-gebaut wurde. Wer einen MultiPlus im Fahrzeug hat und die Eingangsbegrenzung nie
-angefasst hat, verschenkt den halben Nutzen.
+Man steht damit an der schlechtesten Säule des Platzes und merkt es nicht. Das Beste
+daran: Es kostet keinen Cent extra. Die Funktion steckt im MultiPlus, man muss sie
+nur einschalten. Wer einen im Fahrzeug hat und die Eingangsbegrenzung nie angefasst
+hat, verschenkt den halben Wechselrichter.
 
 Zwei ehrliche Einschränkungen gehören dazu. **Geliehen ist nicht geschenkt:** Die
 Batterie muss etwas haben, das sie vorstrecken kann, sonst hilft der schönste
@@ -112,7 +101,7 @@ denen man sich zurechtfinden kann.
 
 <figure>
   <img src="/bilder/victron/technikfach-gesamt.jpg" alt="Technikfach mit Lynx-Verteiler, MultiPlus-II, beschrifteten Kabeln und den beiden 280-Ah-Batterien" />
-  <figcaption>Die Gesamtaufnahme: oben links der Lynx, rechts der MultiPlus-II, unten die beiden 280-Ah-Batterien. Jedes Kabel trägt ein Schild: „Bordnetz", „Ladeverteiler", „Multiplus Ltg 1+", „Haupt Masse". Das ist der Unterschied zwischen einer Anlage, die man versteht, und einer, die man beim nächsten Mal wieder auseinandernehmen muss.</figcaption>
+  <figcaption>Oben links der Lynx, rechts der MultiPlus-II, unten die beiden 280-Ah-Batterien. Jedes Kabel trägt ein Schild: „Bordnetz", „Ladeverteiler", „Multiplus Ltg 1+", „Haupt Masse".</figcaption>
 </figure>
 
 <figure>
@@ -120,9 +109,10 @@ denen man sich zurechtfinden kann.
   <figcaption>Rechts die beiden SmartSolar MPPT 100/30, links unten der Cerbo GX, darüber der Ladeverteiler. In der Mitte die beiden Votronic-Verteiler und oben das originale Kontroll- und Verteilungsmodul des Fahrzeugs. Alt und neu liegen hier buchstäblich nebeneinander.</figcaption>
 </figure>
 
-Genau das ist der Punkt, den man an einem gewachsenen Wohnmobil sieht und der in
-keinem Katalogfoto vorkommt: **Die Victron-Anlage ersetzt die Werksinstallation
-nicht, sie löst sie stückweise ab.** Das Fahrzeug ist von 1998; die originale
+Auf beiden Aufnahmen liegen alt und neu nebeneinander, und das ist kein Zufall.
+**Die Victron-Anlage ersetzt die Werksinstallation nicht, sie löst sie stückweise
+ab.** Ein Zustand, den man an einem gewachsenen Wohnmobil ständig sieht und der in
+keinem Katalogfoto vorkommt. Das Fahrzeug ist von 1998; die originale
 Verteilung darin ist ein CBE-Modul, Modell M 2005 – das ist die Typbezeichnung des
 Herstellers, kein Baujahr. Aufgedruckt ist der Name des Wohnmobilherstellers, gebaut
 hat es CBE.
@@ -143,14 +133,14 @@ ein Stück davon aufgibt.
   <figcaption>Dasselbe Fach von der anderen Seite: oben das originale CBE-Kontroll- und Verteilungsmodul „Mod. M 2005" mit seinen Flachsicherungen, rechts angeschnitten einer der SmartSolar-Laderegler. Unten links der Votronic-Plusverteiler, der die Kreise übernommen hat, die über den defekten Steckplatz des CBE-Moduls liefen.</figcaption>
 </figure>
 
-## Der Punkt, an dem alles zusammenläuft
+## Der Lynx, und warum er ab Werk unfertig ist
 
 <figure>
   <img src="/bilder/victron/technikfach-lynx.jpg" alt="Victron Lynx Power In 1000 im Technikfach, links daneben der rote Batterietrennschalter" />
   <figcaption>Der Lynx Power In 1000 mit den vier Plusabgängen. Der rote Drehknopf links ist der Batteriehauptschalter. Er trennt die ganze Anlage, nicht nur einen Zweig.</figcaption>
 </figure>
 
-Alles Dicke trifft sich an einer Stelle: dem Lynx Power In 1000. Der ist ab Werk
+Alles Dicke trifft sich an einer Stelle, dem Lynx Power In 1000. Und der ist ab Werk
 eine reine Sammelschiene *ohne* Sicherungen: vier Abgänge, alle direkt auf dem
 Batterieplus. Ich habe ihn selbst auf Sicherungen umgebaut.
 
