@@ -2,12 +2,12 @@
 layout: ../../layouts/Projekt.astro
 titel: Internet im Wohnmobil, wenn das Handy längst aufgegeben hat
 kurz: Internet, das trägt. Fernsehen wie zu Hause. Und von der eigenen Küche aus sehen, ob im Wohnmobil alles in Ordnung ist. Dafür braucht es einen 5G-Router und eine Dachantenne – und das Wissen um sechs Fallen, die einen offline lassen.
-meta_titel: Internet im Wohnmobil mit Teltonika RUTX50 und Panorama-Dachantenne
-meta_beschreibung: 5G-Router, Dachantenne, zwei SIM-Karten und Campingplatz-WLAN im Wohnmobil. Welche Teile verbaut sind, warum es der Teltonika RUTX50 wurde, worauf man beim Kabelsatz der Antenne achten muss und welche sechs Fallen einen offline lassen, während alle Anzeigen "verbunden" melden.
+meta_titel: Internet im Wohnmobil mit Teltonika RUTC50 und Panorama-Dachantenne
+meta_beschreibung: 5G-Router, Dachantenne, zwei SIM-Karten und Campingplatz-WLAN im Wohnmobil. Welche Teile verbaut sind, warum es der Teltonika RUTC50 wurde, worauf man beim Kabelsatz der Antenne achten muss und welche sechs Fallen einen offline lassen, während alle Anzeigen "verbunden" melden.
 rang: 5
 status: Laufend
 bild: /bilder/netzwerk/router-front.jpg
-stand: 2026-08
+stand: 2026-09
 tags:
   - Netzwerk
   - Wohnmobil
@@ -23,7 +23,7 @@ Balken, die nichts bedeuten. Und im Fahrzeug hängt inzwischen so viel am Netz, 
 
 Zwei Teile, mehr ist es nicht.
 
-- Ein Teltonika RUTX50, ein 5G-Router für den Dauerbetrieb: zwei
+- Ein Teltonika RUTC50, ein 5G-Router für den Dauerbetrieb: zwei
   SIM-Kartenplätze, vier LAN-Buchsen, eigenes WLAN, Versorgung aus dem 12-V-Bordnetz.
 - Eine Panorama-Dachantenne, in der sieben Antennen in einem flachen Gehäuse
   stecken. Zu der weiter unten mehr, denn sie ist der unterschätzte Teil.
@@ -33,7 +33,7 @@ will oder untereinander redet: Laptop, Fernseher, die Steuerung der Energieanlag
 paar Funkschalter.
 
 <figure>
-  <img src="/bilder/netzwerk/router-front.jpg" alt="Frontblende eines Teltonika RUTX50 mit zwei SIM-Schächten, vier LAN-Buchsen und 3G/4G/5G-Anzeigen" />
+  <img src="/bilder/netzwerk/router-front.jpg" alt="Frontblende eines Teltonika RUTC50 mit zwei SIM-Schächten, vier LAN-Buchsen und 3G/4G/5G-Anzeigen" />
   <figcaption>Zwei SIM-Schächte nebeneinander, vier LAN-Buchsen, darüber die Anzeigen für 3G, 4G und 5G. Der Kippschalter links gehört nicht zum Router, sondern trennt ihn vom Bordnetz.</figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ Wohnmobil „Alexa, Licht aus". Oder „Alexa, Licht auf zehn Prozent". Das ist 
 
 Sofort. Mit genau einer Einschränkung: Ich würde die eSIM-Variante nehmen.
 
-Den RUTX50 gibt es auch mit fest eingebauter eSIM, zusätzlich zu den beiden
+Den RUTC50 gibt es auch mit fest eingebauter eSIM, zusätzlich zu den beiden
 Kartenschächten. Der Unterschied zeigt sich im Ausland: Ein Datenpaket eines örtlichen
 Anbieters bucht man damit am Bildschirm, statt einen Laden zu suchen, eine Karte zu
 kaufen und sie einzulegen. Wer ein paar Wochen in einem Land unterwegs ist, in dem das
@@ -146,8 +146,9 @@ andere Satz ist kürzer und hat diese Bestückung nicht, dann braucht man Adapte
 Zwischenkabel, und man merkt es genau in dem Moment, in dem man auf dem Dach steht.
 
 Also die Antenne gleich mit dem passenden Satz kaufen statt Antenne und Kabel
-getrennt zusammenzusuchen. Passend ist sie damit für RUTX50, RUTX14, RUTX12, RUTM51
-und RUTM54, abwärts auch für die älteren RUT-Modelle.
+getrennt zusammenzusuchen. Passend ist sie damit für alle Teltonika-Modelle mit
+dieser Steckerbelegung: RUTC50, RUTX50, RUTX14, RUTX12, RUTM51 und RUTM54,
+abwärts auch für die älteren RUT-Modelle.
 
 Der Meter ist dabei kein Puffer, sondern die Vorgabe: Antenne und Router muss man
 zusammen planen, nicht nacheinander. Der Router gehört dorthin, wo das Kabel
